@@ -72,7 +72,7 @@ Location: `~/zephyrproject/zephyr/samples`
 
 Basic examples useful to study for beginners are discussed here.
 
-More advanced examples are discusses in `examples.md`
+More advanced examples are discusses in [`examples.md`](https://github.com/maksimdrachov/zephyr-rtos-tutorial/blob/main/examples.md)
 
 ### 4.1. Classic Samples
 
