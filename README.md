@@ -72,7 +72,7 @@ Location: `~/zephyrproject/zephyr/samples`
 
 Basic examples useful to study for beginners are discussed here.
 
-More advanced examples are discusses in [`examples.md`](https://github.com/maksimdrachov/zephyr-rtos-tutorial/blob/main/examples.md)
+More advanced examples are discussed in [`examples.md`](https://github.com/maksimdrachov/zephyr-rtos-tutorial/blob/main/examples.md)
 
 ### 4.1. Classic Samples
 
@@ -117,13 +117,100 @@ Example output:
 ### 4.2. Basic Samples
 
 #### 4.2.1. Blinky
+Same setup as previous example
+
+Lessons:
+- First example that requires to set a Kconfig (see `prj.conf`)
+```
+CONFIG_GPIO=y
+```
+- Shows how to set up and use a GPIO pin
+
+Example output: LED should blink at 1 Hz
+
 #### 4.2.2. PWM Blinky
 #### 4.2.3. Button
+Lessons:
+- Shows how to set up an input GPIO pin
+- Shows how to set up an interrupt function
+
+Example output:
+![button.png](images/4_button.png)
 #### 4.2.4. Fade LED
 #### 4.2.5. Minimal footprint
+1) Copy settings from example Kconfig files to `zephyr/prj.conf`
+2) Inspect code using PlatformIO
+
+Lessons:
+- Shows how to check footprint
+
+`common.conf`
+```
+# Drivers and peripherals
+CONFIG_I2C=n
+CONFIG_WATCHDOG=n
+CONFIG_GPIO=n
+CONFIG_PINMUX=n
+CONFIG_SPI=n
+CONFIG_SERIAL=n
+CONFIG_FLASH=n
+
+# Power management
+CONFIG_PM=n
+
+# Interrupts
+CONFIG_DYNAMIC_INTERRUPTS=n
+CONFIG_IRQ_OFFLOAD=n
+
+# Memory protection
+CONFIG_THREAD_STACK_INFO=n
+CONFIG_THREAD_CUSTOM_DATA=n
+CONFIG_FPU=n
+
+# Boot
+CONFIG_BOOT_BANNER=n
+CONFIG_BOOT_DELAY=0
+
+# Console
+CONFIG_CONSOLE=n
+CONFIG_UART_CONSOLE=n
+CONFIG_STDOUT_CONSOLE=n
+CONFIG_PRINTK=n
+CONFIG_EARLY_CONSOLE=n
+
+# Build
+CONFIG_SIZE_OPTIMIZATIONS=y
+```
+
+`no-mt.conf`
+```
+# Single-threaded, no timer support in the kernel
+CONFIG_MULTITHREADING=n
+CONFIG_KERNEL_MEM_POOL=n
+```
+
+`no-timers.conf`
+```
+# No timer support in the kernel
+CONFIG_SYS_CLOCK_EXISTS=n
+```
+
+Example output:
+_common.conf_
+![common.conf](images/5_minimal_common.png)
+
+Example output:
+_no-mt.conf_ and _no-timers.conf_
+![no-mt.conf](images/6_minimal_no_mt_no_timers.png)
+
 #### 4.2.6. PWM: RGB LED
 #### 4.2.7. Servomotor
 #### 4.2.8. Basic Thread Example
+Lessons:
+- First example that shows how to use threads, study this one carefully.
+
+Example output:
+![threads.png](images/7_threads.png)
 
 ### 4.3. Userspace Samples
 
