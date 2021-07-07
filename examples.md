@@ -1,5 +1,4 @@
-<details>
-<summary>Table of Contents</summary>
+
 - [Various Subsystems Samples](#various-subsystems-samples)
   - [Controller Area Network (CAN) Bus Samples](#controller-area-network-can-bus-samples)
   - [Console Samples](#console-samples)
@@ -265,7 +264,6 @@
   - [TensorFlow Magic Wand sample](#tensorflow-magic-wand-sample)
 - [Compression Samples](#compression-samples)
   - [LZ4](#lz4)
-</details>
 
 <br/><br/>
 
