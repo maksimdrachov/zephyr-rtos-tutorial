@@ -29,6 +29,7 @@
       - [4.3.2. Producer/consumer](#432-producerconsumer)
       - [4.3.3. Userspace Protected Memory](#433-userspace-protected-memory)
       - [4.3.4. Syscall performances](#434-syscall-performances)
+  - [5. Debugging](#5-debugging)
   - [6. Projects using Zephyr RTOS](#6-projects-using-zephyr-rtos)
 
 ## 1. Introduction
@@ -42,10 +43,15 @@ Since Zephyr is a pretty young project I have found it a bit lacking in terms of
 ## 2. Setup
 ### 2.1. VSCode + PlatformIO + Zephyr RTOS
 This is the one that I'm currently using, the examples are based on this setup.
+
+- NOOB-friendly!
 ### 2.2. Eclipse + Zephyr RTOS
 Relevant [section](https://docs.zephyrproject.org/latest/application/index.html?highlight=eclipse#debug-with-eclipse) in Zephyr Documentation.
-### 2.3. West + Zephyr RTOS
 
+- Zephyr-plugin doesn't work with the latest Eclipse. ([github-issue](https://github.com/zephyrproject-rtos/eclipse-plugin/issues/45))
+- However if you use an older version it should work apparently. (haven't tested this myself)
+### 2.3. West + Zephyr RTOS
+- Real pro's use this.
 
 ## 3. The Basics
 
@@ -66,13 +72,47 @@ Location: `~/zephyrproject/zephyr/samples`
 
 Basic examples useful to study for beginners are discussed here.
 
-More advanced examples are discusses in examples.md
+More advanced examples are discusses in `examples.md`
 
 ### 4.1. Classic Samples
 
 #### 4.1.1. Hello World
+Simple example, useful to understand the setup process.
+1) Create new project in PlatformIO
+2) Add `prj.conf` to `zephyr` subfolder (even though empty for this example)
+3) Add `monitor_speed = 115200` to `platformio.ini` (if you get weird characters in the serial window, probably wrong baud rate setting here)
+4) Copy code to `main.c`
+5) 'Build'
+6) 'Flash'
+7) Open Serial to verify
+  
+Example output (press reset on your board to see output)
+![Example output](images/1_hello_world.png)
+
+> TIP: Sometimes you want to check the Kconfig setup for your specific build. 
+> See `<project>/.pio/build/<board>/zephyr/.config` for the final settings.
+> ```
+> cd .pio/build/nucleo_f756zg/zephyr
+> mate .config
+> ```
+
+
 #### 4.1.2. Synchronization Sample
+Same setup as previous example
+
+Code has lots of comments so is pretty clear.
+
+Example output:
+![Example output](images/2_synchronization.png)
+
 #### 4.1.3. Dining Philosophers
+Same setup as previous example. 
+
+There is a header file (`phil_obj_abstract.h`), which should go into the `include` subfolder (instead of `src`).
+
+Example output:
+![Example output](images/3_philosophers.png)
+
 
 ### 4.2. Basic Samples
 
@@ -91,6 +131,8 @@ More advanced examples are discusses in examples.md
 #### 4.3.2. Producer/consumer
 #### 4.3.3. Userspace Protected Memory
 #### 4.3.4. Syscall performances
+
+## 5. Debugging
 
 ## 6. Projects using Zephyr RTOS
 - [Air-quality sensor](https://github.com/ExploratoryEngineering/air-quality-sensor-node)
