@@ -144,7 +144,7 @@ Example output:
 Lessons:
 - Shows how to check footprint
 
-`common.conf`
+_common.conf_
 ```
 # Drivers and peripherals
 CONFIG_I2C=n
@@ -182,14 +182,14 @@ CONFIG_EARLY_CONSOLE=n
 CONFIG_SIZE_OPTIMIZATIONS=y
 ```
 
-`no-mt.conf`
+_no-mt.conf_
 ```
 # Single-threaded, no timer support in the kernel
 CONFIG_MULTITHREADING=n
 CONFIG_KERNEL_MEM_POOL=n
 ```
 
-`no-timers.conf`
+_no-timers.conf_
 ```
 # No timer support in the kernel
 CONFIG_SYS_CLOCK_EXISTS=n
