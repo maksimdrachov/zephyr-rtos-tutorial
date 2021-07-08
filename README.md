@@ -236,14 +236,18 @@ Example output:
 ![userspace_helloworld](images/8_userspace_helloworld.png)
 
 #### 4.3.2. Producer/consumer
-<span style="color:red">ERROR BUILDING</span>
+```diff
+- ERROR BUILDING
+```
 ```
 cannot open source file "syscalls/sample_driver.h" (dependency of "sample_driver.h")
 ```
 ![9_producer_consumer](images/9_producer_consumer_error.png)
 
 #### 4.3.3. Userspace Protected Memory
-<span style="color:red">ERROR BUILDING</span>
+```diff
+- ERROR BUILDING
+```
 ```
 storage size of 'pt_domain' isn't known
 storage size of 'enc_domain' isn't known
@@ -253,14 +257,18 @@ identifier "enc_part" is undefined
 ![10_UserProtected](images/10_UserProtectedMemory_erro.png)
 
 #### 4.3.4. Syscall performances
-<span style="color:red">ERROR BUILDING</span>
+```diff
+- ERROR BUILDING
+```
 ```
 cannot open source file "syscall_list.h" (dependency of "zephyr.h")
 ```
 ![11_Syscall_error](images/11_Syscall_error.png)
 
 ## 5. Debugging
-<span style="color:red">Can someone explain the setup for debugging?</span> <br>
+```diff
+- Can someone explain the setup for debugging?
+```
  Possible to get a clear view on running threads, their priorities,... (preferably using PlatformIO, but if you can provide an example using gdb, that would be useful as well)
 
 ## 6. Projects using Zephyr RTOS
