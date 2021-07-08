@@ -42,16 +42,25 @@ Since Zephyr is a pretty young project I have found it a bit lacking in terms of
   
 ## 2. Setup
 ### 2.1. VSCode + PlatformIO + Zephyr RTOS
+- NOOB-friendly!
+
 This is the one that I'm currently using, the examples are based on this setup.
 
-- NOOB-friendly!
+Setup:
+1) Install VSCode
+2) Add PlatformIO extension (will install Zephyr for you)
 ### 2.2. Eclipse + Zephyr RTOS
 Relevant [section](https://docs.zephyrproject.org/latest/application/index.html?highlight=eclipse#debug-with-eclipse) in Zephyr Documentation.
 
 - Zephyr-plugin doesn't work with the latest Eclipse. ([github-issue](https://github.com/zephyrproject-rtos/eclipse-plugin/issues/45))
 - However if you use an older version it should work apparently. (haven't tested this myself)
+
+Setup: [link](https://docs.zephyrproject.org/latest/application/index.html?highlight=eclipse#debug-with-eclipse)
+
 ### 2.3. West + Zephyr RTOS
 - Real pro's use this.
+
+Setup: [link](https://docs.zephyrproject.org/latest/getting_started/index.html)
 
 ## 3. The Basics
 
