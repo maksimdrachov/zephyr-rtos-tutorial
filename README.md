@@ -74,13 +74,27 @@ Basic examples useful to study for beginners are discussed here.
 
 More advanced examples are discussed in [`examples.md`](https://github.com/maksimdrachov/zephyr-rtos-tutorial/blob/main/examples.md)
 
+I'm using the samples from Zephyr 2.5.0, since that is the latest version of Zephyr that is available on PlatformIO.
+
+To get Zephyr 2.5.0:
+```
+git clone https://github.com/zephyrproject-rtos/zephyr
+git checkout v2.5-branch
+```
+To check version of Zephyr (for PlatformIO) -> make sure the samples you use are from the same version!
+```
+cd ~/.platformio/packages/framework-zephyr
+mate VERSION
+```
+
 ### 4.1. Classic Samples
 
 #### 4.1.1. Hello World
 Simple example, useful to understand the setup process.
-1) Create new project in PlatformIO
+1) Create new project in PlatformIO<br/>
+   -> select your platform and Zephyr RTOS
 2) Add `prj.conf` to `zephyr` subfolder (even though empty for this example)
-3) Add `monitor_speed = 115200` to `platformio.ini` (if you get weird characters in the serial window, probably wrong baud rate setting here)
+3) Add `monitor_speed = 115200` to `platformio.ini` (if you get weird characters in the serial window, probably wrong baud-rate setting here)
 4) Copy code to `main.c`
 5) 'Build'
 6) 'Flash'
@@ -215,11 +229,39 @@ Example output:
 ### 4.3. Userspace Samples
 
 #### 4.3.1. Hello World
+Lessons:
+- Simple example of how to create a thread with a defined stacksize.
+
+Example output:
+![userspace_helloworld](images/8_userspace_helloworld.png)
+
 #### 4.3.2. Producer/consumer
+<span style="color:red">ERROR BUILDING</span>
+```
+cannot open source file "syscalls/sample_driver.h" (dependency of "sample_driver.h")
+```
+![9_producer_consumer](images/9_producer_consumer_error.png)
+
 #### 4.3.3. Userspace Protected Memory
+<span style="color:red">ERROR BUILDING</span>
+```
+storage size of 'pt_domain' isn't known
+storage size of 'enc_domain' isn't known
+'enc_part' undeclared (first use in this function); did you mean 'enc_parts'?
+identifier "enc_part" is undefined
+```
+![10_UserProtected](images/10_UserProtectedMemory_erro.png)
+
 #### 4.3.4. Syscall performances
+<span style="color:red">ERROR BUILDING</span>
+```
+cannot open source file "syscall_list.h" (dependency of "zephyr.h")
+```
+![11_Syscall_error](images/11_Syscall_error.png)
 
 ## 5. Debugging
+<span style="color:red">Can someone explain the setup for debugging?</span> <br>
+ Possible to get a clear view on running threads, their priorities,... (preferably using PlatformIO, but if you can provide an example using gdb, that would be useful as well)
 
 ## 6. Projects using Zephyr RTOS
 - [Air-quality sensor](https://github.com/ExploratoryEngineering/air-quality-sensor-node)
