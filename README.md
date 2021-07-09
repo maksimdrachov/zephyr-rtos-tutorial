@@ -10,6 +10,7 @@
   - [3. The Basics](#3-the-basics)
     - [3.1. RTOS basics](#31-rtos-basics)
     - [3.2. Zephyr-specific basics](#32-zephyr-specific-basics)
+    - [3.3. CMake](#33-cmake)
   - [4. Examples](#4-examples)
     - [4.1. Classic Samples](#41-classic-samples)
       - [4.1.1. Hello World](#411-hello-world)
@@ -71,10 +72,18 @@ This [section](https://www.freertos.org/implementation/a00002.html) from FreeRTO
 
 A Zephyr application directory has the following components:
 - **CMakeLists.txt**: your build settings configuration file - this tells west (really a cmake build system under the hood) where to find what it needs to create your firmware. For more advanced projects, it's also used for debug settings, emulation, and other features.
-- **prj.conf**: the Kernel configuration file. For most projects, it tells Zephyr whether to include specific features for use in your application code - if you use GPIO, PWM, or a serial monitor, you’ll need to enable them in this file first. Sometimes also referred to as Kconfig file.
+- **prj.conf**: the Kernel configuration file. For most projects, it tells Zephyr whether to include specific features for use in your application code - if you use GPIO, PWM, or a serial monitor, you’ll need to enable them in this file first. Sometimes also referred to as Kconfig file. There is also something of a [GUI](https://docs.zephyrproject.org/2.4.0/guides/kconfig/menuconfig.html) which is helpful if you don't know where to start.
 - **src/main.c**: your custom application code - where the magic happens! It’s advisable to put all of your custom source code in a `src/` directory like this so it doesn’t get mixed up with your configuration files.
 
 Explanation on devicetree needed.
+
+### 3.3. CMake
+
+At some point you will need to understand how CMake works.
+
+[Video Tutorial](https://www.youtube.com/watch?v=nlKcXPUJGwA&list=PLalVdRk2RC6o5GHu618ARWh0VO0bFlif4) <- This one offers a pretty clear explanation for beginners
+
+[Wiki CMake Tutorial](https://cmake.org/cmake/help/latest/guide/tutorial/index.html)
 
 ## 4. Examples
 Location: `~/zephyrproject/zephyr/samples`
@@ -248,6 +257,9 @@ Example output:
 ```diff
 - ERROR BUILDING
 ```
+I suspect my error has something to do with my CMakeLists.txt, however even though I understand what is missing, I can't figure out what to do to fix this.
+
+I also think all the other errors that follow have the same core reason, namely files missing. So hopefully if someone can help me fix one of them I should be able to resolve the rest. :)
 ```
 cannot open source file "syscalls/sample_driver.h" (dependency of "sample_driver.h")
 ```
@@ -278,7 +290,7 @@ cannot open source file "syscall_list.h" (dependency of "zephyr.h")
 ```diff
 - Can someone explain the setup for debugging?
 ```
- Possible to get a clear view on running threads, their priorities,... (preferably using PlatformIO, but if you can provide an example using gdb, that would be useful as well)
+ Is it possible to get RTOS aware debugging inside PlatformIO?
 
 ## 6. Projects using Zephyr RTOS
 - [Air-quality sensor](https://github.com/ExploratoryEngineering/air-quality-sensor-node)
