@@ -298,5 +298,5 @@ cannot open source file "syscall_list.h" (dependency of "zephyr.h")
 - [RT-Loc](https://github.com/RT-LOC/zephyr-dwm1001) (Ultra Wideband localisation using DWM1001 module)
 - [BLE Environmental Sensor](https://github.com/patrickmoffitt/zephyr_ble_sensor)
 
-This is the project I'm currently working on, for clarity I'm documenting what each line does, so I can gain a better understanding:
+This is the project I'm currently working on. For clarity, I'm documenting what each line does, so I can gain a better understanding:
 - [STM32 Artnet-node](https://github.com/maksimdrachov/stm32-artnet)
