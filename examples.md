@@ -325,6 +325,15 @@
 #### Asynchronous Socket Echo Server
 #### Asynchronous Socket Echo Server Using select()
 #### Socket Echo Client
+```diff
+- ERROR BUILDING
+```
+![EchoClientError](images/12_EchoClientError.png)
+
+```
+cannot open source file "echo-apps-cert.der.inc" (dependency of "ca_certificate.h")
+
+```
 #### Socket Echo Server
 #### Socket HTTP Client
 #### Socket HTTP GET Example

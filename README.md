@@ -257,9 +257,9 @@ Example output:
 ```diff
 - ERROR BUILDING
 ```
-I suspect my error has something to do with my CMakeLists.txt, however even though I understand what is missing, I can't figure out what to do to fix this.
+I suspect my error has something to do with my CMakeLists.txt, since all the problems are caused by missing 'dependencies'.
 
-I also think all the other errors that follow have the same core reason, namely files missing. So hopefully if someone can help me fix one of them I should be able to resolve the rest. :)
+Since all the next errors have the same fundamental reason, hopefully if someone can help me fix one of them I should be able to resolve the rest. :)
 ```
 cannot open source file "syscalls/sample_driver.h" (dependency of "sample_driver.h")
 ```
