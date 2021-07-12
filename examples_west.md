@@ -8,6 +8,16 @@ Zephyr provides some explanation on how to setup and run the examples [here](htt
 - File -> Open... -> ~/zephyrproject
 - Terminal -> New Terminal
 
+## 1.1. Serial connection
+You have different options here:
+- Terminal (Mac)
+  ```
+  
+  ```
+- Terminal within VSCode
+- CoolTerm (or some alternative)
+![west_serial_settings](images/west_serial_settings.png)
+  
 
 # 2. Examples
 
