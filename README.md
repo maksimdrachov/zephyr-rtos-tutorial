@@ -24,6 +24,10 @@
 ## 1. Introduction
 Since Zephyr is a pretty young project I have found it a bit lacking in terms of tutorials for beginners (like myself). Therefore I decided to start writing this; to have 1 place that gives beginners a simple place to get started.
 
+Recommended hardware platform:
+- [Reel board](https://developer.nordicsemi.com/nRF_Connect_SDK/doc/0.3.0/zephyr/boards/arm/reel_board/doc/reel_board.html): This is a dev board from Nordic Semiconductor. Most examples are based on this board, so if you want the least "trouble", I'd go with this one. Downside: a bit expensive (~50eu).
+- Nucleo: I'm using a [Nucleo F756ZG](https://www.st.com/en/evaluation-tools/nucleo-f756zg.html).
+
 ### 1.1. Useful links
 - [Zephyr Official Documentation](https://docs.zephyrproject.org/latest/)
 - [Introduction to the Zephyr RTOS (video)](https://www.youtube.com/watch?v=jR5E5Kz9A-k): watch from 14:30-51:00
