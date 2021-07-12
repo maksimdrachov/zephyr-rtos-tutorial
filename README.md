@@ -14,6 +14,7 @@
     - [3.4. CMake](#34-cmake)
   - [4. Advanced](#4-advanced)
     - [4.1. Porting Zephyr](#41-porting-zephyr)
+    - [4.2. Device Tree](#42-device-tree)
   - [5. Examples](#5-examples)
   - [6. Debugging](#6-debugging)
     - [6.1. West](#61-west)
@@ -89,6 +90,8 @@ If your platform is not supported, you will need to 'port' Zephyr by setting all
 
 [Video](https://www.youtube.com/watch?v=R0GCLJRCYW0)
 
+### 4.2. Device Tree
+
 
 ## 5. Examples
 Location: `~/zephyrproject/zephyr/samples`
@@ -107,6 +110,8 @@ More advanced examples are discussed in [examples_adv.md](https://github.com/mak
 [This](https://youtu.be/jR5E5Kz9A-k?t=2221) video shows a basic example of how you can use gdb to debug a reel-board.
 
 For more advanced discussion of gdb, see [here](https://www.youtube.com/watch?v=FnfuxDVFcWE).
+
+See [examples_west.md](https://github.com/maksimdrachov/zephyr-rtos-tutorial/blob/main/examples_west.md)
 
 ### 6.2. PlatformIO
 
