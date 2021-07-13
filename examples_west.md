@@ -78,3 +78,26 @@ Check with serial interface if output correct.
 ### 2.3.4. Syscall performances
 
 # 3. Debugging
+
+[Video Tutorial](https://www.youtube.com/watch?v=FnfuxDVFcWE)
+
+[Thread analyzer](https://docs.zephyrproject.org/latest/guides/debug_tools/thread-analyzer.html)
+
+```
+cd zephyr/samples/synchronization
+
+west build -b nucleo_f756zg -- -DCONFIG_QEMU_ICOUNT=n -DCONFIG_THREAD_ANALYZER=y \
+-DCONFIG_THREAD_ANALYZER_USE_PRINTK=y -DCONFIG_THREAD_ANALYZER_AUTO=y \
+-DCONFIG_THREAD_ANALYZER_AUTO_INTERVAL=5
+
+west flash
+```
+![west_threads](images/west_threads.png)
+
+[Core Dump](https://docs.zephyrproject.org/latest/guides/debug_tools/coredump.html)
+
+[GDB stub](https://docs.zephyrproject.org/latest/guides/debug_tools/gdbstub.html)
+
+[Tracing](https://docs.zephyrproject.org/latest/guides/debug_tools/tracing/index.html)
+
+
