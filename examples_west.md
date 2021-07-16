@@ -79,7 +79,11 @@ Check with serial interface if output correct.
 
 # 3. Debugging
 
-[Video Tutorial](https://www.youtube.com/watch?v=FnfuxDVFcWE)
+[General overview of debugging techniques](https://www.youtube.com/watch?v=FnfuxDVFcWE)
+
+[GDB tutorial](https://www.youtube.com/watch?v=svG6OPyKsrw)
+
+## 3.1. Thread Analyzer
 
 [Thread analyzer](https://docs.zephyrproject.org/latest/guides/debug_tools/thread-analyzer.html)
 
@@ -92,12 +96,56 @@ west build -b nucleo_f756zg -- -DCONFIG_QEMU_ICOUNT=n -DCONFIG_THREAD_ANALYZER=y
 
 west flash
 ```
+
 ![west_threads](images/west_threads.png)
 
-[Core Dump](https://docs.zephyrproject.org/latest/guides/debug_tools/coredump.html)
+## 3.2. st-link
+For STM32 platforms
+- `st-info` - a programmer and chip information tool
+- `st-flash` - a flash manipulation tool
+- `st-trace` - a logging tool to record information on execution
+- `st-util` - a GDB server (supported in VSCode via the [Cortex-Debug](https://github.com/Marus/cortex-debug) plugin)
+- `stlink-lib` - a communication library
 
-[GDB stub](https://docs.zephyrproject.org/latest/guides/debug_tools/gdbstub.html)
+Additional information see [github-stlink](https://github.com/stlink-org/stlink)
+
+```
+st-link --descr
+
+st-util
+```
+![st-link-1](images/st-link-1.png)
+![st-link-2](images/st-link-2.png)
+
+## 3.3. GDB
+
+[GDB Official Documentation](http://sourceware.org/gdb/current/onlinedocs/gdb/index.html#SEC_Contents)
+
+[Debugging Programs with Multiple Threads](http://sourceware.org/gdb/current/onlinedocs/gdb/Threads.html#Threads)
+
+[GDB and OpenOCD](http://openocd.org/doc/html/GDB-and-OpenOCD.html)
+
+## 3.4. GDB Stub
+
+[GDB stub Zephyr Documentation](https://docs.zephyrproject.org/latest/guides/debug_tools/gdbstub.html)
+
+As far as I'm aware this won't work on STM32 architecture because it doesn't support this feature. ([ARCH_HAS_GDBSTUB is only true for x86](https://docs.zephyrproject.org/latest/reference/kconfig/CONFIG_ARCH_HAS_GDBSTUB.html))
+
+![gdb-stub](images/gdb-stub.png)
+
+Check: samples/subsys/debug/gdbstub
+
+NOT WORKING FOR ME
+## 3.5. Tracing
+
+[Download and Install TraceCompass](https://www.eclipse.org/tracecompass/)
+
+[Common MacOSX issue: App is damaged and can't be opened](https://apple.stackexchange.com/questions/372084/macos-catalina-app-is-damaged-and-cant-be-opened-you-should-move-it-to-the-t)
 
 [Tracing](https://docs.zephyrproject.org/latest/guides/debug_tools/tracing/index.html)
+
+## 3.6. Core Dump
+
+[Core Dump](https://docs.zephyrproject.org/latest/guides/debug_tools/coredump.html)
 
 
