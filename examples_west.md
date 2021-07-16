@@ -125,17 +125,29 @@ st-util
 
 [GDB and OpenOCD](http://openocd.org/doc/html/GDB-and-OpenOCD.html)
 
-## 3.4. GDB Stub
+## 3.4. GDB
 
 [GDB stub Zephyr Documentation](https://docs.zephyrproject.org/latest/guides/debug_tools/gdbstub.html)
 
-As far as I'm aware this won't work on STM32 architecture because it doesn't support this feature. ([ARCH_HAS_GDBSTUB is only true for x86](https://docs.zephyrproject.org/latest/reference/kconfig/CONFIG_ARCH_HAS_GDBSTUB.html))
-
-![gdb-stub](images/gdb-stub.png)
-
 Check: samples/subsys/debug/gdbstub
 
-NOT WORKING FOR ME
+```
+cd zephyr/samples/basic/threads
+west build -b nucleo_f756zg
+west flash
+west debugserver
+```
+![west-debugserver](images/west-debugserver.png)
+
+```
+arm-none-eabi-gdb -tui ./build/zephyr/zephyr.elf
+(gdb) target remote :3333
+(gdb) continue
+```
+![west-debugserver2](images/west-debugserver-2.png)
+- continue: program continues to run (you can check if lights are blinking correctly)
+- ctrl-c: stop program
+
 ## 3.5. Tracing
 
 [Download and Install TraceCompass](https://www.eclipse.org/tracecompass/)
