@@ -1,3 +1,31 @@
+- [1. Setup](#1-setup)
+  - [1.1. Serial connection](#11-serial-connection)
+- [2. Examples](#2-examples)
+  - [2.1. Classic Samples](#21-classic-samples)
+    - [2.1.1. Hello World](#211-hello-world)
+    - [2.1.2. Synchronization Sample](#212-synchronization-sample)
+    - [2.1.3. Dining Philosophers](#213-dining-philosophers)
+  - [2.2. Basic Samples](#22-basic-samples)
+    - [2.2.1. Blinky](#221-blinky)
+    - [2.2.2. PWM Blinky](#222-pwm-blinky)
+    - [2.2.3. Button](#223-button)
+    - [2.2.4. Fade LED](#224-fade-led)
+    - [2.2.5. Minimal footprint](#225-minimal-footprint)
+    - [2.2.6. PWM: RGB LED](#226-pwm-rgb-led)
+    - [2.2.7. Servomotor](#227-servomotor)
+    - [2.2.8. Basic Thread Example](#228-basic-thread-example)
+  - [2.3. Userspace Samples](#23-userspace-samples)
+    - [2.3.1. Hello World](#231-hello-world)
+    - [2.3.2. Producer/consumer](#232-producerconsumer)
+    - [2.3.3. Userspace Protected Memory](#233-userspace-protected-memory)
+    - [2.3.4. Syscall performances](#234-syscall-performances)
+- [3. Debugging](#3-debugging)
+  - [3.1. Thread Analyzer](#31-thread-analyzer)
+  - [3.2. st-link](#32-st-link)
+  - [3.3. GDB](#33-gdb)
+  - [3.4. Tracing](#34-tracing)
+  - [3.5. Core Dump](#35-core-dump)
+
 # 1. Setup
 
 Follow [this](https://docs.zephyrproject.org/latest/getting_started/index.html)
@@ -125,8 +153,6 @@ st-util
 
 [GDB and OpenOCD](http://openocd.org/doc/html/GDB-and-OpenOCD.html)
 
-## 3.4. GDB
-
 [GDB stub Zephyr Documentation](https://docs.zephyrproject.org/latest/guides/debug_tools/gdbstub.html)
 
 Check: samples/subsys/debug/gdbstub
@@ -144,11 +170,11 @@ arm-none-eabi-gdb -tui ./build/zephyr/zephyr.elf
 (gdb) target remote :3333
 (gdb) continue
 ```
-![west-debugserver2](images/west-debugserver-2.png)
+![west-debugserver2](images/west-debugserver-2.2.png)
 - continue: program continues to run (you can check if lights are blinking correctly)
 - ctrl-c: stop program
 
-## 3.5. Tracing
+## 3.4. Tracing
 
 [Download and Install TraceCompass](https://www.eclipse.org/tracecompass/)
 
@@ -156,7 +182,7 @@ arm-none-eabi-gdb -tui ./build/zephyr/zephyr.elf
 
 [Tracing](https://docs.zephyrproject.org/latest/guides/debug_tools/tracing/index.html)
 
-## 3.6. Core Dump
+## 3.5. Core Dump
 
 [Core Dump](https://docs.zephyrproject.org/latest/guides/debug_tools/coredump.html)
 
