@@ -13,8 +13,6 @@
     - [3.3. gdb](#33-gdb)
     - [3.4. CMake](#34-cmake)
   - [4. Advanced](#4-advanced)
-    - [4.1. Porting Zephyr](#41-porting-zephyr)
-    - [4.2. Device Tree](#42-device-tree)
   - [5. Examples](#5-examples)
   - [6. Debugging](#6-debugging)
     - [6.1. West](#61-west)
@@ -24,9 +22,12 @@
 ## 1. Introduction
 Since Zephyr is a pretty young project I have found it a bit lacking in terms of tutorials for beginners (like myself). Therefore I decided to start writing this; to have 1 place that gives beginners a simple place to get started.
 
-Recommended hardware platform:
+In terms of hardware you have a couple of different options:
 - [Reel board](https://developer.nordicsemi.com/nRF_Connect_SDK/doc/0.3.0/zephyr/boards/arm/reel_board/doc/reel_board.html): This is a dev board from Nordic Semiconductor. Most examples are based on this board, so if you want the least "trouble", I'd go with this one. Downside: a bit expensive (~50eu).
-- Nucleo: I'm using a [Nucleo F756ZG](https://www.st.com/en/evaluation-tools/nucleo-f756zg.html).
+- Nucleo: If you're already been working with embedded dev boards, chances are you have some of these laying around. I'm using a [Nucleo F756ZG](https://www.st.com/en/evaluation-tools/nucleo-f756zg.html).
+- QEMU: If you don't have any boards, you can always use QEMU that allows you to emulate different platforms.
+
+[Supported boards](https://docs.zephyrproject.org/latest/boards/index.html#boards)
 
 ### 1.1. Useful links
 - [Zephyr Official Documentation](https://docs.zephyrproject.org/latest/)
@@ -59,8 +60,6 @@ Relevant [section](https://docs.zephyrproject.org/latest/application/index.html?
 
 Setup: [link](https://docs.zephyrproject.org/latest/application/index.html?highlight=eclipse#debug-with-eclipse)
 
-Setup: [link](https://docs.zephyrproject.org/latest/getting_started/index.html)
-
 ## 3. The Basics
 
 ### 3.1. RTOS basics
@@ -89,18 +88,15 @@ At some point it is recommended to understand how CMake works.
 
 ## 4. Advanced
 
-### 4.1. Porting Zephyr 
-If your platform is not supported, you will need to 'port' Zephyr by setting all the right config files. (Good luck!)
-
-[Video](https://www.youtube.com/watch?v=R0GCLJRCYW0)
-
-### 4.2. Device Tree
+For discussing more 'advanced' topics I have created a seperate [repository](https://github.com/maksimdrachov/zephyr-rtos-advanced-tutorial).
 
 
 ## 5. Examples
 Location: `~/zephyrproject/zephyr/samples`
 
 Basic examples useful to study for beginners are discussed here:
+
+Advice: start with west immediately, if you find yourself overwhelmed, go to PlatformIO. Learn there, then go back to west.
 
 - PlatformIO: [examples_PIO.md](https://github.com/maksimdrachov/zephyr-rtos-tutorial/blob/main/examples_PIO.md)
 - west: [examples_west.md](https://github.com/maksimdrachov/zephyr-rtos-tutorial/blob/main/examples_west.md)
