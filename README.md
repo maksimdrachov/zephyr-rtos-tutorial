@@ -14,6 +14,7 @@
     - [3.4. CMake](#34-cmake)
   - [4. Advanced](#4-advanced)
   - [5. Examples](#5-examples)
+  - [6. Tests](#6-tests)
   - [6. Debugging](#6-debugging)
     - [6.1. West](#61-west)
     - [6.2. PlatformIO](#62-platformio)
@@ -37,7 +38,7 @@ In terms of hardware you have a couple of different options:
 ## 2. Setup
 ### 2.1. VSCode + PlatformIO + Zephyr RTOS
 
-To start I used this setup, if you don't need to go in-depth this will probably work. 
+Starting off I used this setup, if you don't need to go in-depth this will probably work. 
 
 However once you start messing with more 'advanced' features of Zephyr, you will probably have to make the transition to the `west` metatool.
 
@@ -63,7 +64,27 @@ Setup: [link](https://docs.zephyrproject.org/latest/application/index.html?highl
 ## 3. The Basics
 
 ### 3.1. RTOS basics
-This [section](https://www.freertos.org/implementation/a00002.html) from FreeRTOS should cover the basics of what an RTOS does.
+
+Before going any further it might be useful to quickly go over some basic RTOS concepts.
+
+First: what is an RTOS? It is an operating system that is intended to serve real-time applications. Typical time requirement are below 0.01s. Two types of systems can be identified:
+- Event-driven: switch tasks based on their priorities
+- Time-sharing: switch the task based on clock interrupts
+
+Some key concepts:
+- Kernel: the core component within an operating system. Takes care of scheduling the tasks in such a way that they *appear* to be happening simultanously.
+
+![rtos_basic_execution](images/rtos_basic_execution.gif)
+
+- Task: Each executing program is a task (or thread) under control of the operating system.
+- Scheduler: part of the kernel responsible for deciding which task should be executing at any particular time. The scheduling policy decides which task to execute at any point in time.
+- Sleep: a task can choose to (voluntarily) suspend itself for a fixed period.
+- Block: a task can wait for a resource to become available (eg a serial port) or an event to occur (eg a key press).
+- Context: as a task executes it uses the registers and memory. The processor registers, stack, etc compromise the task execution context. On switching to a task the RTOS is responsible to set the context back to the way it was at the moment it got pre-empted the previous time. The process of saving the context of a task being suspended and restoring the context of a task being resumed is called context switching.
+
+
+
+source: [wikipedia](https://en.wikipedia.org/wiki/Real-time_operating_system), [freertos](https://www.freertos.org/implementation/a00004.html)
 
 ### 3.2. Zephyr-specific basics
 
@@ -103,7 +124,8 @@ Advice: start with west immediately, if you find yourself overwhelmed, go to Pla
 
 More advanced examples are discussed in [examples_adv.md](https://github.com/maksimdrachov/zephyr-rtos-tutorial/blob/main/examples_adv.md)
 
-
+## 6. Tests
+Location : `~/zephyrproject/zephyr/tests`
 
 ## 6. Debugging
 ### 6.1. West
