@@ -9,15 +9,19 @@
     - [2.3. Eclipse + Plugin + Zephyr RTOS](#23-eclipse--plugin--zephyr-rtos)
   - [3. The Basics](#3-the-basics)
     - [3.1. RTOS basics](#31-rtos-basics)
-    - [3.2. Zephyr-specific basics](#32-zephyr-specific-basics)
+    - [3.2. Zephyr-specific](#32-zephyr-specific)
     - [3.3. gdb](#33-gdb)
     - [3.4. CMake](#34-cmake)
-  - [4. Advanced](#4-advanced)
+  - [4. Kernel Services](#4-kernel-services)
+    - [4.1. Scheduling, Interrupts and Synchronization](#41-scheduling-interrupts-and-synchronization)
+      - [4.1.1. Threads](#411-threads)
+      - [4.1.2. Scheduling](#412-scheduling)
+    - [4.2. Data Passing](#42-data-passing)
+    - [4.3. Memory Management](#43-memory-management)
+    - [4.4. Timing](#44-timing)
+  - [5. Advanced topics](#5-advanced-topics)
   - [5. Examples](#5-examples)
   - [6. Tests](#6-tests)
-  - [6. Debugging](#6-debugging)
-    - [6.1. West](#61-west)
-    - [6.2. PlatformIO](#62-platformio)
   - [7. Projects using Zephyr RTOS](#7-projects-using-zephyr-rtos)
 
 ## 1. Introduction
@@ -82,34 +86,68 @@ Some key concepts:
 - Block: a task can wait for a resource to become available (eg a serial port) or an event to occur (eg a key press).
 - Context: as a task executes it uses the registers and memory. The processor registers, stack, etc compromise the task execution context. On switching to a task the RTOS is responsible to set the context back to the way it was at the moment it got pre-empted the previous time. The process of saving the context of a task being suspended and restoring the context of a task being resumed is called context switching.
 
+source: [wikipedia](https://en.wikipedia.org/wiki/Real-time_operating_system), [freertos](https://www.freertos.org/implementation/a00004.html), [zephyr](https://docs.zephyrproject.org/latest/reference/kernel/index.html)
 
-
-source: [wikipedia](https://en.wikipedia.org/wiki/Real-time_operating_system), [freertos](https://www.freertos.org/implementation/a00004.html)
-
-### 3.2. Zephyr-specific basics
+### 3.2. Zephyr-specific
 
 A Zephyr application directory has the following components:
 - **CMakeLists.txt**: your build settings configuration file - this tells west (really a cmake build system under the hood) where to find what it needs to create your firmware. For more advanced projects, it's also used for debug settings, emulation, and other features.
-- **prj.conf**: the Kernel configuration file. For most projects, it tells Zephyr whether to include specific features for use in your application code - if you use GPIO, PWM, or a serial monitor, you’ll need to enable them in this file first. Sometimes also referred to as Kconfig file. There is also something of a [GUI](https://docs.zephyrproject.org/2.4.0/guides/kconfig/menuconfig.html) which is helpful if you don't know where to start.
+  
+```
+cmake_minimum_required(VERSION 3.13.1)
+find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
+project(blinky)
+
+target_sources(app PRIVATE src/main.c)
+```
+*samples/basic/blinky/CMakeLists.txt*
+
+- **prj.conf**: the Kernel configuration file. For most projects, it tells Zephyr whether to include specific features for use in your application code - if you use GPIO, PWM, or a serial monitor, you’ll need to enable them in this file first. Sometimes also referred to as Kconfig file. There is also something of a [GUI](https://docs.zephyrproject.org/2.4.0/guides/kconfig/menuconfig.html) which is helpful to get started.
+![guiconfig](images/guiconfig.png)
+*guiconfig*
+
 - **src/main.c**: your custom application code - where the magic happens! It’s advisable to put all of your custom source code in a `src/` directory like this so it doesn’t get mixed up with your configuration files.
+
+Once you have succesfully built an application a build folder will appear within your directory. The following files are interesting to take a look at:
+- **build/zephyr/zephyr.dts**: CMake uses a devicetree to tailor the build towards your specific architecture/board. For an in-depth explanation on how to interpret devicetree files see [here](https://github.com/maksimdrachov/zephyr-rtos-advanced-tutorial#7-devicetree).
+- **build/zephyr/.config**: To check the final Kconfig used for your built. This can be useful to verify if a setting has been set correctly.
 
 ### 3.3. gdb
 
-At some point you will need to understand how gdb works.
+In order to be able to debug multi-threaded systems, you will need to be able to use `gdb`.
 
-[Video Tutorial](https://www.youtube.com/watch?v=FnfuxDVFcWE)
+[Youtube playlist explaining lots of common debugging techniques](https://www.youtube.com/watch?v=mfmXcbiRs0E&list=PL9IEJIKnBJjHGWPN_S9NS_Ky1-tC8ZrUI) 
 
 ### 3.4. CMake
 
-At some point it is recommended to understand how CMake works.
+At some point it is recommended to understand how CMake works. (Probably not right away though, so feel free to skip this one for now)
 
 [Video Tutorial](https://www.youtube.com/watch?v=nlKcXPUJGwA&list=PLalVdRk2RC6o5GHu618ARWh0VO0bFlif4)
 
 [Wiki CMake Tutorial](https://cmake.org/cmake/help/latest/guide/tutorial/index.html)
 
-## 4. Advanced
+## 4. Kernel Services
+In this section we'll go over all the services available using the Zephyr kernel.
 
-For discussing more 'advanced' topics I have created a seperate [repository](https://github.com/maksimdrachov/zephyr-rtos-advanced-tutorial).
+The text and format is based on the [Zephyr Api](https://docs.zephyrproject.org/latest/reference/kernel/index.html), these are just my condenced notes for that section.
+
+### 4.1. Scheduling, Interrupts and Synchronization
+#### 4.1.1. Threads
+See kernel_threads.md
+
+#### 4.1.2. Scheduling
+See kernel_scheduling.md
+
+### 4.2. Data Passing
+See kernel_data_passing.md
+
+### 4.3. Memory Management
+
+### 4.4. Timing
+
+## 5. Advanced topics
+
+For discussing more 'advanced' topics using Zephyr, I have created a seperate [repository](https://github.com/maksimdrachov/zephyr-rtos-advanced-tutorial).
 
 
 ## 5. Examples
@@ -126,16 +164,6 @@ More advanced examples are discussed in [examples_adv.md](https://github.com/mak
 
 ## 6. Tests
 Location : `~/zephyrproject/zephyr/tests`
-
-## 6. Debugging
-### 6.1. West
-[This](https://youtu.be/jR5E5Kz9A-k?t=2221) video shows a basic example of how you can use gdb to debug a reel-board.
-
-For more advanced discussion of gdb, see [here](https://www.youtube.com/watch?v=FnfuxDVFcWE).
-
-See [examples_west.md](https://github.com/maksimdrachov/zephyr-rtos-tutorial/blob/main/examples_west.md)
-
-### 6.2. PlatformIO
 
 ## 7. Projects using Zephyr RTOS
 - [Air-quality sensor](https://github.com/ExploratoryEngineering/air-quality-sensor-node)
