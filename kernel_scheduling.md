@@ -33,7 +33,7 @@ Once a cooperative thread becomes the current thread, it remains the current thr
   
 Consequently, if a cooperative thread performs lengthy computations, it may cause an unacceptable delay in the scheduling of other threads, including those of higher priority and equal priority.
 
-![cooperative](images/cooperative.png)
+![cooperative](images/cooperative1.png)
 
 To overcome such problems, a cooperative thread can volutarily relinquish the CPU from time to time to permit other threads to execute. A thread can relinquish the CPU in two ways:
 
