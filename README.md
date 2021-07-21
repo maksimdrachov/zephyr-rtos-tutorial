@@ -20,8 +20,20 @@
       - [4.1.4. Semaphores](#414-semaphores)
       - [4.1.5. Mutexes](#415-mutexes)
     - [4.2. Data Passing](#42-data-passing)
+      - [4.2.1. Queues](#421-queues)
+      - [4.2.2. FIFOs](#422-fifos)
+      - [4.2.3. LIFOs](#423-lifos)
+      - [4.2.4. Stacks](#424-stacks)
+      - [4.2.4. Message Queues](#424-message-queues)
+      - [4.2.4. Mailboxes](#424-mailboxes)
+      - [4.2.4. Pipes](#424-pipes)
     - [4.3. Memory Management](#43-memory-management)
+      - [4.3.1. Memory heaps](#431-memory-heaps)
+      - [4.3.2. Memory slabs](#432-memory-slabs)
     - [4.4. Timing](#44-timing)
+      - [4.4.1. Kernel Timing](#441-kernel-timing)
+      - [4.4.2. Timers](#442-timers)
+  - [5. Devicetree guide](#5-devicetree-guide)
   - [5. Advanced topics](#5-advanced-topics)
   - [5. Examples](#5-examples)
   - [6. Tests](#6-tests)
@@ -136,25 +148,61 @@ The text and format is based on the [Zephyr Api](https://docs.zephyrproject.org/
 
 ### 4.1. Scheduling, Interrupts and Synchronization
 #### 4.1.1. Threads
-See [kernel_threads.md](https://github.com/maksimdrachov/zephyr-rtos-tutorial/blob/main/kernel_threads.md)
+- [x] See [kernel_threads.md](https://github.com/maksimdrachov/zephyr-rtos-tutorial/blob/main/kernel_threads.md)
 
 #### 4.1.2. Scheduling
-See kernel_scheduling.md
+- [x] See [kernel_scheduling.md](https://github.com/maksimdrachov/zephyr-rtos-tutorial/blob/main/kernel_scheduling.md)
 
 #### 4.1.3. Interrupts
-See kernel_interrupts.md
+- [ ] See [kernel_interrupts.md](https://github.com/maksimdrachov/zephyr-rtos-tutorial/blob/main/kernel_interrupts.md)
 
 #### 4.1.4. Semaphores
-See kernel_semaphores.md
+- [ ] See [kernel_semaphores.md](https://github.com/maksimdrachov/zephyr-rtos-tutorial/blob/main/kernel_semaphores.md)
 
 #### 4.1.5. Mutexes
-See kernel_mutexes.md
+- [ ] See [kernel_mutexes.md](https://github.com/maksimdrachov/zephyr-rtos-tutorial/blob/main/kernel_mutexes.md)
 
 ### 4.2. Data Passing
 
+#### 4.2.1. Queues
+- [ ] See [kernel_queues.md](https://github.com/maksimdrachov/zephyr-rtos-tutorial/blob/main/kernel_queues.md)
+
+#### 4.2.2. FIFOs
+- [ ] See [kernel_fifos.md](https://github.com/maksimdrachov/zephyr-rtos-tutorial/blob/main/kernel_fifos.md)
+
+#### 4.2.3. LIFOs
+- [ ] See [kernel_lifos.md](https://github.com/maksimdrachov/zephyr-rtos-tutorial/blob/main/kernel_lifos.md)
+
+#### 4.2.4. Stacks
+- [ ] See [kernel_stacks.md](https://github.com/maksimdrachov/zephyr-rtos-tutorial/blob/main/kernel_stacks.md)
+
+#### 4.2.4. Message Queues 
+- [ ] See [kernel_message_queues.md](https://github.com/maksimdrachov/zephyr-rtos-tutorial/blob/main/kernel_message_queues.md)
+
+#### 4.2.4. Mailboxes 
+- [ ] See [kernel_mailboxes.md](https://github.com/maksimdrachov/zephyr-rtos-tutorial/blob/main/kernel_mailboxes.md)
+
+#### 4.2.4. Pipes 
+- [ ] See [kernel_pipes.md](https://github.com/maksimdrachov/zephyr-rtos-tutorial/blob/main/kernel_pipes.md)
+
 ### 4.3. Memory Management
 
+#### 4.3.1. Memory heaps 
+- [ ] See [kernel_memory_heaps.md](https://github.com/maksimdrachov/zephyr-rtos-tutorial/blob/main/kernel_memory_heaps.md)
+
+#### 4.3.2. Memory slabs 
+- [ ] See [kernel_memory_slabs.md](https://github.com/maksimdrachov/zephyr-rtos-tutorial/blob/main/kernel_memory_slabs.md)
+
 ### 4.4. Timing
+
+#### 4.4.1. Kernel Timing
+- [ ] See [kernel_timing.md](https://github.com/maksimdrachov/zephyr-rtos-tutorial/blob/main/kernel_memory_timing.md)
+
+#### 4.4.2. Timers
+- [ ] See [kernel_timers.md](https://github.com/maksimdrachov/zephyr-rtos-tutorial/blob/main/kernel_timers.md)
+
+## 5. Devicetree guide
+- [ ] See [devicetree_guide.md](https://github.com/maksimdrachov/zephyr-rtos-tutorial/blob/main/devicetree_guide.md)
 
 ## 5. Advanced topics
 
