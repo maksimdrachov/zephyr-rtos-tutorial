@@ -1,4 +1,19 @@
 # Threads
+- [Threads](#threads)
+  - [1. Introduction](#1-introduction)
+  - [2. Thread commands](#2-thread-commands)
+    - [2.1. k_thread_start()](#21-k_thread_start)
+    - [2.2. k_thread_join()](#22-k_thread_join)
+    - [2.3. k_thread_abort()](#23-k_thread_abort)
+    - [2.4. k_thread_suspend()](#24-k_thread_suspend)
+    - [2.5. k_sleep()](#25-k_sleep)
+  - [3. Thread states](#3-thread-states)
+  - [4. Thread stack objects](#4-thread-stack-objects)
+  - [5. Thread priorities](#5-thread-priorities)
+  - [6. Thread options](#6-thread-options)
+  - [7. Examples](#7-examples)
+  - [8. Runtime statistics](#8-runtime-statistics)
+  - [9. API reference](#9-api-reference)
 
 ## 1. Introduction
 
@@ -66,16 +81,53 @@ The priority of a thread can be changed, even after it has already started.
 CONFIG_NUM_COOP_PRIORITIES and CONFIG_NUM_PREEMPT_PRIORITIES specify the number of priority levels for each class of thread.
 
 ## 6. Thread options
+Kernel supports thread options that allow a thread to receive special treatment under specific circumstances.
 
-## 7. Thread custom data
+- K_ESSENTIAL: tags the thread as an essential thread. Instructs the kernel to treat the termination or aborting of the thread as a fatal system error.
+- K_FP_REGS: indicates that the thread uses the CPU's floating point registers. Instructs the kernel to take additional steps to save and restore the contents of these registers when scheduling the thread. 
+- K_USER: if CONFIG_USERSPACE is enabled, this thread will be created in user mode and will have reduced privileges.
+- K_INHERIT_PERMS: if CONFIG_USERSPACE is enabled, this thread will inherit all kernel object permissions that the parent thread had.
 
-## 8. Implementation
+## 7. Examples
+Example 1 : using the thread spawning function
+```
+#define MY_STACK_SIZE 500
+#define MY_PRIORITY 5
 
-## 9. Runtime statistics
+extern void my_entry_point(void *, void *, void *);
 
-## 10. Suggested uses
+K_THREAD_STACK_DEFINE(my_stack_area, MY_STACK_SIZE);
+struct k_thread my_thread_data;
 
-## 11. Configuration options
+k_tid_t my_tid = k_thread_create(&my_thread_data, my_stack_area,
+                                 K_THREAD_STACK_SIZEOF(my_stack_area),
+                                 my_entry_point,
+                                 NULL, NULL, NULL,
+                                 MY_PRIORITY, 0, K_NO_WAIT);
+```
 
-## 12. API reference
+Example 2: a thread can be declared at compile time by calling K_THREAD_DEFINE. The macro defines the stack area, control block and thread id variables automatically.
+```
+#define MY_STACK_SIZE 500
+#define MY_PRIORITY 5
 
+extern void my_entry_point(void *, void *, void *);
+
+K_THREAD_DEFINE(my_tid, MY_STACK_SIZE,
+                my_entry_point, NULL, NULL, NULL,
+                MY_PRIORITY, 0, 0);
+```
+
+## 8. Runtime statistics
+Thread runtime statistics can be gathered and retrieved if CONFIG_THREAD_RUNTIME_STATS is enabled, for example, total number of execution cycles of a thread.
+
+```
+k_thread_runtime_stats_t rt_stats_thread;
+
+k_thread_runtime_stats_get(k_current_get(), &rt_stats_thread);
+
+printk("Cycles: %llu\n", rt_stats_thread.execution_cycles);
+```
+
+## 9. API reference
+See [zephyr-wiki](https://docs.zephyrproject.org/latest/reference/kernel/threads/index.html#api-reference) (scroll down)

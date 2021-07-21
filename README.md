@@ -133,7 +133,7 @@ The text and format is based on the [Zephyr Api](https://docs.zephyrproject.org/
 
 ### 4.1. Scheduling, Interrupts and Synchronization
 #### 4.1.1. Threads
-See kernel_threads.md
+See [kernel_threads.md](https://github.com/maksimdrachov/zephyr-rtos-tutorial/blob/main/kernel_threads.md)
 
 #### 4.1.2. Scheduling
 See kernel_scheduling.md
