@@ -16,6 +16,9 @@
     - [4.1. Scheduling, Interrupts and Synchronization](#41-scheduling-interrupts-and-synchronization)
       - [4.1.1. Threads](#411-threads)
       - [4.1.2. Scheduling](#412-scheduling)
+      - [4.1.3. Interrupts](#413-interrupts)
+      - [4.1.4. Semaphores](#414-semaphores)
+      - [4.1.5. Mutexes](#415-mutexes)
     - [4.2. Data Passing](#42-data-passing)
     - [4.3. Memory Management](#43-memory-management)
     - [4.4. Timing](#44-timing)
@@ -138,8 +141,16 @@ See [kernel_threads.md](https://github.com/maksimdrachov/zephyr-rtos-tutorial/bl
 #### 4.1.2. Scheduling
 See kernel_scheduling.md
 
+#### 4.1.3. Interrupts
+See kernel_interrupts.md
+
+#### 4.1.4. Semaphores
+See kernel_semaphores.md
+
+#### 4.1.5. Mutexes
+See kernel_mutexes.md
+
 ### 4.2. Data Passing
-See kernel_data_passing.md
 
 ### 4.3. Memory Management
 
