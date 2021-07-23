@@ -35,9 +35,9 @@
       - [4.4.2. Timers](#442-timers)
   - [5. Devicetree guide](#5-devicetree-guide)
   - [5. Advanced topics](#5-advanced-topics)
-  - [5. Examples](#5-examples)
-  - [6. Tests](#6-tests)
-  - [7. Projects using Zephyr RTOS](#7-projects-using-zephyr-rtos)
+  - [6. Examples](#6-examples)
+  - [7. Tests](#7-tests)
+  - [8. Projects using Zephyr RTOS](#8-projects-using-zephyr-rtos)
 
 ## 1. Introduction
 Since Zephyr is a pretty young project I have found it a bit lacking in terms of tutorials for beginners (like myself). Therefore I decided to start writing this; to have 1 place that gives beginners a simple place to get started.
@@ -57,9 +57,7 @@ In terms of hardware you have a couple of different options:
 ## 2. Setup
 ### 2.1. VSCode + PlatformIO + Zephyr RTOS
 
-Starting off I used this setup, if you don't need to go in-depth this will probably work. 
-
-However once you start messing with more 'advanced' features of Zephyr, you will probably have to make the transition to the `west` metatool.
+Starting off I used this setup, however once you start messing with more 'advanced' features of Zephyr, you will probably have to make the transition to the `west` metatool.
 
 Setup:
 1) Install VSCode
@@ -67,7 +65,7 @@ Setup:
   
 ### 2.2. VSCode + West + Zephyr RTOS
 
-The 'recommended' way to use Zephyr. 
+The 'recommended' way to use Zephyr. (I will be using this one)
 
 Setup: [link](https://docs.zephyrproject.org/latest/getting_started/index.html)
 
@@ -91,15 +89,15 @@ First: what is an RTOS? It is an operating system that is intended to serve real
 - Time-sharing: switch the task based on clock interrupts
 
 Some key concepts:
-- Kernel: the core component within an operating system. Takes care of scheduling the tasks in such a way that they *appear* to be happening simultanously.
+- **Kernel**: the core component within an operating system. Takes care of scheduling the tasks in such a way that they *appear* to be happening simultanously.
 
 ![rtos_basic_execution](images/rtos_basic_execution.gif)
 
-- Task: Each executing program is a task (or thread) under control of the operating system.
-- Scheduler: part of the kernel responsible for deciding which task should be executing at any particular time. The scheduling policy decides which task to execute at any point in time.
-- Sleep: a task can choose to (voluntarily) suspend itself for a fixed period.
-- Block: a task can wait for a resource to become available (eg a serial port) or an event to occur (eg a key press).
-- Context: as a task executes it uses the registers and memory. The processor registers, stack, etc compromise the task execution context. On switching to a task the RTOS is responsible to set the context back to the way it was at the moment it got pre-empted the previous time. The process of saving the context of a task being suspended and restoring the context of a task being resumed is called context switching.
+- **Task**: Each executing program is a task (or thread) under control of the operating system.
+- **Scheduler**: part of the kernel responsible for deciding which task should be executing at any particular time. The scheduling policy decides which task to execute at any point in time.
+- **Sleep**: a task can choose to (voluntarily) suspend itself for a fixed period.
+- **Block**: a task can wait for a resource to become available (eg a serial port) or an event to occur (eg a key press).
+- **Context**: as a task executes it uses the registers and memory. The processor registers, stack, etc compromise the task execution context. On switching to a task the RTOS is responsible to set the context back to the way it was at the moment it got pre-empted the previous time. The process of saving the context of a task being suspended and restoring the context of a task being resumed is called context switching.
 
 source: [wikipedia](https://en.wikipedia.org/wiki/Real-time_operating_system), [freertos](https://www.freertos.org/implementation/a00004.html), [zephyr](https://docs.zephyrproject.org/latest/reference/kernel/index.html)
 
@@ -124,12 +122,12 @@ target_sources(app PRIVATE src/main.c)
 - **src/main.c**: your custom application code - where the magic happens! It’s advisable to put all of your custom source code in a `src/` directory like this so it doesn’t get mixed up with your configuration files.
 
 Once you have succesfully built an application a build folder will appear within your directory. The following files are interesting to take a look at:
-- **build/zephyr/zephyr.dts**: CMake uses a devicetree to tailor the build towards your specific architecture/board. For an in-depth explanation on how to interpret devicetree files see [here](https://github.com/maksimdrachov/zephyr-rtos-advanced-tutorial#7-devicetree).
+- **build/zephyr/zephyr.dts**: CMake uses a devicetree to tailor the build towards your specific architecture/board. A more in-depth discussion of devicetree follows a bit later.
 - **build/zephyr/.config**: To check the final Kconfig used for your built. This can be useful to verify if a setting has been set correctly.
 
 ### 3.3. gdb
 
-In order to be able to debug multi-threaded systems, you will need to be able to use `gdb`.
+In order to be able to debug multi-threaded systems, you will need to be able to use `gdb`. (In the examples we'll go step-by-step over some commonly used debugging techniques)
 
 [Youtube playlist explaining lots of common debugging techniques](https://www.youtube.com/watch?v=mfmXcbiRs0E&list=PL9IEJIKnBJjHGWPN_S9NS_Ky1-tC8ZrUI) 
 
@@ -206,25 +204,20 @@ The text and format is based on the [Zephyr Api](https://docs.zephyrproject.org/
 
 ## 5. Advanced topics
 
-For discussing more 'advanced' topics using Zephyr, I have created a seperate [repository](https://github.com/maksimdrachov/zephyr-rtos-advanced-tutorial).
+For discussing more 'advanced' topics using Zephyr (such as networking, bluetooth,...), I have created a seperate [repository](https://github.com/maksimdrachov/zephyr-rtos-advanced-tutorial).
 
 
-## 5. Examples
+## 6. Examples
 Location: `~/zephyrproject/zephyr/samples`
 
-Basic examples useful to study for beginners are discussed here:
+Basic examples useful to study for beginners are discussed here: [examples_west.md](https://github.com/maksimdrachov/zephyr-rtos-tutorial/blob/main/examples_west.md)
 
-Advice: start with west immediately, if you find yourself overwhelmed, go to PlatformIO. Learn there, then go back to west.
+More advanced examples are discussed here: [examples_adv.md](https://github.com/maksimdrachov/zephyr-rtos-tutorial/blob/main/examples_adv.md)
 
-- PlatformIO: [examples_PIO.md](https://github.com/maksimdrachov/zephyr-rtos-tutorial/blob/main/examples_PIO.md)
-- west: [examples_west.md](https://github.com/maksimdrachov/zephyr-rtos-tutorial/blob/main/examples_west.md)
-
-More advanced examples are discussed in [examples_adv.md](https://github.com/maksimdrachov/zephyr-rtos-tutorial/blob/main/examples_adv.md)
-
-## 6. Tests
+## 7. Tests
 Location : `~/zephyrproject/zephyr/tests`
 
-## 7. Projects using Zephyr RTOS
+## 8. Projects using Zephyr RTOS
 - [Air-quality sensor](https://github.com/ExploratoryEngineering/air-quality-sensor-node)
 - [Pinetime-hypnos](https://github.com/endian-albin/pinetime-hypnos) (smartwatch)
 - [RT-Loc](https://github.com/RT-LOC/zephyr-dwm1001) (Ultra Wideband localisation using DWM1001 module)

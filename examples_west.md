@@ -56,7 +56,14 @@ cd zephyr/samples/hello_world
 west build -b nucleo_f756zg
 west flash
 ```
-Check with serial interface if "hello world" is being output.
+
+![hello_world](images/hello_world_vs_code.png)
+*succesful build*
+
+![hello_world_2](images/hello_world_vs_code_2.png)
+*succesful flash*
+
+Check with serial interface if "hello world" is being output. (Press reset on your board)
 
 ![west_hello_world_serial](images/west_hello_world_serial.png)
 
@@ -66,9 +73,34 @@ cd zephyr/samples/synchronization
 west build -b nucleo_f756zg
 west flash
 ```
+
 Check with serial interface if output correct.
 
 ![west_synchronization_serial](images/west_synchronization_serial.png)
+
+Now let's try some debugging. 
+```
+west debugserver
+```
+![synchro_debug](images/synchro_debugserver.png)
+
+
+Open a new terminal window and cd to `zephyr/samples/synchronization`. 
+```
+arm-none-eabi-gdb -tui ./build/zephyr/zephyr.elf
+(gdb) target remote :3333
+```
+![target_remote](images/target_remote.png)
+
+```
+(gdb) monitor reset init
+(gdb) monitor flash write_image erase ./build/zephyr/zephyr.elf
+(gdb) monitor reset halt
+(gdb) monitor resume
+(gdb) monitor halt
+(gdb) 
+```
+
 
 ### 2.1.3. Dining Philosophers
 ```
