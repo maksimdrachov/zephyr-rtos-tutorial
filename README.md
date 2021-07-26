@@ -50,9 +50,18 @@ In terms of hardware you have a couple of different options:
 [Supported boards](https://docs.zephyrproject.org/latest/boards/index.html#boards)
 
 ### 1.1. Useful links
+
+**General**
 - [Zephyr Official Documentation](https://docs.zephyrproject.org/latest/)
 - [Introduction to the Zephyr RTOS (video)](https://www.youtube.com/watch?v=jR5E5Kz9A-k): watch from 14:30-51:00
-- [PlatformIO: Zephyr RTOS documentation](https://docs.platformio.org/en/latest/frameworks/zephyr.html)
+
+**Youtube**
+- [The Linux Foundation](https://www.youtube.com/c/LinuxfoundationOrg/search?query=zephyr)
+- [Zephyr Project](https://www.youtube.com/c/ZephyrProject/videos)
+
+**Blogs**
+- [jaredwolff.com](https://www.jaredwolff.com/blog/)
+- [linumiz.com](https://www.linumiz.com/zephyr-rtos-getting-started/)
   
 ## 2. Setup
 ### 2.1. VSCode + PlatformIO + Zephyr RTOS

@@ -34,7 +34,34 @@ Zephyr provides some explanation on how to setup and run the examples [here](htt
 
 - Open VSCode
 - File -> Open... -> ~/zephyrproject
-- Terminal -> New Terminal
+
+To debug you'll need to install cortex-debug (expansion for VSCode) add launch.json to your .vscode folder:
+```
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "openocd",
+            "cwd": "${workspaceRoot}",
+            "executable": "zephyr/samples/synchronization/build/zephyr/zephyr.elf",
+            "name": "zephyr STM32F746ZG",
+            "device": "STM32F746ZG",
+            "configFiles": [
+                "zephyr/boards/arm/nucleo_f756zg/support/openocd.cfg"
+                   ]
+        }
+    ]
+}
+```
+Change the values according to the board you're using, sample you're trying to debug,...
+
+If you want to check peripheral register values during debugging you will need to add an svdFile entry:
+
+![svdfile](images/svdfile.png)
+
+[youtube-explanation](https://www.youtube.com/watch?v=xaC5oWwzOt0)
 
 ## 1.1. Serial connection
 You have different options here:
@@ -56,12 +83,12 @@ cd zephyr/samples/hello_world
 west build -b nucleo_f756zg
 west flash
 ```
+*<p style="text-align: center;"> succesful build</p>*
 
 ![hello_world](images/hello_world_vs_code.png)
-*succesful build*
 
+*<p style="text-align: center;"> succesful flash</p>*
 ![hello_world_2](images/hello_world_vs_code_2.png)
-*succesful flash*
 
 Check with serial interface if "hello world" is being output. (Press reset on your board)
 
@@ -78,29 +105,18 @@ Check with serial interface if output correct.
 
 ![west_synchronization_serial](images/west_synchronization_serial.png)
 
-Now let's try some debugging. 
-```
-west debugserver
-```
-![synchro_debug](images/synchro_debugserver.png)
+Now let's try some debugging. Make sure launch.json is set up to debug samples/synchronization and your particular board. 
 
+Run->Start Debugging
 
-Open a new terminal window and cd to `zephyr/samples/synchronization`. 
-```
-arm-none-eabi-gdb -tui ./build/zephyr/zephyr.elf
-(gdb) target remote :3333
-```
-![target_remote](images/target_remote.png)
+![thread-debugging](images/thread-debugging.png)
 
-```
-(gdb) monitor reset init
-(gdb) monitor flash write_image erase ./build/zephyr/zephyr.elf
-(gdb) monitor reset halt
-(gdb) monitor resume
-(gdb) monitor halt
-(gdb) 
-```
-
+You can:
+- Step through code using buttons on top
+- Check out different threads (Call Stack)
+- Check out values of registers (Cortex Registers)
+- If you set up svdFile in launch.json; check out values of peripheral registers(Cortex Peripherals)
+- Put in own gdb commands into the Debug console
 
 ### 2.1.3. Dining Philosophers
 ```
@@ -198,6 +214,7 @@ west debugserver
 ![west-debugserver](images/west-debugserver.png)
 
 ```
+cd zephyr/samples/basic/threads
 arm-none-eabi-gdb -tui ./build/zephyr/zephyr.elf
 (gdb) target remote :3333
 (gdb) continue
