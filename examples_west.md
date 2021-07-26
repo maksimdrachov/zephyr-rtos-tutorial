@@ -57,6 +57,8 @@ To debug you'll need to install cortex-debug (expansion for VSCode) add launch.j
 ```
 Change the values according to the board you're using, sample you're trying to debug,...
 
+If you have any issues with threads not being detected, it probably means your openocd needs to be updated to the latest version and openocd config file needs to be adjusted. Read [this](https://github.com/zephyrproject-rtos/zephyr/issues/37175#issuecomment-886692845) and execute the steps covered.
+
 If you want to check peripheral register values during debugging you will need to add an svdFile entry:
 
 ![svdfile](images/svdfile.png)
