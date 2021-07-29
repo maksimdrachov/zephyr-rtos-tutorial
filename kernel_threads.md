@@ -118,6 +118,17 @@ K_THREAD_DEFINE(my_tid, MY_STACK_SIZE,
                 MY_PRIORITY, 0, 0);
 ```
 
+**k_thread_start()**
+
+```mermaid
+  graph LR
+      A --- B
+      B-->C[fa:fa-ban forbidden]
+      B-->D(fa:fa-spinner);
+      
+```
+
+
 ## 8. Runtime statistics
 Thread runtime statistics can be gathered and retrieved if CONFIG_THREAD_RUNTIME_STATS is enabled, for example, total number of execution cycles of a thread.
 
