@@ -35,8 +35,8 @@ Zephyr provides some explanation on how to setup and run the examples [here](htt
 - Open VSCode
 - File -> Open... -> ~/zephyrproject
 
-To debug you'll need to install cortex-debug (expansion for VSCode) add launch.json to your .vscode folder:
-```
+To debug you'll need to install cortex-debug (expansion for VSCode) and add launch.json to your .vscode folder:
+```json
 {
     "version": "0.2.0",
     "configurations": [
@@ -110,8 +110,10 @@ Check with serial interface if "hello world" is being output. (Press reset on yo
 ```
 cd zephyr/samples/synchronization
 west build -b nucleo_f756zg
+west build -t guiconfig
 west flash
 ```
+Make sure to check 
 
 Check with serial interface if output correct.
 

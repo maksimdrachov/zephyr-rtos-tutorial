@@ -10,8 +10,6 @@
   - [3. The Basics](#3-the-basics)
     - [3.1. RTOS basics](#31-rtos-basics)
     - [3.2. Zephyr-specific](#32-zephyr-specific)
-    - [3.3. gdb](#33-gdb)
-    - [3.4. CMake](#34-cmake)
   - [4. Kernel Services](#4-kernel-services)
     - [4.1. Scheduling, Interrupts and Synchronization](#41-scheduling-interrupts-and-synchronization)
       - [4.1.1. Threads](#411-threads)
@@ -33,18 +31,17 @@
     - [4.4. Timing](#44-timing)
       - [4.4.1. Kernel Timing](#441-kernel-timing)
       - [4.4.2. Timers](#442-timers)
-  - [5. Devicetree guide](#5-devicetree-guide)
-  - [5. Advanced topics](#5-advanced-topics)
-  - [6. Examples](#6-examples)
-  - [7. Tests](#7-tests)
+    - [4.5. User Mode](#45-user-mode)
+  - [5. Examples](#5-examples)
+  - [6. Tests](#6-tests)
   - [8. Projects using Zephyr RTOS](#8-projects-using-zephyr-rtos)
 
 ## 1. Introduction
-Since Zephyr is a pretty young project I have found it a bit lacking in terms of tutorials for beginners (like myself). Therefore I decided to start writing this; to have 1 place that gives beginners a simple place to get started.
+Since Zephyr is a pretty young project I have found it a bit lacking in terms of tutorials for beginners. Therefore I decided to start writing this; to have 1 place that gives beginners a simple place to get started.
 
 In terms of hardware you have a couple of different options:
-- [Reel board](https://developer.nordicsemi.com/nRF_Connect_SDK/doc/0.3.0/zephyr/boards/arm/reel_board/doc/reel_board.html): This is a dev board from Nordic Semiconductor. Most examples are based on this board, so if you want the least "trouble", I'd go with this one. Downside: a bit expensive (~50eu).
-- Nucleo: If you're already been working with embedded dev boards, chances are you have some of these laying around. I'm using a [Nucleo F756ZG](https://www.st.com/en/evaluation-tools/nucleo-f756zg.html).
+- [Reel board](https://developer.nordicsemi.com/nRF_Connect_SDK/doc/0.3.0/zephyr/boards/arm/reel_board/doc/reel_board.html): This is a dev board from Nordic Semiconductor. Most Zephyr-examples are based on this board. Downside: a bit expensive (~50eu).
+- Nucleo-board: If you're already been working with embedded dev boards, chances are you have some of these laying around. I'm using a [Nucleo F756ZG](https://www.st.com/en/evaluation-tools/nucleo-f756zg.html).
 - QEMU: If you don't have any boards, you can always use QEMU that allows you to emulate different platforms.
 
 [Supported boards](https://docs.zephyrproject.org/latest/boards/index.html#boards)
@@ -54,23 +51,20 @@ In terms of hardware you have a couple of different options:
 **General**
 - [Zephyr Official Documentation](https://docs.zephyrproject.org/latest/)
 - [Introduction to the Zephyr RTOS (video)](https://www.youtube.com/watch?v=jR5E5Kz9A-k): watch from 14:30-51:00
+- [awesome-zephyr](https://github.com/fkromer/awesome-zephyr)
 
 **Youtube**
 - [The Linux Foundation](https://www.youtube.com/c/LinuxfoundationOrg/search?query=zephyr)
 - [Zephyr Project](https://www.youtube.com/c/ZephyrProject/videos)
 
 **Blogs**
-- [jaredwolff.com](https://www.jaredwolff.com/blog/)
-- [linumiz.com](https://www.linumiz.com/zephyr-rtos-getting-started/)
+- [jaredwolff.com: Optimize Zephyr config and overlays](https://www.jaredwolff.com/optimize-zephyr-config-and-overlays/)
+- [linumiz.com: Zephyr RTOS getting started](https://www.linumiz.com/zephyr-rtos-getting-started/)
   
 ## 2. Setup
 ### 2.1. VSCode + PlatformIO + Zephyr RTOS
 
 Starting off I used this setup, however once you start messing with more 'advanced' features of Zephyr, you will probably have to make the transition to the `west` metatool.
-
-Setup:
-1) Install VSCode
-2) Add PlatformIO extension (will install Zephyr for you)
   
 ### 2.2. VSCode + West + Zephyr RTOS
 
@@ -97,15 +91,12 @@ First: what is an RTOS? It is an operating system that is intended to serve real
 - Event-driven: switch tasks based on their priorities
 - Time-sharing: switch the task based on clock interrupts
 
-Some key concepts:
-- **Kernel**: the core component within an operating system. Takes care of scheduling the tasks in such a way that they *appear* to be happening simultanously.
-
 ![rtos_basic_execution](images/rtos_basic_execution.gif)
 
+Some key concepts:
+- **Kernel**: the core component within an operating system. Takes care of scheduling the tasks in such a way that they *appear* to be happening simultanously.
 - **Task**: Each executing program is a task (or thread) under control of the operating system.
 - **Scheduler**: part of the kernel responsible for deciding which task should be executing at any particular time. The scheduling policy decides which task to execute at any point in time.
-- **Sleep**: a task can choose to (voluntarily) suspend itself for a fixed period.
-- **Block**: a task can wait for a resource to become available (eg a serial port) or an event to occur (eg a key press).
 - **Context**: as a task executes it uses the registers and memory. The processor registers, stack, etc compromise the task execution context. On switching to a task the RTOS is responsible to set the context back to the way it was at the moment it got pre-empted the previous time. The process of saving the context of a task being suspended and restoring the context of a task being resumed is called context switching.
 
 source: [wikipedia](https://en.wikipedia.org/wiki/Real-time_operating_system), [freertos](https://www.freertos.org/implementation/a00004.html), [zephyr](https://docs.zephyrproject.org/latest/reference/kernel/index.html)
@@ -134,7 +125,7 @@ Once you have succesfully built an application a build folder will appear within
 - **build/zephyr/zephyr.dts**: CMake uses a devicetree to tailor the build towards your specific architecture/board. A more in-depth discussion of devicetree follows a bit later.
 - **build/zephyr/.config**: To check the final Kconfig used for your built. This can be useful to verify if a setting has been set correctly.
 
-### 3.3. gdb
+<!-- ### 3.3. gdb
 
 In order to be able to debug multi-threaded systems, you will need to be able to use `gdb`. (In the examples we'll go step-by-step over some commonly used debugging techniques)
 
@@ -146,7 +137,7 @@ At some point it is recommended to understand how CMake works. (Probably not rig
 
 [Video Tutorial](https://www.youtube.com/watch?v=nlKcXPUJGwA&list=PLalVdRk2RC6o5GHu618ARWh0VO0bFlif4)
 
-[Wiki CMake Tutorial](https://cmake.org/cmake/help/latest/guide/tutorial/index.html)
+[Wiki CMake Tutorial](https://cmake.org/cmake/help/latest/guide/tutorial/index.html) -->
 
 ## 4. Kernel Services
 In this section we'll go over all the services available using the Zephyr kernel.
@@ -208,27 +199,29 @@ The text and format is based on the [Zephyr Api](https://docs.zephyrproject.org/
 #### 4.4.2. Timers
 - [ ] See [kernel_timers.md](https://github.com/maksimdrachov/zephyr-rtos-tutorial/blob/main/kernel_timers.md)
 
-## 5. Devicetree guide
-- [ ] See [devicetree_guide.md](https://github.com/maksimdrachov/zephyr-rtos-tutorial/blob/main/devicetree_guide.md)
+### 4.5. User Mode
 
-## 5. Advanced topics
+<!-- ## 5. Devicetree guide
+- [ ] See [devicetree_guide.md](https://github.com/maksimdrachov/zephyr-rtos-tutorial/blob/main/devicetree_guide.md) -->
 
-For discussing more 'advanced' topics using Zephyr (such as networking, bluetooth,...), I have created a seperate [repository](https://github.com/maksimdrachov/zephyr-rtos-advanced-tutorial).
+<!-- ## 5. Advanced topics
+
+For discussing more 'advanced' topics using Zephyr (such as networking, bluetooth,...), I have created a seperate [repository](https://github.com/maksimdrachov/zephyr-rtos-advanced-tutorial). -->
 
 
-## 6. Examples
+## 5. Examples
 Location: `~/zephyrproject/zephyr/samples`
 
 Basic examples useful to study for beginners are discussed here: [examples_west.md](https://github.com/maksimdrachov/zephyr-rtos-tutorial/blob/main/examples_west.md)
 
 More advanced examples are discussed here: [examples_adv.md](https://github.com/maksimdrachov/zephyr-rtos-tutorial/blob/main/examples_adv.md)
 
-## 7. Tests
+## 6. Tests
 Location : `~/zephyrproject/zephyr/tests`
 
 ## 8. Projects using Zephyr RTOS
 - [Air-quality sensor](https://github.com/ExploratoryEngineering/air-quality-sensor-node)
-- [Pinetime-hypnos](https://github.com/endian-albin/pinetime-hypnos) (smartwatch)
-- [RT-Loc](https://github.com/RT-LOC/zephyr-dwm1001) (Ultra Wideband localisation using DWM1001 module)
+- [Pinetime-hypnos](https://github.com/endian-albin/pinetime-hypnos)
+- [RT-Loc](https://github.com/RT-LOC/zephyr-dwm1001) 
 - [BLE Environmental Sensor](https://github.com/patrickmoffitt/zephyr_ble_sensor)
-- [STM32 Artnet-node](https://github.com/maksimdrachov/stm32-artnet) (This is the project I'm currently working on. For clarity, I'm documenting what each line does, so I can gain a better understanding:)
+- [STM32 Artnet-node](https://github.com/maksimdrachov/stm32-artnet)

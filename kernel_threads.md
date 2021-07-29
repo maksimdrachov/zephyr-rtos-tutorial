@@ -3,10 +3,10 @@
   - [1. Introduction](#1-introduction)
   - [2. Thread commands](#2-thread-commands)
     - [2.1. k_thread_start()](#21-k_thread_start)
-    - [2.2. k_thread_join()](#22-k_thread_join)
-    - [2.3. k_thread_abort()](#23-k_thread_abort)
+    - [2.2. k_thread_abort()](#22-k_thread_abort)
+    - [2.3. k_sleep()](#23-k_sleep)
     - [2.4. k_thread_suspend()](#24-k_thread_suspend)
-    - [2.5. k_sleep()](#25-k_sleep)
+    - [2.5. k_thread_join()](#25-k_thread_join)
   - [3. Thread states](#3-thread-states)
   - [4. Thread stack objects](#4-thread-stack-objects)
   - [5. Thread priorities](#5-thread-priorities)
@@ -31,22 +31,22 @@
 
 A thread must be created before it can be used.
 
-### 2.2. k_thread_join()
+### 2.2. k_thread_abort()
+Abort a thread. Thread is taken off all kernel queues.
+
+### 2.3. k_sleep()
+A thread can prevent itself from executing for a specified amount of time. A sleeping thread becomes executable automatically once the time limit is reached.
+
+### 2.4. k_thread_suspend()
+Prevent a thread from executing for an indefinite period of time. Once suspended, use k_thread_resume() to re-start.
+
+### 2.5. k_thread_join()
 Sleep until a thread exits. 
 
 For example:
 - THREAD_1 is responsible for setting up a hardware interface
 - THREAD_2 is responsible for processing data from this interface
 - As long as THREAD_1 has not exited, THREAD_2 can't start, so we'll use k_thread_join(THREAD_1, timeout) in this case.
-
-### 2.3. k_thread_abort()
-Abort a thread. Thread is taken off all kernel queues.
-
-### 2.4. k_thread_suspend()
-Prevent a thread from executing for an indefinite period of time. Once suspended, use k_thread_resume() to re-start.
-
-### 2.5. k_sleep()
-A thread can prevent itself from executing for a specified amount of time. A sleeping thread becomes executable automatically once the time limit is reached.
 
 ## 3. Thread states
 Ready: eligible to be selected as the next running thread.
