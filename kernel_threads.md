@@ -31,17 +31,28 @@
 
 A thread must be created before it can be used.
 
+![k_thread_im](svg-images/k_thread_start.png)
+
 ### 2.2. k_thread_abort()
 Abort a thread. Thread is taken off all kernel queues.
+
+![k_thread_im](svg-images/k_thread_abort.png)
 
 ### 2.3. k_sleep()
 A thread can prevent itself from executing for a specified amount of time. A sleeping thread becomes executable automatically once the time limit is reached.
 
+![k_thread_im](svg-images/k_thread_sleep.png)
+
 ### 2.4. k_thread_suspend()
 Prevent a thread from executing for an indefinite period of time. Once suspended, use k_thread_resume() to re-start.
 
+![k_thread_im](svg-images/k_thread_suspend.png)
+
 ### 2.5. k_thread_join()
 Sleep until a thread exits. 
+
+![k_thread_im](svg-images/k_thread_join.png)
+
 
 For example:
 - THREAD_1 is responsible for setting up a hardware interface
@@ -89,44 +100,26 @@ Kernel supports thread options that allow a thread to receive special treatment 
 - K_INHERIT_PERMS: if CONFIG_USERSPACE is enabled, this thread will inherit all kernel object permissions that the parent thread had.
 
 ## 7. Examples
-Example 1 : using the thread spawning function
-```
-#define MY_STACK_SIZE 500
-#define MY_PRIORITY 5
-
-extern void my_entry_point(void *, void *, void *);
-
-K_THREAD_STACK_DEFINE(my_stack_area, MY_STACK_SIZE);
-struct k_thread my_thread_data;
-
-k_tid_t my_tid = k_thread_create(&my_thread_data, my_stack_area,
-                                 K_THREAD_STACK_SIZEOF(my_stack_area),
-                                 my_entry_point,
-                                 NULL, NULL, NULL,
-                                 MY_PRIORITY, 0, K_NO_WAIT);
-```
-
-Example 2: a thread can be declared at compile time by calling K_THREAD_DEFINE. The macro defines the stack area, control block and thread id variables automatically.
-```
-#define MY_STACK_SIZE 500
-#define MY_PRIORITY 5
-
-extern void my_entry_point(void *, void *, void *);
-
-K_THREAD_DEFINE(my_tid, MY_STACK_SIZE,
-                my_entry_point, NULL, NULL, NULL,
-                MY_PRIORITY, 0, 0);
-```
-
 **k_thread_start()**
 
-```mermaid
-  graph LR
-      A --- B
-      B-->C[fa:fa-ban forbidden]
-      B-->D(fa:fa-spinner);
-      
-```
+![k_thread_start](images/k_thread_start.png)
+
+**k_thread_abort()**
+
+![k_thread_start](images/k_thread_abort.png)
+
+**k_sleep()**
+
+![k_thread_start](images/k_thread_sleep.png)
+
+**k_thread_suspend()**
+
+![k_thread_start](images/k_thread_suspend.png)
+
+**k_thread_join()**
+
+![k_thread_start](images/k_thread_join.png)
+
 
 
 ## 8. Runtime statistics
