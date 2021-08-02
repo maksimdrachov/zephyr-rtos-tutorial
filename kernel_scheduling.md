@@ -72,5 +72,6 @@ Use preemptive threads to give priority to time-sensitive processing over less t
 ## 5. Examples
 
 **Cooperative Time Slicing**
+![coop_time](images/coop_time_slicing.png)
 
 **Preemptive Time Slicing**
