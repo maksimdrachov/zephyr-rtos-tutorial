@@ -1,0 +1,5 @@
+- [ ] Write out steps to install zephyr on mac
+    - [ ] Install VSCode
+    - [ ] Follow setup
+    - [ ] VSCode useful extensions
+    - [ ] Coolterm

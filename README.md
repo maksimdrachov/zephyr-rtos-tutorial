@@ -13,9 +13,9 @@ A website version of this tutorial can also be found [here](https://maksimdracho
 
 ## Table of Contents
 
-- [ ] **[Introduction](docs/Introduction.md)** - [x]
-- [ ] **[Contribution guide](docs/Contributions.md)**
-- [ ] **[Prerequisites](docs/Prerequisites.md)**
+- [x] **[Introduction](docs/Introduction.md)**
+- [x] **[Contribution guide](docs/Contributions.md)**
+- [x] **[Prerequisites](docs/Prerequisites.md)**
 - [ ] **Lesson 1: Zephyr Setup** 
   - [ ] 1.1 Installation
     - [ ] [MacOS](docs/lesson01/install/mac-os.md)
@@ -27,8 +27,8 @@ A website version of this tutorial can also be found [here](https://maksimdracho
     - [ ] [Linux](docs/lesson01/setup/linux.md)
 
 - [ ] **Lesson 2: Introduction**
-  - [ ] 2.1 [RTOS basics](docs/lesson02/rtos-basics.md)
-  - [ ] 2.2 [Zephyr basics](docs/lesson02/zephyr-structure.md)
+  - [x] 2.1 [RTOS basics](docs/lesson02/rtos-basics.md)
+  - [x] 2.2 [Zephyr basics](docs/lesson02/zephyr-structure.md)
   
 - [ ] **Lesson 3: Threads**
   - [ ] 3.1 [Introduction](docs/lesson03/introduction.md)
@@ -51,3 +51,6 @@ A website version of this tutorial can also be found [here](https://maksimdracho
 **Youtube**
 - [The Linux Foundation](https://www.youtube.com/c/LinuxfoundationOrg/search?query=zephyr)
 - [Zephyr Project](https://www.youtube.com/c/ZephyrProject/videos)
+
+## To Do
+- [ ] Add next page and prev page links
