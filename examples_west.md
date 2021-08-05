@@ -78,10 +78,12 @@ If you want to check peripheral register values during debugging you will need t
 ## 1.1. Serial connection
 You have different options here:
 - Terminal (Mac)
-  ```
-  
-  ```
-- Terminal within VSCode
+```
+$ ls /dev/cu.*
+  /dev/cu.Bluetooth-Incoming-Port	/dev/cu.RockboxBoldXs-JL_SPP
+  /dev/cu.LizasBeatsSolo3-SPPServ	/dev/cu.usbmodem141203
+$ screen /dev/cu.usbmodem141203 115200
+```
 - CoolTerm (or some alternative)
 ![west_serial_settings](images/west_serial_settings.png)
   
