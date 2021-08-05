@@ -13,7 +13,7 @@ A website version of this tutorial can also be found [here](https://maksimdracho
 
 ## Table of Contents
 
-* **[Introduction](docs/Introduction.md)**
+- [ ] **[Introduction](docs/Introduction.md)** - [x]
 * **[Contribution guide](docs/Contributions.md)**
 * **[Prerequisites](docs/Prerequisites.md)**
 * **Lesson 1: Zephyr Setup** 
