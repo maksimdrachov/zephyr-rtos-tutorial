@@ -29,18 +29,25 @@ A website version of this tutorial can also be found [here](https://maksimdracho
 - [ ] **Lesson 2: Introduction**
   - [x] 2.1 [RTOS basics](docs/lesson02/rtos-basics.md)
   - [x] 2.2 [Zephyr basics](docs/lesson02/zephyr-structure.md)
+
+- [ ] **Lesson 3: GPIO**
   
-- [ ] **Lesson 3: Threads**
-  - [ ] 3.1 [Introduction](docs/lesson03/introduction.md)
-  - [ ] 3.2 [Commands](docs/lesson03/commands.md)
-  - [ ] 3.3 [Kconfig](docs/lesson03/kconfig.md)
-  - [ ] 3.2 [Exercise](docs/lesson03/exercise.md)
-  - [ ] 3.3 [API reference](docs/lesson03/threads-api.md)
-- [ ] **Lesson 4: Scheduling**
-- [ ] **Lesson 5: Interrupts** 
-- [ ] **Lesson 6: Mutexes**
-- [ ] **Lesson 7: Semaphores**
-- [ ] **Lesson 8: Networking**
+- [ ] **Lesson 4: Threads**
+  - [ ] 4.1 [Introduction](docs/lesson03/introduction.md)
+  - [ ] 4.2 [Commands](docs/lesson03/commands.md)
+  - [ ] 4.3 [Kconfig](docs/lesson03/kconfig.md)
+  - [ ] 4.2 [Exercise](docs/lesson03/exercise.md)
+  - [ ] 4.3 [API reference](docs/lesson03/threads-api.md)
+- [ ] **Lesson 5: Debugging**
+  - [ ] 5.1 GDB
+  - [ ] 5.2 Runtime statistics
+- [ ] **Lesson 5: Scheduling**
+- [ ] **Lesson 6: Interrupts** 
+- [ ] **Lesson 7: Mutexes**
+- [ ] **Lesson 8: Semaphores**
+- [ ] **Lesson 9: Networking**
+  - [ ] 9.1 DHCP
+- [ ] **Lesson 10: Logging**
 
 ## Useful Links
 **General**
