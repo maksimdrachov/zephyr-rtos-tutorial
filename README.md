@@ -9,6 +9,8 @@ Each lesson builds on the previous one. Most lessons end with exercises (with so
 
 This project is under active development, if you want to participate - please read the [Contribution guide](docs/Contributions.md).
 
+A website version of this tutorial can also be found [here](https://maksimdrachov.github.io/zephyr-rtos-tutorial).
+
 ## Table of Contents
 
 * **[Introduction](docs/Introduction.md)**
