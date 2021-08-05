@@ -14,33 +14,33 @@ A website version of this tutorial can also be found [here](https://maksimdracho
 ## Table of Contents
 
 - [ ] **[Introduction](docs/Introduction.md)** - [x]
-* **[Contribution guide](docs/Contributions.md)**
-* **[Prerequisites](docs/Prerequisites.md)**
-* **Lesson 1: Zephyr Setup** 
-  * 1.1 Installation
-    * [MacOS](docs/lesson01/install/mac-os.md)
-    * [Windows](docs/lesson01/install/windows.md)
-    * [Linux](docs/lesson01/install/linux.md)
-  * 1.2 Basic Workspace Setup
-    * [MacOS](docs/lesson01/setup/mac-os.md)
-    * [Windows](docs/lesson01/setup/windows.md)
-    * [Linux](docs/lesson01/setup/linux.md)
+- [ ] **[Contribution guide](docs/Contributions.md)**
+- [ ] **[Prerequisites](docs/Prerequisites.md)**
+- [ ] **Lesson 1: Zephyr Setup** 
+  - [ ] 1.1 Installation
+    - [ ] [MacOS](docs/lesson01/install/mac-os.md)
+    - [ ] [Windows](docs/lesson01/install/windows.md)
+    - [ ] [Linux](docs/lesson01/install/linux.md)
+  - [ ] 1.2 Basic Workspace Setup
+    - [ ] [MacOS](docs/lesson01/setup/mac-os.md)
+    - [ ] [Windows](docs/lesson01/setup/windows.md)
+    - [ ] [Linux](docs/lesson01/setup/linux.md)
 
-* **Lesson 2: Introduction**
-  * 2.1 [RTOS basics](docs/lesson02/rtos-basics.md)
-  * 2.2 [Zephyr basics](docs/lesson02/zephyr-structure.md)
+- [ ] **Lesson 2: Introduction**
+  - [ ] 2.1 [RTOS basics](docs/lesson02/rtos-basics.md)
+  - [ ] 2.2 [Zephyr basics](docs/lesson02/zephyr-structure.md)
   
-* **Lesson 3: Threads**
-  * 3.1 [Introduction](docs/lesson03/introduction.md)
-  * 3.2 [Commands](docs/lesson03/commands.md)
-  * 3.3 [Kconfig](docs/lesson03/kconfig.md)
-  * 3.2 [Exercise](docs/lesson03/exercise.md)
-  * 3.3 [API reference](docs/lesson03/threads-api.md)
-* **Lesson 4: Scheduling**
-* **Lesson 5: Interrupts** 
-* **Lesson 6: Mutexes**
-* **Lesson 7: Semaphores**
-* **Lesson 8: Networking**
+- [ ] **Lesson 3: Threads**
+  - [ ] 3.1 [Introduction](docs/lesson03/introduction.md)
+  - [ ] 3.2 [Commands](docs/lesson03/commands.md)
+  - [ ] 3.3 [Kconfig](docs/lesson03/kconfig.md)
+  - [ ] 3.2 [Exercise](docs/lesson03/exercise.md)
+  - [ ] 3.3 [API reference](docs/lesson03/threads-api.md)
+- [ ] **Lesson 4: Scheduling**
+- [ ] **Lesson 5: Interrupts** 
+- [ ] **Lesson 6: Mutexes**
+- [ ] **Lesson 7: Semaphores**
+- [ ] **Lesson 8: Networking**
 
 ## Useful Links
 **General**
