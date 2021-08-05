@@ -1,6 +1,6 @@
 # Zephyr: Tutorial for Beginners
 
-This repository contains a ste-by-step guide that teaches you how to use Zephyr RTOS. It assumes:
+This repository contains a step-by-step guide that teaches you how to use Zephyr RTOS. It assumes:
 - no previous experience with RTOS
 - basic embedded electronics knowledge (GPIO, Timers, Interrupt,...)
 - knowledge of C
