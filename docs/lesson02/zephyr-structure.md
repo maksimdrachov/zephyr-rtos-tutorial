@@ -14,7 +14,7 @@ target_sources(app PRIVATE src/main.c)
 
 - **prj.conf**: the Kernel configuration file. For most projects, it tells Zephyr whether to include specific features for use in your application code - if you use GPIO, PWM, or a serial monitor, you’ll need to enable them in this file first. Sometimes also referred to as Kconfig file. There is also something of a [GUI](https://docs.zephyrproject.org/2.4.0/guides/kconfig/menuconfig.html) which is helpful to get started.
 
-![guiconfig](/images/guiconfig.png)
+![guiconfig](https://maksimdrachov.github.io/zephyr-rtos-tutorial/images/guiconfig.png)
 
 - **src/main.c**: your custom application code - where the magic happens! It’s advisable to put all of your custom source code in a `src/` directory like this so it doesn’t get mixed up with your configuration files.
 
