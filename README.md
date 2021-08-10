@@ -32,11 +32,7 @@ A web version of this tutorial can also be found [here](https://maksimdrachov.gi
   
 - [ ] **Lesson 3: Threads**
   - [x] 3.1 [Introduction](docs/lesson03/introduction.md)
-    - Key concepts
-    - Thread states
   - [x] 3.2 [Commands](docs/lesson03/commands.md)
-    - Thread commands
-    - Thread creation
   - [x] 3.3 [Kconfig](docs/lesson03/kconfig.md)
   - [x] 3.4 [Exercise](docs/lesson03/exercise.md)
 
