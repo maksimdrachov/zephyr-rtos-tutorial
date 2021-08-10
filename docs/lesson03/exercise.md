@@ -18,3 +18,6 @@
 **k_thread_join()**
 
 ![k_thread_start](/images/k_thread_join.png)
+
+**to do**
+- add exercise using define declaration

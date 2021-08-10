@@ -1,4 +1,4 @@
-## Commands
+## Thread commands
 ### k_thread_start()
 A thread must be created before it can be used.
 
@@ -28,18 +28,6 @@ For example:
 - As long as thread b has not exited, thread a can't start, so we'll use k_thread_join(thread_b, timeout) in this case.
 
 ![k_thread_im](/svg-images/k_thread_join.png)
-
-## Thread states
-Ready: eligible to be selected as the next running thread.
-
-Following factors can make a thread unready:
-- Thread has not been started
-- Waiting for a kernel object to complete an operation (for example, the thread is taking semaphore that is unavailable)
-- Waiting for a timeout to occur
-- Thread has been suspended
-- Thread has terminated or aborted
-
-![thread_states](/images/thread_states_png.png)
 
 ## Thread creation
 A thread is spawned by defining its stack area and its thread control block, and then calling k_thread_create().
