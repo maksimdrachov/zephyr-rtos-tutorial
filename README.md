@@ -37,7 +37,6 @@ A web version of this tutorial can also be found [here](https://maksimdrachov.gi
   - [ ] 4.2 [Commands](docs/lesson03/commands.md)
   - [ ] 4.3 [Kconfig](docs/lesson03/kconfig.md)
   - [ ] 4.2 [Exercise](docs/lesson03/exercise.md)
-  - [ ] 4.3 [API reference](docs/lesson03/threads-api.md)
 - [ ] **Lesson 5: Debugging**
   - [ ] 5.1 GDB
   - [ ] 5.2 Runtime statistics
