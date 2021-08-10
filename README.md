@@ -47,9 +47,9 @@ A web version of this tutorial can also be found [here](https://maksimdrachov.gi
   - [ ] 4.4 [Exercise](docs/lesson04/exercise.md)
   
 - [ ] **Lesson 5: Scheduling**
-  - [ ] 5.1 [Introduction](docs/lesson05/introduction.md)
-  - [ ] 5.2 [Commands](docs/lesson05/commands.md)
-  - [ ] 5.3 [Kconfig](docs/lesson05/kconfig.md)
+  - [x] 5.1 [Introduction](docs/lesson05/introduction.md)
+  - [x] 5.2 [Commands](docs/lesson05/commands.md)
+  - [x] 5.3 [Kconfig](docs/lesson05/kconfig.md)
   - [ ] 5.4 [Exercise](docs/lesson05/exercise.md)
 
 - [ ] **Lesson 6: Debugging**
@@ -106,3 +106,4 @@ A web version of this tutorial can also be found [here](https://maksimdrachov.gi
 
 ## To Do
 - [ ] Add next page and prev page links
+- [ ] Sort images into lessons
