@@ -1,4 +1,4 @@
-## Zephyr RTOS Tutorial
+# Zephyr: Tutorial for Beginners
 
 This repository contains a step-by-step guide that teaches you how to use Zephyr RTOS. It assumes:
 - no previous experience with RTOS
@@ -7,38 +7,88 @@ This repository contains a step-by-step guide that teaches you how to use Zephyr
 
 Each lesson builds on the previous one. Most lessons end with exercises (with solutions!) that allow you to test your knowledge to make sure you understand everything that is covered.
 
-This project is under active development, if you want to participate - please read the [Contribution guide](docs/Contributions.md).
+This tutorial is under active development, if you want to participate - please read the [Contribution guide](docs/Contributions.md).
+
+A web version of this tutorial can also be found [here](https://maksimdrachov.github.io/zephyr-rtos-tutorial).
 
 ## Table of Contents
 
-* **[Introduction](docs/Introduction.md)**
-* **[Contribution guide](docs/Contributions.md)**
-* **[Prerequisites](docs/Prerequisites.md)**
-* **Lesson 1: Zephyr Setup** 
-  * 1.1 Installation
-    * [MacOS](docs/lesson01/install/mac-os.md)
-    * [Windows](docs/lesson01/install/windows.md)
-    * [Linux](docs/lesson01/install/linux.md)
-  * 1.2 Basic Workspace Setup
-    * [MacOS](docs/lesson01/setup/mac-os.md)
-    * [Windows](docs/lesson01/setup/windows.md)
-    * [Linux](docs/lesson01/setup/linux.md)
+- [x] **[Introduction](docs/Introduction.md)**
+- [x] **[Contribution guide](docs/Contributions.md)**
+- [x] **[Prerequisites](docs/Prerequisites.md)**
+- [ ] **Lesson 1: Zephyr Setup** 
+  - [ ] 1.1 Installation
+    - [ ] [MacOS](docs/lesson01/install/mac-os.md)
+    - [ ] [Windows](docs/lesson01/install/windows.md)
+    - [ ] [Linux](docs/lesson01/install/linux.md)
+  - [ ] 1.2 Basic Workspace Setup
+    - [ ] [MacOS](docs/lesson01/setup/mac-os.md)
+    - [ ] [Windows](docs/lesson01/setup/windows.md)
+    - [ ] [Linux](docs/lesson01/setup/linux.md)
 
-* **Lesson 2: Introduction**
-  * 2.1 [RTOS basics](docs/lesson02/rtos-basics.md)
-  * 2.2 [Zephyr basics](docs/lesson02/zephyr-structure.md)
+- [ ] **Lesson 2: Introduction**
+  - [x] 2.1 [RTOS basics](docs/lesson02/rtos-basics.md)
+  - [x] 2.2 [Zephyr basics](docs/lesson02/zephyr-structure.md)
   
-* **Lesson 3: Threads**
-  * 3.1 [Introduction](docs/lesson03/introduction.md)
-  * 3.2 [Commands](docs/lesson03/commands.md)
-  * 3.3 [Kconfig](docs/lesson03/kconfig.md)
-  * 3.2 [Exercise](docs/lesson03/exercise.md)
-  * 3.3 [API reference](docs/lesson03/threads-api.md)
-* **Lesson 4: Scheduling**
-* **Lesson 5: Interrupts** 
-* **Lesson 6: Mutexes**
-* **Lesson 7: Semaphores**
-* **Lesson 8: Networking**
+- [ ] **Lesson 3: Threads**
+  - [x] 3.1 [Introduction](docs/lesson03/introduction.md)
+  - [x] 3.2 [Commands](docs/lesson03/commands.md)
+  - [x] 3.3 [Kconfig](docs/lesson03/kconfig.md)
+  - [x] 3.4 [Exercise](docs/lesson03/exercise.md)
+
+- [ ] **Lesson 4: GPIO**
+  - [ ] 4.1 [Introduction](docs/lesson04/introduction.md)
+  - [ ] 4.2 [Commands](docs/lesson04/commands.md)
+  - [ ] 4.3 [Kconfig](docs/lesson04/kconfig.md)
+  - [ ] 4.4 [Exercise](docs/lesson04/exercise.md)
+  
+- [ ] **Lesson 5: Scheduling**
+  - [x] 5.1 [Introduction](docs/lesson05/introduction.md)
+  - [x] 5.2 [Commands](docs/lesson05/commands.md)
+  - [x] 5.3 [Kconfig](docs/lesson05/kconfig.md)
+  - [ ] 5.4 [Exercise](docs/lesson05/exercise.md)
+
+- [ ] **Lesson 6: Debugging**
+  - [ ] 6.1 [Introduction](docs/lesson06/introduction.md)
+  - [ ] 6.2 [Commands](docs/lesson06/commands.md)
+  - [ ] 6.3 [Kconfig](docs/lesson06/kconfig.md)
+  - [ ] 6.4 [Exercise](docs/lesson06/exercise.md)
+
+- [ ] **Lesson 7: Interrupts** 
+  - [ ] 7.1 [Introduction](docs/lesson07/introduction.md)
+  - [ ] 7.2 [Commands](docs/lesson07/commands.md)
+  - [ ] 7.3 [Kconfig](docs/lesson07/kconfig.md)
+  - [ ] 7.4 [Exercise](docs/lesson07/exercise.md)
+
+- [ ] **Lesson 8: Mutexes**
+  - [ ] 8.1 [Introduction](docs/lesson08/introduction.md)
+  - [ ] 8.2 [Commands](docs/lesson08/commands.md)
+  - [ ] 8.3 [Kconfig](docs/lesson08/kconfig.md)
+  - [ ] 8.4 [Exercise](docs/lesson08/exercise.md)
+
+- [ ] **Lesson 9: Semaphores**
+  - [ ] 9.1 [Introduction](docs/lesson09/introduction.md)
+  - [ ] 9.2 [Commands](docs/lesson09/commands.md)
+  - [ ] 9.3 [Kconfig](docs/lesson09/kconfig.md)
+  - [ ] 9.4 [Exercise](docs/lesson09/exercise.md)
+
+- [ ] **Lesson 10: Logging**
+  - [ ] 10.1 [Introduction](docs/lesson10/introduction.md)
+  - [ ] 10.2 [Commands](docs/lesson10/commands.md)
+  - [ ] 10.3 [Kconfig](docs/lesson10/kconfig.md)
+  - [ ] 10.4 [Exercise](docs/lesson10/exercise.md)
+
+- [ ] **Lesson 11: Networking**
+  - [ ] 11.1 [Introduction](docs/lesson11/introduction.md)
+  - [ ] 11.2 [Commands](docs/lesson11/commands.md)
+  - [ ] 11.3 [Kconfig](docs/lesson11/kconfig.md)
+  - [ ] 11.4 [Exercise](docs/lesson11/exercise.md)
+
+- [ ] **Lesson 12: Timers**
+  - [ ] 12.1 [Introduction](docs/lesson12/introduction.md)
+  - [ ] 12.2 [Commands](docs/lesson12/commands.md)
+  - [ ] 12.3 [Kconfig](docs/lesson12/kconfig.md)
+  - [ ] 12.4 [Exercise](docs/lesson12/exercise.md)
 
 ## Useful Links
 **General**
@@ -49,3 +99,7 @@ This project is under active development, if you want to participate - please re
 **Youtube**
 - [The Linux Foundation](https://www.youtube.com/c/LinuxfoundationOrg/search?query=zephyr)
 - [Zephyr Project](https://www.youtube.com/c/ZephyrProject/videos)
+
+## To Do
+- [ ] Add next page and prev page links
+- [ ] Sort images into lessons
