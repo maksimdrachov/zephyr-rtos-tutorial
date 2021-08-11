@@ -103,3 +103,7 @@ A web version of this tutorial can also be found [here](https://maksimdrachov.gi
 ## To Do
 - [ ] Add next page and prev page links
 - [ ] Sort images into lessons
+- [ ] Add Support method: "I believe all knowledge should be freely accessible to the benefit of all.
+                          If you want to support me in my endavours, here are some ways you can do so:
+                            - subscribe to my youtube channel, twitter or bitclout to stay up to date on my latest videos, blogs and projects
+                            - donate in your favourite cryptocurrency, see maksimdrachov.github.io/donate"
