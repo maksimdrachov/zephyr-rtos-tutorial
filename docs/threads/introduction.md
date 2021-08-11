@@ -1,3 +1,10 @@
+*What are threads?*
+
+*How do I define threads in Zephyr?*
+
+*How does Zephyr choose which thread to run?*
+
+
 ## Key concepts
 - **Stack area**: a region of memory used for the thread's stack. The size can be adjusted as required by the thread's processing.
 - **Thread control block**: for internal bookkeeping of the thread's metadata. An instance of the type `k_thread`.

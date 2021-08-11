@@ -5,7 +5,7 @@ First: what is an RTOS? It is an operating system that is intended to serve real
 - Event-driven: switch tasks based on their priorities
 - Time-sharing: switch the task based on clock interrupts
 
-![rtos_basic_execution](https://maksimdrachov.github.io/zephyr-rtos-tutorial/images/rtos_basic_execution.gif)
+![rtos_basic_execution](https://maksimdrachov.github.io/zephyr-rtos-tutorial/images/introduction/rtos_basic_execution.gif)
 
 Some key concepts:
 - **Kernel**: the core component within an operating system. Takes care of scheduling the tasks in such a way that they *appear* to be happening simultanously.

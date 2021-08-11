@@ -1,4 +1,10 @@
 ## Exercises
+*Explain that you need to use basic-template for all exercises, this contains a main.c file which you'll need to edit. kconfig contains already one entry: CONFIG_PRINTK, we'll need this to be able to use serial output to verify if our solution is correct*
+
+**thread creation: main**
+
+**thread creation: define**
+
 **k_thread_start()**
 
 ![k_thread_start](/images/k_thread_start.png)
@@ -19,5 +25,3 @@
 
 ![k_thread_start](/images/k_thread_join.png)
 
-**to do**
-- add exercise using define declaration
