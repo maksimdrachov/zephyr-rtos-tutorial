@@ -107,3 +107,5 @@ A web version of this tutorial can also be found [here](https://maksimdrachov.gi
                           If you want to support me in my endavours, here are some ways you can do so:
                             - subscribe to my youtube channel, twitter or bitclout to stay up to date on my latest videos, blogs and projects
                             - donate in your favourite cryptocurrency, see maksimdrachov.github.io/donate"
+- [ ] gpio:commands.md -> add descriptions to tables
+- [ ] exercises: rename project names
