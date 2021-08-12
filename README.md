@@ -121,3 +121,4 @@ Bitcoin            |  Ethereum | Other
 - [ ] svg-images: resort images into folders
 - [ ] update image links in texts
 - [ ] exercices: threads add def equivalents to each type
+- [ ] zephyr-setup: test proposed install and setup on 'tutorial'
