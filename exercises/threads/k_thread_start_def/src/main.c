@@ -21,7 +21,6 @@
 
 K_THREAD_STACK_DEFINE(threadA_stack_area, STACKSIZE);
 static struct k_thread threadA_data;
-k_tid_t my_tid;
 
 /* threadA is a static thread that is spawned automatically */
 
@@ -41,6 +40,13 @@ void threadA(void *dummy1, void *dummy2, void *dummy3)
 
 }
 
-K_THREAD_DEFINE(my_tid, STACKSIZE,
-                threadA, NULL, NULL, NULL,
-                PRIORITY, 0, 0);
+void main(void)
+{
+	k_thread_create(&threadA_data, threadA_stack_area,
+			K_THREAD_STACK_SIZEOF(threadA_stack_area),
+			threadA, NULL, NULL, NULL,
+			PRIORITY, 0, K_FOREVER);
+	k_thread_name_set(&threadA_data, "thread_a");
+
+	k_thread_start(&threadA_data);
+}

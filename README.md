@@ -120,3 +120,4 @@ Bitcoin            |  Ethereum | Other
 - [ ] images: resort images into folders
 - [ ] svg-images: resort images into folders
 - [ ] update image links in texts
+- [ ] exercices: threads add def equivalents to each type
