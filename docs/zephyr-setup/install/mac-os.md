@@ -44,7 +44,7 @@ pip3 install -r ~/zephyrproject/zephyr/scripts/requirements.txt
 ```
 
 **4) Install GNU ARM Embedded toolchain**
-- Dowload GNU ARM Embedded build and extract in `~/dev-tools`
+- Dowload [GNU ARM Embedded build](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads) and extract in `~/dev-tools`
 - Set environment variables in `~/.zshenv`
 ```
 mate .zshenv
@@ -52,24 +52,23 @@ mate .zshenv
 Add the following lines. Make sure to use the right toolchain version, yours might be slightly different!
 ```
 export ZEPHYR_TOOLCHAIN_VARIANT=GNUARMEMB
-export GNUARMEMB_TOOLCHAIN_PATH=/Users/maksim/dev/tools/gcc-arm-none-eabi-10-2020-q4-major
+export GNUARMEMB_TOOLCHAIN_PATH=/Users/maksim/dev-tools/gcc-arm-none-eabi-10.3-2021.07
 ```
-- Check if environment variables are set correctly
-```
-echo $ZEPHYR_TOOLCHAIN_VARIANT
-GNUARMEMB
-echo $GNUARMEMB_TOOLCHAIN_PATH
-/Users/dra4ov/dev-tools/gcc-arm-none-eabi-10-2020-q4-major
-```
+- Restart terminal and dheck if environment variables are set up correctly
+![env_var_check](/images/zephyr-setup/env_var_check.png)
 
 **5) Build the Blinky sample**
 ```
 cd ~/zephyrproject/zephyr/samples/basic/blinky
 west build -b nucleo_f756zg
 ```
+A succesful build looks like this:
+![succes_build](/images/zephyr-setup/succes_build.png)
 
 **6) Flash the Sample**
 ```
 cd ~/zephyrproject/zephyr/samples/basic/blinky
 west flash
 ```
+A succesful flash looks like this:
+![succes_flash](/images/zephyr-setup/succes_flash.png)
