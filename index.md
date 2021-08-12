@@ -18,47 +18,47 @@ A web version of this tutorial can also be found [here](https://maksimdrachov.gi
 - [x] **[Prerequisites](docs/Prerequisites.md)**
 - [ ] **Lesson 1: Zephyr Setup** 
   - [ ] 1.1 Installation
-    - [ ] [MacOS](docs/lesson01/install/mac-os.md)
-    - [ ] [Windows](docs/lesson01/install/windows.md)
-    - [ ] [Linux](docs/lesson01/install/linux.md)
+    - [x] [MacOS](docs/zephyr-setup/install/mac-os.md)
+    - [ ] [Windows](docs/zephyr-setup/install/windows.md)
+    - [ ] [Linux](docs/zephyr-setup/install/linux.md)
   - [ ] 1.2 Basic Workspace Setup
-    - [ ] [MacOS](docs/lesson01/setup/mac-os.md)
-    - [ ] [Windows](docs/lesson01/setup/windows.md)
-    - [ ] [Linux](docs/lesson01/setup/linux.md)
+    - [x] [MacOS](docs/zephyr-setup/setup/mac-os.md)
+    - [ ] [Windows](docs/zephyr-setup/setup/windows.md)
+    - [ ] [Linux](docs/zephyr-setup/setup/linux.md)
 
 - [ ] **Lesson 2: Introduction**
-  - [x] 2.1 [RTOS basics](docs/lesson02/rtos-basics.md)
-  - [x] 2.2 [Zephyr basics](docs/lesson02/zephyr-structure.md)
+  - [ ] 2.1 [RTOS basics](docs/introduction/rtos-basics.md)
+  - [ ] 2.2 [Zephyr basics](docs/introduction/zephyr-structure.md)
   
 - [ ] **Lesson 3: Threads**
-  - [x] 3.1 [Introduction](docs/lesson03/introduction.md)
-  - [x] 3.2 [Commands](docs/lesson03/commands.md)
-  - [x] 3.3 [Kconfig](docs/lesson03/kconfig.md)
-  - [x] 3.4 [Exercise](docs/lesson03/exercise.md)
+  - [ ] 3.1 [Introduction](docs/threads/introduction.md)
+  - [ ] 3.2 [Commands](docs/threads/commands.md)
+  - [ ] 3.3 [Kconfig](docs/threads/kconfig.md)
+  - [ ] 3.4 [Exercise](docs/threads/exercise.md)
 
 - [ ] **Lesson 4: GPIO**
-  - [ ] 4.1 [Introduction](docs/lesson04/introduction.md)
-  - [ ] 4.2 [Commands](docs/lesson04/commands.md)
-  - [ ] 4.3 [Kconfig](docs/lesson04/kconfig.md)
-  - [ ] 4.4 [Exercise](docs/lesson04/exercise.md)
+  - [ ] 4.1 [Introduction](docs/gpio/introduction.md)
+  - [ ] 4.2 [Commands](docs/gpio/commands.md)
+  - [ ] 4.3 [Kconfig](docs/gpio/kconfig.md)
+  - [ ] 4.4 [Exercise](docs/gpio/exercise.md)
   
 - [ ] **Lesson 5: Scheduling**
-  - [x] 5.1 [Introduction](docs/lesson05/introduction.md)
-  - [x] 5.2 [Commands](docs/lesson05/commands.md)
-  - [x] 5.3 [Kconfig](docs/lesson05/kconfig.md)
-  - [ ] 5.4 [Exercise](docs/lesson05/exercise.md)
+  - [ ] 5.1 [Introduction](docs/scheduling/introduction.md)
+  - [ ] 5.2 [Commands](docs/scheduling/commands.md)
+  - [ ] 5.3 [Kconfig](docs/scheduling/kconfig.md)
+  - [ ] 5.4 [Exercise](docs/scheduling/exercise.md)
 
 - [ ] **Lesson 6: Debugging**
-  - [ ] 6.1 [Introduction](docs/lesson06/introduction.md)
-  - [ ] 6.2 [Commands](docs/lesson06/commands.md)
-  - [ ] 6.3 [Kconfig](docs/lesson06/kconfig.md)
-  - [ ] 6.4 [Exercise](docs/lesson06/exercise.md)
+  - [ ] 6.1 [Introduction](docs/debugging/introduction.md)
+  - [ ] 6.2 [Commands](docs/debugging/commands.md)
+  - [ ] 6.3 [Kconfig](docs/debugging/kconfig.md)
+  - [ ] 6.4 [Exercise](docs/debugging/exercise.md)
 
 - [ ] **Lesson 7: Interrupts** 
-  - [ ] 7.1 [Introduction](docs/lesson07/introduction.md)
-  - [ ] 7.2 [Commands](docs/lesson07/commands.md)
-  - [ ] 7.3 [Kconfig](docs/lesson07/kconfig.md)
-  - [ ] 7.4 [Exercise](docs/lesson07/exercise.md)
+  - [ ] 7.1 [Introduction](docs/interrupts/introduction.md)
+  - [ ] 7.2 [Commands](docs/interrupts/commands.md)
+  - [ ] 7.3 [Kconfig](docs/interrupts/kconfig.md)
+  - [ ] 7.4 [Exercise](docs/interrupts/exercise.md)
 
 - [ ] **Lesson 8: Mutexes**
   - [ ] 8.1 [Introduction](docs/lesson08/introduction.md)
@@ -73,22 +73,22 @@ A web version of this tutorial can also be found [here](https://maksimdrachov.gi
   - [ ] 9.4 [Exercise](docs/lesson09/exercise.md)
 
 - [ ] **Lesson 10: Logging**
-  - [ ] 10.1 [Introduction](docs/lesson10/introduction.md)
-  - [ ] 10.2 [Commands](docs/lesson10/commands.md)
-  - [ ] 10.3 [Kconfig](docs/lesson10/kconfig.md)
-  - [ ] 10.4 [Exercise](docs/lesson10/exercise.md)
+  - [ ] 10.1 [Introduction](docs/logging/introduction.md)
+  - [ ] 10.2 [Commands](docs/logging/commands.md)
+  - [ ] 10.3 [Kconfig](docs/logging/kconfig.md)
+  - [ ] 10.4 [Exercise](docs/logging/exercise.md)
 
 - [ ] **Lesson 11: Networking**
-  - [ ] 11.1 [Introduction](docs/lesson11/introduction.md)
-  - [ ] 11.2 [Commands](docs/lesson11/commands.md)
-  - [ ] 11.3 [Kconfig](docs/lesson11/kconfig.md)
-  - [ ] 11.4 [Exercise](docs/lesson11/exercise.md)
+  - [ ] 11.1 [Introduction](docs/networking/introduction.md)
+  - [ ] 11.2 [Commands](docs/networking/commands.md)
+  - [ ] 11.3 [Kconfig](docs/networking/kconfig.md)
+  - [ ] 11.4 [Exercise](docs/networking/exercise.md)
 
 - [ ] **Lesson 12: Timers**
-  - [ ] 12.1 [Introduction](docs/lesson12/introduction.md)
-  - [ ] 12.2 [Commands](docs/lesson12/commands.md)
-  - [ ] 12.3 [Kconfig](docs/lesson12/kconfig.md)
-  - [ ] 12.4 [Exercise](docs/lesson12/exercise.md)
+  - [ ] 12.1 [Introduction](docs/timers/introduction.md)
+  - [ ] 12.2 [Commands](docs/timers/commands.md)
+  - [ ] 12.3 [Kconfig](docs/timers/kconfig.md)
+  - [ ] 12.4 [Exercise](docs/timers/exercise.md)
 
 ## Useful Links
 **General**
@@ -96,10 +96,29 @@ A web version of this tutorial can also be found [here](https://maksimdrachov.gi
 - [Introduction to the Zephyr RTOS (video)](https://www.youtube.com/watch?v=jR5E5Kz9A-k)
 - [awesome-zephyr](https://github.com/fkromer/awesome-zephyr)
 
-**Youtube**
+**Youtube channels**
 - [The Linux Foundation](https://www.youtube.com/c/LinuxfoundationOrg/search?query=zephyr)
 - [Zephyr Project](https://www.youtube.com/c/ZephyrProject/videos)
+
+## Support
+I believe all knowledge should be freely accessible to whomever wants to learn. If you want to support me in writing more tutorials like this one, here are some ways you can do so:
+- subscribe to my youtube channel: stay up to date on my latest videos
+- subscribe to my bitclout: stay up to date on my latest blogs/projects
+- donate cryptocurrency
+
+Bitcoin            |  Ethereum | Other
+:-------------------------:|:-------------------------:|:-------------------------:
+![bitcoin_address](https://...Dark.png)  |  ![eth_address](https://...Ocean.png)|  ![donate-link](https://...Ocean.png)
+
+
 
 ## To Do
 - [ ] Add next page and prev page links
 - [ ] Sort images into lessons
+- [ ] gpio:commands.md -> add descriptions to tables
+- [ ] exercises: rename project names
+- [ ] images: resort images into folders
+- [ ] svg-images: resort images into folders
+- [ ] update image links in texts
+- [ ] exercices: threads add def equivalents to each type
+- [ ] zephyr-setup: test proposed install and setup on 'tutorial'
