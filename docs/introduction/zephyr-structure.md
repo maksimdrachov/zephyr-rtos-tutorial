@@ -1,5 +1,7 @@
 ## Zephyr structure
 
+*How to work with Zephyr?*
+
 A Zephyr application directory has the following components:
 - **CMakeLists.txt**: your build settings configuration file - this tells west (really a cmake build system under the hood) where to find what it needs to create your firmware. For more advanced projects, it's also used for debug settings, emulation, and other features.
   

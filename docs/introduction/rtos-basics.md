@@ -1,4 +1,13 @@
 ## RTOS basics
+*Why do I need an RTOS?*
+
+*How does an RTOS work?*
+
+*What are some key concept in RTOS?*
+
+*Why Zephyr?*
+
+
 Before going any further it might be useful to quickly go over some basic RTOS concepts.
 
 First: what is an RTOS? It is an operating system that is intended to serve real-time applications. Typical time requirement are below 0.01s. Two types of systems can be identified:
