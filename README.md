@@ -29,6 +29,7 @@ A web version of this tutorial can also be found [here](https://maksimdrachov.gi
 - [ ] **Lesson 2: Introduction**
   - [ ] 2.1 [RTOS basics](docs/introduction/rtos-basics.md)
   - [ ] 2.2 [Zephyr basics](docs/introduction/zephyr-structure.md)
+  - [ ] 2.3 [Tutorial structure](docs/introduction/tutorial-structure.md)
   
 - [ ] **Lesson 3: Threads**
   - [ ] 3.1 [Introduction](docs/threads/introduction.md)
