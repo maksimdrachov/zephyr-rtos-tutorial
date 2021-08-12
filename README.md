@@ -102,24 +102,25 @@ A web version of this tutorial can also be found [here](https://maksimdrachov.gi
 - [Zephyr Project](https://www.youtube.com/c/ZephyrProject/videos)
 
 ## Support
-I believe all knowledge should be freely accessible to whomever wants to learn. If you want to support me in writing more tutorials like this one, here are some ways you can do so:
-- subscribe to my youtube channel: stay up to date on my latest videos
-- subscribe to my bitclout: stay up to date on my latest blogs/projects
+I believe all knowledge should be freely accessible to whomever wants to learn.
+
+If you want to support me in writing more tutorials like this one, here are some ways you can do so:
+- subscribe to my [youtube](https://www.youtube.com/channel/UCh_9X-7LSQtC5bnwKDteiLw): stay up to date on my latest videos
+- follow me on [bitclout](https://bitclout.com/u/maksim_drachov): stay up to date on my latest blogs/projects
 - donate cryptocurrency
 
 Bitcoin            |  Ethereum | Other
 :-------------------------:|:-------------------------:|:-------------------------:
-![bitcoin_address](https://...Dark.png)  |  ![eth_address](https://...Ocean.png)|  ![donate-link](https://...Ocean.png)
+![bitcoin_address](https://...Dark.png)  |  ![eth_address](https://...Ocean.png)|  link
 
 
 
 ## To Do
-- [ ] Add next page and prev page links
-- [ ] Sort images into lessons
 - [ ] gpio:commands.md -> add descriptions to tables
-- [ ] exercises: rename project names
-- [ ] images: resort images into folders
-- [ ] svg-images: resort images into folders
-- [ ] update image links in texts
-- [ ] exercices: threads add def equivalents to each type
+- [ ] exercices: threads : add define equivalents to each type
 - [ ] zephyr-setup: test proposed install and setup on 'tutorial'
+- 
+
+towards the end:
+- [ ] Add next page and prev page links
+- [ ] exercises: rename project names

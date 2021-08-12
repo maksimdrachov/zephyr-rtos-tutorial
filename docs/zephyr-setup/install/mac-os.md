@@ -55,7 +55,7 @@ export ZEPHYR_TOOLCHAIN_VARIANT=GNUARMEMB
 export GNUARMEMB_TOOLCHAIN_PATH=/Users/maksim/dev-tools/gcc-arm-none-eabi-10.3-2021.07
 ```
 - Restart terminal and dheck if environment variables are set up correctly
-![env_var_check](/images/zephyr-setup/env_var_check.png)
+![env_var_check](/images/zephyr-setup/env-var-check.png)
 
 **5) Build the Blinky sample**
 ```
@@ -63,7 +63,7 @@ cd ~/zephyrproject/zephyr/samples/basic/blinky
 west build -b nucleo_f756zg
 ```
 A succesful build looks like this:
-![succes_build](/images/zephyr-setup/succes_build.png)
+![succes_build](/images/zephyr-setup/succes-build.png)
 
 **6) Flash the Sample**
 ```
@@ -71,4 +71,4 @@ cd ~/zephyrproject/zephyr/samples/basic/blinky
 west flash
 ```
 A succesful flash looks like this:
-![succes_flash](/images/zephyr-setup/succes_flash.png)
+![succes_flash](/images/zephyr-setup/succes-flash.png)
