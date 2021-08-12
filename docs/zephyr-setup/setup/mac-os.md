@@ -38,7 +38,7 @@ Save this configuration under `~/dev-tools/coolterm`, since you'll need it often
 **3) Build and Flash basic-sample**
 - Open the folder zephyr-rtos-tutorial in VScode
 
-- Open Coolterm with the `nucleo-f756zg` configuration
+- Open Coolterm with the `nucleo-f756zg` configuration and connect
 
 - `Terminal -> New Terminal`
 ```
