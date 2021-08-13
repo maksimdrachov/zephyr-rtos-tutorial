@@ -27,9 +27,9 @@ A web version of this tutorial can also be found [here](https://maksimdrachov.gi
     - [ ] [Linux](docs/zephyr-setup/setup/linux.md)
 
 - [ ] **Lesson 2: Introduction**
-  - [ ] 2.1 [RTOS basics](docs/introduction/rtos-basics.md)
-  - [ ] 2.2 [Zephyr basics](docs/introduction/zephyr-structure.md)
-  - [ ] 2.3 [Tutorial structure](docs/introduction/tutorial-structure.md)
+  - [x] 2.1 [RTOS basics](docs/introduction/rtos-basics.md)
+  - [x] 2.2 [Zephyr structure](docs/introduction/zephyr-structure.md)
+  - [x] 2.3 [Tutorial structure](docs/introduction/tutorial-structure.md)
   
 - [ ] **Lesson 3: Threads**
   - [ ] 3.1 [Introduction](docs/threads/introduction.md)
@@ -61,35 +61,35 @@ A web version of this tutorial can also be found [here](https://maksimdrachov.gi
   - [ ] 7.3 [Kconfig](docs/interrupts/kconfig.md)
   - [ ] 7.4 [Exercise](docs/interrupts/exercise.md)
 
-- [ ] **Lesson 8: Mutexes**
-  - [ ] 8.1 [Introduction](docs/lesson08/introduction.md)
-  - [ ] 8.2 [Commands](docs/lesson08/commands.md)
-  - [ ] 8.3 [Kconfig](docs/lesson08/kconfig.md)
-  - [ ] 8.4 [Exercise](docs/lesson08/exercise.md)
+- [ ] **Lesson 8: Timers**
+  - [ ] 8.1 [Introduction](docs/timers/introduction.md)
+  - [ ] 8.2 [Commands](docs/timers/commands.md)
+  - [ ] 8.3 [Kconfig](docs/timers/kconfig.md)
+  - [ ] 8.4 [Exercise](docs/timers/exercise.md)
 
-- [ ] **Lesson 9: Semaphores**
-  - [ ] 9.1 [Introduction](docs/lesson09/introduction.md)
-  - [ ] 9.2 [Commands](docs/lesson09/commands.md)
-  - [ ] 9.3 [Kconfig](docs/lesson09/kconfig.md)
-  - [ ] 9.4 [Exercise](docs/lesson09/exercise.md)
+- [ ] **Lesson 9: Mutexes**
+  - [ ] 9.1 [Introduction](docs/lesson08/introduction.md)
+  - [ ] 9.2 [Commands](docs/lesson08/commands.md)
+  - [ ] 9.3 [Kconfig](docs/lesson08/kconfig.md)
+  - [ ] 9.4 [Exercise](docs/lesson08/exercise.md)
 
-- [ ] **Lesson 10: Logging**
-  - [ ] 10.1 [Introduction](docs/logging/introduction.md)
-  - [ ] 10.2 [Commands](docs/logging/commands.md)
-  - [ ] 10.3 [Kconfig](docs/logging/kconfig.md)
-  - [ ] 10.4 [Exercise](docs/logging/exercise.md)
+- [ ] **Lesson 10: Semaphores**
+  - [ ] 10.1 [Introduction](docs/lesson09/introduction.md)
+  - [ ] 10.2 [Commands](docs/lesson09/commands.md)
+  - [ ] 10.3 [Kconfig](docs/lesson09/kconfig.md)
+  - [ ] 10.4 [Exercise](docs/lesson09/exercise.md)
 
-- [ ] **Lesson 11: Networking**
-  - [ ] 11.1 [Introduction](docs/networking/introduction.md)
-  - [ ] 11.2 [Commands](docs/networking/commands.md)
-  - [ ] 11.3 [Kconfig](docs/networking/kconfig.md)
-  - [ ] 11.4 [Exercise](docs/networking/exercise.md)
+- [ ] **Lesson 11: Logging**
+  - [ ] 11.1 [Introduction](docs/logging/introduction.md)
+  - [ ] 11.2 [Commands](docs/logging/commands.md)
+  - [ ] 11.3 [Kconfig](docs/logging/kconfig.md)
+  - [ ] 11.4 [Exercise](docs/logging/exercise.md)
 
-- [ ] **Lesson 12: Timers**
-  - [ ] 12.1 [Introduction](docs/timers/introduction.md)
-  - [ ] 12.2 [Commands](docs/timers/commands.md)
-  - [ ] 12.3 [Kconfig](docs/timers/kconfig.md)
-  - [ ] 12.4 [Exercise](docs/timers/exercise.md)
+- [ ] **Lesson 12: Networking**
+  - [ ] 12.1 [Introduction](docs/networking/introduction.md)
+  - [ ] 12.2 [Commands](docs/networking/commands.md)
+  - [ ] 12.3 [Kconfig](docs/networking/kconfig.md)
+  - [ ] 12.4 [Exercise](docs/networking/exercise.md)
 
 ## Useful Links
 **General**
@@ -119,6 +119,7 @@ Bitcoin            |  Ethereum | Dogecoin
 - [ ] gpio:commands.md -> add descriptions to tables
 - [ ] exercices: threads : add define equivalents to each type
 - [ ] zephyr-setup: test proposed install and setup on 'tutorial'
+- introduction->rtos-basics: add explanatory images
 - 
 
 towards the end:

@@ -1,25 +1,36 @@
 ## Zephyr structure
 
-*How to work with Zephyr?*
+*How to work with Zephyr?* Before we start writing our first applications in Zephyr, it might be a good step to take a look at the folder structure that Zephyr provides us.
+
 
 A Zephyr application directory has the following components:
 - **CMakeLists.txt**: your build settings configuration file - this tells west (really a cmake build system under the hood) where to find what it needs to create your firmware. For more advanced projects, it's also used for debug settings, emulation, and other features.
-  
-```
-cmake_minimum_required(VERSION 3.13.1)
-find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
-project(blinky)
 
-target_sources(app PRIVATE src/main.c)
-```
-*samples/basic/blinky/CMakeLists.txt*
+![sample-folder](/images/introduction/sample-folder.png)
 
-- **prj.conf**: the Kernel configuration file. For most projects, it tells Zephyr whether to include specific features for use in your application code - if you use GPIO, PWM, or a serial monitor, you’ll need to enable them in this file first. Sometimes also referred to as Kconfig file. There is also something of a [GUI](https://docs.zephyrproject.org/2.4.0/guides/kconfig/menuconfig.html) which is helpful to get started.
+Let's go one-by-one:
 
-![guiconfig](https://maksimdrachov.github.io/zephyr-rtos-tutorial/images/guiconfig.png)
+### build
+This folder appears only once you have build your application and contains what gets flashed on the microcontroller. 
 
-- **src/main.c**: your custom application code - where the magic happens! It’s advisable to put all of your custom source code in a `src/` directory like this so it doesn’t get mixed up with your configuration files.
-
-Once you have succesfully built an application a build folder will appear within your directory. The following files are interesting to take a look at:
-- **build/zephyr/zephyr.dts**: CMake uses a devicetree to tailor the build towards your specific architecture/board. A more in-depth discussion of devicetree follows a bit later.
+The following files are sometimes interesting to take a look at:
+- **build/zephyr/zephyr.dts**: CMake uses a devicetree to tailor the build towards your specific architecture/board. This is the final version of that file. If you don't understand what a devicetree is, don't worry we'll cover this in more detail later.
 - **build/zephyr/.config**: To check the final Kconfig used for your built. This can be useful to verify if a setting has been set correctly.
+
+### CMakeLists.txt
+This file will be used by [CMake](https://en.wikipedia.org/wiki/CMake) to set up your build, during this tutorial you won't need to change this one.
+
+### prj.conf
+This is you Kconfig file. Important! This file will contain any *additional* settings you'll set for your Zephyr configuration. For example if you need TCP/IP, Bluetooth or want to make changes to your scheduler,... We'll explore some of the options throughout this tutorial.
+
+![k-config](/images/introduction/k-config.png)
+
+Right now it's pretty empty, since for the basic-sample we don't need anything "fancy", just the basic Zephyr kernel. We only set CONFIG_PRINTK=y , this will allow us to the printk function to output to the serial (which will be displayed on our computer screen).
+
+If you're ever unsure about what a particular config setting does, you have 2 options:
+- Use [google](https://www.google.com/search?client=firefox-b-d&q=zephyr+CONFIG_PRINTK): usually Zephyr Documentation is one of the first links
+- Use the guiconfig: in your basic-sample folder execute `west build -t guiconfig`. This will show you a menu of all the possible configuration settings and a small description of what each one does. (Use `Jump to` to find your config)
+![guiconfig](/images/introduction/guiconfig.png). 
+
+### src
+Where the magic happens! This folder should contain all of your custom application code. For now it should only contain `main.c`.

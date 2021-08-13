@@ -5,7 +5,3 @@ When I started learning Zephyr (~June 2021) I noticed it was difficult to find a
 
 *Why on Github?*
 As Zephyr is a relatively new project and still very much evolving, I thought it made sense to write this tutorial in an open source manner. Therefore as things change, and the project evolves, it will remain possible to keep the information up-to-date. If you come across any code that is not working, information that is invalid (or out-of-date),... don't hesitate to raise an issue or submit a PR. I hope that with the help of the Zephyr community this can become an entry-point for all beginners.
-
-*Why do I need to learn Zephyr?*
-
-*What makes Zephyr different from other RTOS'es?*
