@@ -106,12 +106,12 @@ I believe all knowledge should be freely accessible to whomever wants to learn.
 
 If you want to support me in writing more tutorials like this one, here are some ways you can do so:
 - subscribe to my [youtube](https://www.youtube.com/channel/UCh_9X-7LSQtC5bnwKDteiLw): stay up to date on my latest videos
-- follow me on [bitclout](https://bitclout.com/u/maksim_drachov): stay up to date on my latest blogs/projects
+- follow me on [twitter](https://twitter.com/maksimdrachov): stay up to date on my latest blogs/projects
 - donate cryptocurrency
 
-Bitcoin            |  Ethereum | Other
+Bitcoin            |  Ethereum | Dogecoin
 :-------------------------:|:-------------------------:|:-------------------------:
-![bitcoin_address](https://...Dark.png)  |  ![eth_address](https://...Ocean.png)|  link
+![bitcoin_address](/images/donate/bitcoin-donations.png)  |  ![eth_address](/images/donate/ethereum-donations.png)|  ![doge_address](/images/donate/dogecoin-donations.png)
 
 
 
