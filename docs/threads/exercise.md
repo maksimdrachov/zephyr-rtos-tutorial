@@ -1,27 +1,92 @@
 ## Exercises
-*Explain that you need to use basic-template for all exercises, this contains a main.c file which you'll need to edit. kconfig contains already one entry: CONFIG_PRINTK, we'll need this to be able to use serial output to verify if our solution is correct*
+For solving the exercises I recommend you create your own folder inside `zephyr-rtos-tutorial` which contains the following filetree.
+
+```
+.
+└── my-exercises
+    ├── threads
+    │   ├── thread-start
+    │   ├── thread-start-define
+    │   ├── thread-abort
+    │   ├── thread-sleep
+    │   ├── thread-suspend
+    │   └── thread-join
+    ├── gpio
+    ├── scheduling
+    ├── debugging
+    ├── interrupts
+    ├── timers
+    ├── mutexes
+    ├── semaphores
+    ├── logging
+    └── networking
+```
+
+
 
 **thread creation: main**
 
+- Use `k_thread_create()` to create a thread
+- Implement the following
+
+![thread-start](/svg-images/threads/thread-start.png)
+
+- Output the following serial using `printk()`
+
+![thread-start](/images/threads/thread-start.png)
+
+solution: `exercises/threads/thread-start`
+
 **thread creation: define**
 
-**k_thread_start()**
+- Same as previous, but this time using `K_THREAD_DEFINE` to create thread
 
-![k_thread_start](/images/k_thread_start.png)
+solution: `exercises/threads/thread-start-define`
 
-**k_thread_abort()**
+**thread abort**
 
-![k_thread_start](/images/k_thread_abort.png)
+- Implement the following
 
-**k_sleep()**
+![thread-abort](/svg-images/threads/thread-abort.png)
 
-![k_thread_start](/images/k_thread_sleep.png)
+- Output the following serial using `printk()`
 
-**k_thread_suspend()**
+![thread-abort](/images/threads/thread-abort.png)
 
-![k_thread_start](/images/k_thread_suspend.png)
+solution: `exercises/threads/thread-abort`
 
-**k_thread_join()**
+**thread sleep**
 
-![k_thread_start](/images/k_thread_join.png)
+- Implement the following
 
+![thread-sleep](/svg-images/threads/thread-sleep.png)
+
+- Output the following serial using `printk()`
+
+![thread-sleep](/images/threads/thread-sleep.png)
+
+solution: `exercises/threads/thread-sleep`
+
+**thread suspend**
+
+- Implement the following
+
+![thread-sleep](/svg-images/threads/thread-suspend.png)
+
+- Output the following serial using `printk()`
+
+![thread-sleep](/images/threads/thread-suspend.png)
+
+solution: `exercises/threads/thread-suspend`
+
+**thread join**
+
+- Implement the following
+
+![thread-join](/svg-images/threads/thread-join.png)
+
+- Output the following serial using `printk()`
+
+![thread-join](/images/threads/thread-join.png)
+
+solution: `exercises/threads/thread-join`

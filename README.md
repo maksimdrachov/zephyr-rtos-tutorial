@@ -30,10 +30,10 @@ This tutorial is under active development, if you want to participate - please r
   - [x] 2.3 [Tutorial structure](docs/introduction/tutorial-structure.md)
   
 - [ ] **Lesson 3: Threads**
-  - [ ] 3.1 [Introduction](docs/threads/introduction.md)
-  - [ ] 3.2 [Commands](docs/threads/commands.md)
-  - [ ] 3.3 [Kconfig](docs/threads/kconfig.md)
-  - [ ] 3.4 [Exercise](docs/threads/exercise.md)
+  - [x] 3.1 [Introduction](docs/threads/introduction.md)
+  - [x] 3.2 [Commands](docs/threads/commands.md)
+  - [x] 3.3 [Kconfig](docs/threads/kconfig.md)
+  - [x] 3.4 [Exercise](docs/threads/exercise.md)
 
 - [ ] **Lesson 4: GPIO**
   - [ ] 4.1 [Introduction](docs/gpio/introduction.md)
