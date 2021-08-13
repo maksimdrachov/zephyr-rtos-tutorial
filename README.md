@@ -117,8 +117,9 @@ Bitcoin            |  Ethereum | Dogecoin
 - [ ] gpio:commands.md -> add descriptions to tables
 - [ ] exercices: threads : add define equivalents to each type
 - [ ] zephyr-setup: test proposed install and setup on 'tutorial'
-- introduction->rtos-basics: add explanatory images
-- 
+- [ ] introduction->rtos-basics: add explanatory images
+- [ ] threads->exercises: retake screenshots coolterm without shadow
+- [ ] threads->exercises: check build thread-start
 
 towards the end:
 - [ ] Add next page and prev page links
