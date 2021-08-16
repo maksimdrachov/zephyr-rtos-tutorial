@@ -14,6 +14,11 @@
 
 #define SLEEP_TIME_MS	1
 
+#define MY_DEV_IRQ 	24
+#define MY_DEV_PRIO	2
+
+
+
 /*
  * Get button configuration from the devicetree sw0 alias. This is mandatory.
  */

@@ -36,9 +36,9 @@ This tutorial is under active development, if you want to participate - please r
   - [x] 3.4 [Exercise](docs/threads/exercise.md)
 
 - [ ] **Lesson 4: GPIO**
-  - [ ] 4.1 [Introduction](docs/gpio/introduction.md)
-  - [ ] 4.2 [Commands](docs/gpio/commands.md)
-  - [ ] 4.3 [Kconfig](docs/gpio/kconfig.md)
+  - [x] 4.1 [Introduction](docs/gpio/introduction.md)
+  - [x] 4.2 [Commands](docs/gpio/commands.md)
+  - [x] 4.3 [Kconfig](docs/gpio/kconfig.md)
   - [ ] 4.4 [Exercise](docs/gpio/exercise.md)
   
 - [ ] **Lesson 5: Scheduling**
@@ -118,7 +118,6 @@ Bitcoin            |  Ethereum | Dogecoin
 - [ ] exercices: threads : add define equivalents to each type
 - [ ] zephyr-setup: test proposed install and setup on 'tutorial'
 - [ ] introduction->rtos-basics: add explanatory images
-- [ ] threads->exercises: retake screenshots coolterm without shadow
 - [ ] threads->exercises: check build thread-start
 
 towards the end:
