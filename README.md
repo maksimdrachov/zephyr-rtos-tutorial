@@ -54,7 +54,7 @@ This tutorial is under active development, if you want to participate - please r
   - [ ] 6.4 [Exercise](docs/debugging/exercise.md)
 
 - [ ] **Lesson 7: Interrupts** 
-  - [ ] 7.1 [Introduction](docs/interrupts/introduction.md)
+  - [x] 7.1 [Introduction](docs/interrupts/introduction.md)
   - [ ] 7.2 [Commands](docs/interrupts/commands.md)
   - [ ] 7.3 [Kconfig](docs/interrupts/kconfig.md)
   - [ ] 7.4 [Exercise](docs/interrupts/exercise.md)
