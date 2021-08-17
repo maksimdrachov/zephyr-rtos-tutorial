@@ -1,27 +1,47 @@
-## Introduction
+*What are some common debugging techniques and when to use them?*
+
+The three most common debugging techniques we'll be discussing here are:
+- thread aware debugging (debug probe)
+- thread analysis
+- core dump
+
+*How does thread aware debugging work?*
+
 
 OpenOCD thread aware debugging
 ![openocd-threads-support](/images/debugging/openocd-threads-support.png)
 
-### OpenOCD
+A debug probe is special hardware which allows you to control execution of a Zephyr application running on a seperate board. Debug probes usually allow reading and writing registers and memory, and support breakpoint debugging of the Zephyr application on your host workstation using tools like GDB. 
 
-### Thread analyzer
+ST-LINK is a serial and debug adapter built into all Nucleo and Discovery boards. It provides a bridge between your computer (or other SUB host) and the embedded target processor, which can be used for debugging, flash programming, and serial communication, all over a simple USB cable.
 
-### Core dump
-The core dump module enables dumping the CPU registers and memory content for offline debugging. This module is called when fatal error is encountered, and the data is printed or stored according to which backends are enabled.
+It is compatible with the following host debug tools:
+- OpenOCD Debug Host Tools
+- J-Link Debug Host Tools
 
-Usage
+In this tutorial we'll be using OpenOCD.
 
-When the core dump module is enabled, during fatal error, CPU registers and memory content are being printed or stored according to which backends are enabled. This core dump data can fed into a custom made GDB server as a remote target for GDB (and other GDB compatible debuggers). CPU registers, memory content and stack can be examined in the debugger.
+*How to use OpenOCD?*
+OpenOCD is available by default on ST-Link and configured as the default flash and debug tool. Flash and debug can be done as follows:
+```
+west build -b nucleo_f756zg
+west flash
+```
+```
+west build -b nucleo_f756zg
+west debug
+```
+
+*How does thread analysis work?*
+The thread analyzer module enables all the Zephyr options required to track the thread information, e.g. thread stack size usage and other runtime thread statistics.
+
+The analysis is performed on demand when the application calls thread_analyzer_run() or thread_analyzer_print().
+
+*How does core dump work?*
+The core dump module enables dumping the CPU registers and memory content for offline debugging. This module is called when a fatal error is encountered, and the data is printed or stored to which backends are enabled. This core dump data can be fed into a custom made GDB server as a remote target for GDB. CPU registers, memory content and stack can be examined in the debugger.
 
 This usually involves the following steps:
-
-    Get the core dump log from the device depending on enabled backends. For example, if the log module backend is used, get the log output from the log module backend.
-
-    Convert the core dump log into a binary format that can be parsed by the GDB server. For example, scripts/coredump/coredump_serial_log_parser.py can be used to convert the serial console log into a binary file.
-
-    Start the custom GDB server using the script scripts/coredump/coredump_gdbserver.py with the core dump binary log file, and the Zephyr ELF file as parameters.
-
-    Start the debugger corresponding to the target architecture.
-
-[More on Core Dump](https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/zephyr/guides/flash_debug/coredump.html)
+1) Get the core dump log from the device depending on enabled backends.
+2) Convert the core dump log into a binary format that can be parsed by the GDB server. For example, scripts/coredump/coredump_serial_log_parser.py can be used to convert the serial console log into a binary file.
+3) Start the custom GDB server using the script scripts/coredump/coredump_gdbserver.py with the core dump binary log file, and the Zephyr ELF file as parameters.
+4) Start the debugger corresponding to the target architecture.

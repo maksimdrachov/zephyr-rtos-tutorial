@@ -39,16 +39,16 @@ This tutorial is under active development, if you want to participate - please r
   - [x] 4.1 [Introduction](docs/gpio/introduction.md)
   - [x] 4.2 [Commands](docs/gpio/commands.md)
   - [x] 4.3 [Kconfig](docs/gpio/kconfig.md)
-  - [ ] 4.4 [Exercise](docs/gpio/exercise.md)
+  - [x] 4.4 [Exercise](docs/gpio/exercise.md)
   
 - [ ] **Lesson 5: Scheduling**
-  - [ ] 5.1 [Introduction](docs/scheduling/introduction.md)
+  - [x] 5.1 [Introduction](docs/scheduling/introduction.md)
   - [ ] 5.2 [Commands](docs/scheduling/commands.md)
   - [ ] 5.3 [Kconfig](docs/scheduling/kconfig.md)
   - [ ] 5.4 [Exercise](docs/scheduling/exercise.md)
 
 - [ ] **Lesson 6: Debugging**
-  - [ ] 6.1 [Introduction](docs/debugging/introduction.md)
+  - [x] 6.1 [Introduction](docs/debugging/introduction.md)
   - [ ] 6.2 [Commands](docs/debugging/commands.md)
   - [ ] 6.3 [Kconfig](docs/debugging/kconfig.md)
   - [ ] 6.4 [Exercise](docs/debugging/exercise.md)

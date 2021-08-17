@@ -1,3 +1,11 @@
+*What is an interrupt?*
+
+*How to define an interrupt?*
+
+*When to use an interrupt?*
+
+
+
 An ISR has the following key properties:
 - An interrupt request (IRQ) signal that triggers the ISR.
 - A priority level associated with the IRQ.
