@@ -1,4 +1,5 @@
 *What is an interrupt?*
+
 An interrupt service routine (ISR) is a function that executes asynchronously in response to a hardware or software interrupt. An ISR normally preempts the execution of the current thread, allowing the response to occur with very low overhead. Thread execution resumes only once all ISR work has been completed.
 
 An ISR has the following key properties:
@@ -82,6 +83,7 @@ void my_isr_installer(void)
 ```
 
 *How to disable interrupts?*
+
 In certain situations it may be necessary for the current thread to prevent ISRs from executing while it is performing time-sensitive or critical section operations.
 
 A thread may temporarily prevent all IRQ handling in the system using an IRQ lock. This lock can be applied even when it is already in effect, so routines can use it without having to know if it is already in effect. The thread must unlock its IRQ lock the same number of times it was locked before interrupts can be once again processed by the kernel while the thread is running.

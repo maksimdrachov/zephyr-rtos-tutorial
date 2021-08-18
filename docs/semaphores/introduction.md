@@ -1,5 +1,7 @@
-## Introduction
+*What is a semaphore?*
 
-### GDB
+*How to define a semaphore?*
 
-### Runtime statistics
+*How to use a semaphore?*
+
+*When to use?*

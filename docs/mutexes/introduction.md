@@ -1,5 +1,7 @@
-## Introduction
+*What is a mutex?*
 
-### GDB
+*How to define a mutex?*
 
-### Runtime statistics
+*How to use a mutex?*
+
+*When to use?*

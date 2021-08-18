@@ -43,39 +43,39 @@ This tutorial is under active development, if you want to participate - please r
   
 - [ ] **Lesson 5: Scheduling**
   - [x] 5.1 [Introduction](docs/scheduling/introduction.md)
-  - [ ] 5.2 [Commands](docs/scheduling/commands.md)
-  - [ ] 5.3 [Kconfig](docs/scheduling/kconfig.md)
+  - [x] 5.2 [Commands](docs/scheduling/commands.md)
+  - [x] 5.3 [Kconfig](docs/scheduling/kconfig.md)
   - [ ] 5.4 [Exercise](docs/scheduling/exercise.md)
 
 - [ ] **Lesson 6: Debugging**
   - [x] 6.1 [Introduction](docs/debugging/introduction.md)
-  - [ ] 6.2 [Commands](docs/debugging/commands.md)
-  - [ ] 6.3 [Kconfig](docs/debugging/kconfig.md)
+  - [x] 6.2 [Commands](docs/debugging/commands.md)
+  - [x] 6.3 [Kconfig](docs/debugging/kconfig.md)
   - [ ] 6.4 [Exercise](docs/debugging/exercise.md)
 
 - [ ] **Lesson 7: Interrupts** 
   - [x] 7.1 [Introduction](docs/interrupts/introduction.md)
-  - [ ] 7.2 [Commands](docs/interrupts/commands.md)
-  - [ ] 7.3 [Kconfig](docs/interrupts/kconfig.md)
+  - [x] 7.2 [Commands](docs/interrupts/commands.md)
+  - [x] 7.3 [Kconfig](docs/interrupts/kconfig.md)
   - [ ] 7.4 [Exercise](docs/interrupts/exercise.md)
 
 - [ ] **Lesson 8: Timers**
-  - [ ] 8.1 [Introduction](docs/timers/introduction.md)
+  - [x] 8.1 [Introduction](docs/timers/introduction.md)
   - [ ] 8.2 [Commands](docs/timers/commands.md)
-  - [ ] 8.3 [Kconfig](docs/timers/kconfig.md)
+  - [x] 8.3 [Kconfig](docs/timers/kconfig.md)
   - [ ] 8.4 [Exercise](docs/timers/exercise.md)
 
 - [ ] **Lesson 9: Mutexes**
-  - [ ] 9.1 [Introduction](docs/lesson08/introduction.md)
-  - [ ] 9.2 [Commands](docs/lesson08/commands.md)
-  - [ ] 9.3 [Kconfig](docs/lesson08/kconfig.md)
-  - [ ] 9.4 [Exercise](docs/lesson08/exercise.md)
+  - [ ] 9.1 [Introduction](docs/mutexes/introduction.md)
+  - [x] 9.2 [Commands](docs/mutexes/commands.md)
+  - [x] 9.3 [Kconfig](docs/mutexes/kconfig.md)
+  - [ ] 9.4 [Exercise](docs/mutexes/exercise.md)
 
 - [ ] **Lesson 10: Semaphores**
-  - [ ] 10.1 [Introduction](docs/lesson09/introduction.md)
-  - [ ] 10.2 [Commands](docs/lesson09/commands.md)
-  - [ ] 10.3 [Kconfig](docs/lesson09/kconfig.md)
-  - [ ] 10.4 [Exercise](docs/lesson09/exercise.md)
+  - [ ] 10.1 [Introduction](docs/semaphores/introduction.md)
+  - [ ] 10.2 [Commands](docs/semaphores/commands.md)
+  - [ ] 10.3 [Kconfig](docs/semaphores/kconfig.md)
+  - [ ] 10.4 [Exercise](docs/semaphores/exercise.md)
 
 - [ ] **Lesson 11: Logging**
   - [ ] 11.1 [Introduction](docs/logging/introduction.md)
