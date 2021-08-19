@@ -78,9 +78,9 @@ This tutorial is under active development, if you want to participate - please r
   - [ ] 10.4 [Exercise](docs/semaphores/exercise.md)
 
 - [ ] **Lesson 11: Logging**
-  - [ ] 11.1 [Introduction](docs/logging/introduction.md)
-  - [ ] 11.2 [Commands](docs/logging/commands.md)
-  - [ ] 11.3 [Kconfig](docs/logging/kconfig.md)
+  - [x] 11.1 [Introduction](docs/logging/introduction.md)
+  - [x] 11.2 [Commands](docs/logging/commands.md)
+  - [x] 11.3 [Kconfig](docs/logging/kconfig.md)
   - [ ] 11.4 [Exercise](docs/logging/exercise.md)
 
 - [ ] **Lesson 12: Networking**
