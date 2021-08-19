@@ -61,20 +61,20 @@ This tutorial is under active development, if you want to participate - please r
 
 - [ ] **Lesson 8: Timers**
   - [x] 8.1 [Introduction](docs/timers/introduction.md)
-  - [ ] 8.2 [Commands](docs/timers/commands.md)
+  - [x] 8.2 [Commands](docs/timers/commands.md)
   - [x] 8.3 [Kconfig](docs/timers/kconfig.md)
   - [ ] 8.4 [Exercise](docs/timers/exercise.md)
 
 - [ ] **Lesson 9: Mutexes**
-  - [ ] 9.1 [Introduction](docs/mutexes/introduction.md)
+  - [x] 9.1 [Introduction](docs/mutexes/introduction.md)
   - [x] 9.2 [Commands](docs/mutexes/commands.md)
   - [x] 9.3 [Kconfig](docs/mutexes/kconfig.md)
   - [ ] 9.4 [Exercise](docs/mutexes/exercise.md)
 
 - [ ] **Lesson 10: Semaphores**
-  - [ ] 10.1 [Introduction](docs/semaphores/introduction.md)
-  - [ ] 10.2 [Commands](docs/semaphores/commands.md)
-  - [ ] 10.3 [Kconfig](docs/semaphores/kconfig.md)
+  - [x] 10.1 [Introduction](docs/semaphores/introduction.md)
+  - [x] 10.2 [Commands](docs/semaphores/commands.md)
+  - [x] 10.3 [Kconfig](docs/semaphores/kconfig.md)
   - [ ] 10.4 [Exercise](docs/semaphores/exercise.md)
 
 - [ ] **Lesson 11: Logging**
