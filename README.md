@@ -84,9 +84,9 @@ This tutorial is under active development, if you want to participate - please r
   - [ ] 11.4 [Exercise](docs/logging/exercise.md)
 
 - [ ] **Lesson 12: Networking**
-  - [ ] 12.1 [Introduction](docs/networking/introduction.md)
-  - [ ] 12.2 [Commands](docs/networking/commands.md)
-  - [ ] 12.3 [Kconfig](docs/networking/kconfig.md)
+  - [x] 12.1 [Introduction](docs/networking/introduction.md)
+  - [x] 12.2 [Commands](docs/networking/commands.md)
+  - [x] 12.3 [Kconfig](docs/networking/kconfig.md)
   - [ ] 12.4 [Exercise](docs/networking/exercise.md)
 
 ## Useful Links
