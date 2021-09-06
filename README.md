@@ -45,13 +45,13 @@ This tutorial is under active development, if you want to participate - please r
   - [x] 5.1 [Introduction](docs/scheduling/introduction.md)
   - [x] 5.2 [Commands](docs/scheduling/commands.md)
   - [x] 5.3 [Kconfig](docs/scheduling/kconfig.md)
-  - [ ] 5.4 [Exercise](docs/scheduling/exercise.md)
+  - [x] 5.4 [Exercise](docs/scheduling/exercise.md)
 
 - [ ] **Lesson 6: Debugging**
   - [x] 6.1 [Introduction](docs/debugging/introduction.md)
   - [x] 6.2 [Commands](docs/debugging/commands.md)
   - [x] 6.3 [Kconfig](docs/debugging/kconfig.md)
-  - [ ] 6.4 [Exercise](docs/debugging/exercise.md)
+  - [x] 6.4 [Exercise](docs/debugging/exercise.md)
 
 - [ ] **Lesson 7: Interrupts** 
   - [x] 7.1 [Introduction](docs/interrupts/introduction.md)
@@ -119,6 +119,7 @@ Bitcoin            |  Ethereum | Dogecoin
 - [ ] zephyr-setup: test proposed install and setup on 'tutorial'
 - [ ] introduction->rtos-basics: add explanatory images
 - [ ] threads->exercises: check build thread-start
+- [ ] debugging: core dump exercise
 
 towards the end:
 - [ ] Add next page and prev page links
