@@ -7,6 +7,8 @@
 #include <zephyr.h>
 #include <sys/printk.h>
 
+#include <debug/thread_analyzer.h>
+
 /* size of stack area used by each thread */
 #define STACKSIZE 1024
 
@@ -66,6 +68,7 @@ void thread_3(void *dummy1, void *dummy2, void *dummy3)
 	while (1)
 	{
 		printk("thread_3: thread loop \n");
+		thread_analyzer_print();
 	}
 
 }
