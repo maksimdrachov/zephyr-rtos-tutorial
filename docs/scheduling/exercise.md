@@ -16,6 +16,7 @@ thread_2: thread loop 3
 
 *figure showing the thread priority and the fact that thread_1 doesn't yield even though lower priority*
 
+![serial-coop-time-slicing](/images/scheduling/serial-coop-time-slicing.png)
 
 
 **Preemptive Time Slicing**
@@ -40,6 +41,8 @@ thread_1: thread loop 3
 
 *figure showing the increase in thread priority and preemption and completion of each thread*
 
+![serial-preemptive-time-slicing](/images/scheduling/serial-preemptive-time-slicing.png)
+
 **Time Slicing (with 3 threads)**
 Implement time slicing with three threads (of equal priority)
 
@@ -58,4 +61,4 @@ thread_3: thread loop
 
 *figure showing the equal priority threads preempting each other*
 
-
+![serial-time-slicing](/images/scheduling/serial-time-slicing.png)

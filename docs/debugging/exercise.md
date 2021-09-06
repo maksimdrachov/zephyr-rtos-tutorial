@@ -30,10 +30,14 @@ Using the code from the previous section (time-slicing), we'll try to see how de
 
 *showing the first screen*
 
+![debug-starting](/images/debugging/debug-starting.png)
+
 *showing the first breakpoint*
+
+![debug-breakpoint](/images/debugging/debug-breakpoint-1.png)
 
 ## Exercise 2: Print runtime statistics
 
-
+![runtime-statistics](/images/debugging/runtime-statistics.png)
 
 ## Exercise 3: Core dump
