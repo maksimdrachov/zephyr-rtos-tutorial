@@ -21,7 +21,7 @@ Note: execution of ISRs takes precedence over thread execution. Unless interrupt
 
 The kernel can be built with one of several choices for the ready queue implementation. The choice is a trade-off between:
 - code size
-- contant factor runtime overhead
+- constant factor runtime overhead
 - performance scaling when many threads are involved
 
 The queue types: 
