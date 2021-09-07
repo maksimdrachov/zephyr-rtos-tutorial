@@ -4,6 +4,12 @@ GPIO-input-interrupt
 
 Configure an interrupt on a button press.
 
+1 thread running continously putting out "loop message" every second
+
+on button press: print out "isr message"
+
+
+
 [Zephyr docs](https://docs.zephyrproject.org/1.9.0/kernel/other/interrupts.html)
 [Example 1](https://github.com/zephyrproject-rtos/zephyr/issues/13514)
 [Example 2](https://github.com/zephyrproject-rtos/zephyr/issues/9630)

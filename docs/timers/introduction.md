@@ -11,7 +11,7 @@ A timer has the following key priorities:
 - A stop function that is executed if the timer is stopped prematurely while running. The function is executed by the thread that stops the timer. If no stop function is required a NULL function can be specified.
 - A status value that indicates how many times the timer has expired since the status value was last read. 
 
-A timer must be initialized before it can used. This specifies its expiry function and stop function values, sets the timer's status to zero, and puts the timer into the stopped state.
+A timer must be initialized before it can be used. This specifies its expiry function and stop function values, sets the timer's status to zero, and puts the timer into the stopped state.
 
 A timer is started by specifying a duration and a period. The timer's status is reset to zero, then the timer enters the running state and begins counting down towards expiry.
 
