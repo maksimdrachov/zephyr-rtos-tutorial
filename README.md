@@ -57,13 +57,13 @@ This tutorial is under active development, if you want to participate - please r
   - [x] 7.1 [Introduction](docs/interrupts/introduction.md)
   - [x] 7.2 [Commands](docs/interrupts/commands.md)
   - [x] 7.3 [Kconfig](docs/interrupts/kconfig.md)
-  - [ ] 7.4 [Exercise](docs/interrupts/exercise.md)
+  - [x] 7.4 [Exercise](docs/interrupts/exercise.md)
 
 - [ ] **Lesson 8: Timers**
   - [x] 8.1 [Introduction](docs/timers/introduction.md)
   - [x] 8.2 [Commands](docs/timers/commands.md)
   - [x] 8.3 [Kconfig](docs/timers/kconfig.md)
-  - [ ] 8.4 [Exercise](docs/timers/exercise.md)
+  - [x] 8.4 [Exercise](docs/timers/exercise.md)
 
 - [ ] **Lesson 9: Mutexes**
   - [x] 9.1 [Introduction](docs/mutexes/introduction.md)
