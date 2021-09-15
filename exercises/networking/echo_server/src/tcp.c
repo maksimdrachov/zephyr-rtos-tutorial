@@ -101,18 +101,21 @@ static void handle_data(void *ptr1, void *ptr2, void *ptr3)
 			sizeof(data->tcp.accepted[slot].recv_buffer) - offset,
 			0);
 
-		if (received == 0) {
+		if (received == 0) 
+		{
 			/* Connection closed */
 			LOG_INF("TCP (%s): Connection closed", data->proto);
 			ret = 0;
 			break;
-		} else if (received < 0) {
+		} else if (received < 0) 
+		{
 			/* Socket error */
 			LOG_ERR("TCP (%s): Connection error %d", data->proto,
 				errno);
 			ret = -errno;
 			break;
-		} else {
+		} else 
+		{
 			atomic_add(&data->tcp.bytes_received, received);
 		}
 
@@ -128,29 +131,32 @@ static void handle_data(void *ptr1, void *ptr2, void *ptr3)
 			  sizeof(data->tcp.accepted[slot].recv_buffer) -
 								offset,
 			  MSG_PEEK | MSG_DONTWAIT) < 0 &&
-		     (errno == EAGAIN || errno == EWOULDBLOCK))) {
+		     (errno == EAGAIN || errno == EWOULDBLOCK))) 
+			 {
 
-			ret = sendall(client,
-				      data->tcp.accepted[slot].recv_buffer,
-				      offset);
-			if (ret < 0) {
-				LOG_ERR("TCP (%s): Failed to send, "
-					"closing socket", data->proto);
-				ret = 0;
-				break;
+				ret = sendall(client,
+						data->tcp.accepted[slot].recv_buffer,
+						offset);
+				if (ret < 0) 
+				{
+					LOG_ERR("TCP (%s): Failed to send, "
+						"closing socket", data->proto);
+					ret = 0;
+					break;
+				}
+
+				LOG_DBG("TCP (%s): Received and replied with %d bytes",
+					data->proto, offset);
+
+				if (++data->tcp.accepted[slot].counter % 1000 == 0U) 
+				{
+					LOG_INF("%s TCP: Sent %u packets", data->proto,
+						data->tcp.accepted[slot].counter);
+				}
+
+				offset = 0;
+
 			}
-
-			LOG_DBG("TCP (%s): Received and replied with %d bytes",
-				data->proto, offset);
-
-			if (++data->tcp.accepted[slot].counter % 1000 == 0U) {
-				LOG_INF("%s TCP: Sent %u packets", data->proto,
-					data->tcp.accepted[slot].counter);
-			}
-
-			offset = 0;
-
-		}
 
 	} while (true);
 
