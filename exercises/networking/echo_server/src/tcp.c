@@ -29,13 +29,6 @@ static struct k_thread tcp4_handler_thread[CONFIG_NET_SAMPLE_NUM_HANDLERS];
 static APP_BMEM bool tcp4_handler_in_use[CONFIG_NET_SAMPLE_NUM_HANDLERS];
 #endif
 
-#if defined(CONFIG_NET_IPV6)
-K_THREAD_STACK_ARRAY_DEFINE(tcp6_handler_stack, CONFIG_NET_SAMPLE_NUM_HANDLERS,
-			    STACK_SIZE);
-static struct k_thread tcp6_handler_thread[CONFIG_NET_SAMPLE_NUM_HANDLERS];
-static APP_BMEM bool tcp6_handler_in_use[CONFIG_NET_SAMPLE_NUM_HANDLERS];
-#endif
-
 static void process_tcp4(void);
 
 K_THREAD_DEFINE(tcp4_thread_id, STACK_SIZE,
@@ -64,35 +57,14 @@ static int start_tcp_proto(struct data *data,
 {
 	int ret;
 
-#if defined(CONFIG_NET_SOCKETS_SOCKOPT_TLS)
-	data->tcp.sock = socket(bind_addr->sa_family, SOCK_STREAM,
-				IPPROTO_TLS_1_2);
-#else
 	data->tcp.sock = socket(bind_addr->sa_family, SOCK_STREAM,
 				IPPROTO_TCP);
-#endif
+
 	if (data->tcp.sock < 0) {
 		LOG_ERR("Failed to create TCP socket (%s): %d", data->proto,
 			errno);
 		return -errno;
 	}
-
-#if defined(CONFIG_NET_SOCKETS_SOCKOPT_TLS)
-	sec_tag_t sec_tag_list[] = {
-		SERVER_CERTIFICATE_TAG,
-#if defined(CONFIG_MBEDTLS_KEY_EXCHANGE_PSK_ENABLED)
-		PSK_TAG,
-#endif
-	};
-
-	ret = setsockopt(data->tcp.sock, SOL_TLS, TLS_SEC_TAG_LIST,
-			 sec_tag_list, sizeof(sec_tag_list));
-	if (ret < 0) {
-		LOG_ERR("Failed to set TCP secure option (%s): %d", data->proto,
-			errno);
-		ret = -errno;
-	}
-#endif
 
 	ret = bind(data->tcp.sock, bind_addr, bind_addrlen);
 	if (ret < 0) {
