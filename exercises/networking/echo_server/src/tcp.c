@@ -118,7 +118,7 @@ static void handle_data(void *ptr1, void *ptr2, void *ptr3)
 
 		offset += received;
 
-#if !defined(CONFIG_NET_SOCKETS_SOCKOPT_TLS)
+
 		/* To prevent fragmentation of the response, reply only if
 		 * buffer is full or there is no more data to read
 		 */
@@ -129,7 +129,7 @@ static void handle_data(void *ptr1, void *ptr2, void *ptr3)
 								offset,
 			  MSG_PEEK | MSG_DONTWAIT) < 0 &&
 		     (errno == EAGAIN || errno == EWOULDBLOCK))) {
-#endif
+
 			ret = sendall(client,
 				      data->tcp.accepted[slot].recv_buffer,
 				      offset);
@@ -149,9 +149,9 @@ static void handle_data(void *ptr1, void *ptr2, void *ptr3)
 			}
 
 			offset = 0;
-#if !defined(CONFIG_NET_SOCKETS_SOCKOPT_TLS)
+
 		}
-#endif
+
 	} while (true);
 
 	*in_use = false;
