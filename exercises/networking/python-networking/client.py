@@ -3,10 +3,10 @@
 import socket
 
 HEADER = 64
-PORT = 5050
+PORT = 4242
 FORMAT = 'utf-8'
 DISCONNECT_MESSAGE = "!DISCONNECT"
-SERVER = "127.0.0.1"
+SERVER = "192.168.0.240"
 ADDR = (SERVER, PORT)
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -21,6 +21,6 @@ def send(msg):
     client.send(message)
 
 send("Hello World!")    
-send("Hello Everyone!")
+#send("Hello Everyone!")
 
-send(DISCONNECT_MESSAGE)
+#send(DISCONNECT_MESSAGE)
