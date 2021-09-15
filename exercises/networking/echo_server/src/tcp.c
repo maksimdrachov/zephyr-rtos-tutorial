@@ -37,15 +37,9 @@ static APP_BMEM bool tcp6_handler_in_use[CONFIG_NET_SAMPLE_NUM_HANDLERS];
 #endif
 
 static void process_tcp4(void);
-static void process_tcp6(void);
 
 K_THREAD_DEFINE(tcp4_thread_id, STACK_SIZE,
 		process_tcp4, NULL, NULL, NULL,
-		THREAD_PRIORITY,
-		IS_ENABLED(CONFIG_USERSPACE) ? K_USER : 0, -1);
-
-K_THREAD_DEFINE(tcp6_thread_id, STACK_SIZE,
-		process_tcp6, NULL, NULL, NULL,
 		THREAD_PRIORITY,
 		IS_ENABLED(CONFIG_USERSPACE) ? K_USER : 0, -1);
 
@@ -238,30 +232,6 @@ static int process_tcp(struct data *data)
 
 #define MAX_NAME_LEN sizeof("tcp6[0]")
 
-#if defined(CONFIG_NET_IPV6)
-	if (client_addr.sin_family == AF_INET6) {
-		tcp6_handler_in_use[slot] = true;
-
-		k_thread_create(
-			&tcp6_handler_thread[slot],
-			tcp6_handler_stack[slot],
-			K_THREAD_STACK_SIZEOF(tcp6_handler_stack[slot]),
-			(k_thread_entry_t)handle_data,
-			INT_TO_POINTER(slot), data, &tcp6_handler_in_use[slot],
-			THREAD_PRIORITY,
-			IS_ENABLED(CONFIG_USERSPACE) ? K_USER |
-						       K_INHERIT_PERMS : 0,
-			K_NO_WAIT);
-
-		if (IS_ENABLED(CONFIG_THREAD_NAME)) {
-			char name[MAX_NAME_LEN];
-
-			snprintk(name, sizeof(name), "tcp6[%d]", slot);
-			k_thread_name_set(&tcp6_handler_thread[slot], name);
-		}
-	}
-#endif
-
 #if defined(CONFIG_NET_IPV4)
 	if (client_addr.sin_family == AF_INET) {
 		tcp4_handler_in_use[slot] = true;
@@ -317,34 +287,6 @@ static void process_tcp4(void)
 	quit();
 }
 
-static void process_tcp6(void)
-{
-	int ret;
-	struct sockaddr_in6 addr6;
-
-	(void)memset(&addr6, 0, sizeof(addr6));
-	addr6.sin6_family = AF_INET6;
-	addr6.sin6_port = htons(MY_PORT);
-
-	ret = start_tcp_proto(&conf.ipv6, (struct sockaddr *)&addr6,
-			      sizeof(addr6));
-	if (ret < 0) {
-		quit();
-		return;
-	}
-
-	k_work_reschedule(&conf.ipv6.tcp.stats_print, K_SECONDS(STATS_TIMER));
-
-	while (ret == 0) {
-		ret = process_tcp(&conf.ipv6);
-		if (ret != 0) {
-			break;
-		}
-	}
-
-	quit();
-}
-
 static void print_stats(struct k_work *work)
 {
 	struct data *data = CONTAINER_OF(work, struct data, tcp.stats_print);
@@ -393,24 +335,6 @@ void stop_tcp(void)
 	/* Not very graceful way to close a thread, but as we may be blocked
 	 * in accept or recv call it seems to be necessary
 	 */
-
-	if (IS_ENABLED(CONFIG_NET_IPV6)) {
-		k_thread_abort(tcp6_thread_id);
-		if (conf.ipv6.tcp.sock >= 0) {
-			(void)close(conf.ipv6.tcp.sock);
-		}
-
-		for (i = 0; i < CONFIG_NET_SAMPLE_NUM_HANDLERS; i++) {
-#if defined(CONFIG_NET_IPV6)
-			if (tcp6_handler_in_use[i] == true) {
-				k_thread_abort(&tcp6_handler_thread[i]);
-			}
-#endif
-			if (conf.ipv6.tcp.accepted[i].sock >= 0) {
-				(void)close(conf.ipv6.tcp.accepted[i].sock);
-			}
-		}
-	}
 
 	if (IS_ENABLED(CONFIG_NET_IPV4)) {
 		k_thread_abort(tcp4_thread_id);
