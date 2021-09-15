@@ -369,46 +369,18 @@ void start_tcp(void)
 {
 	int i;
 
-	for (i = 0; i < CONFIG_NET_SAMPLE_NUM_HANDLERS; i++) {
+	for (i = 0; i < CONFIG_NET_SAMPLE_NUM_HANDLERS; i++) 
+	{
 		conf.ipv6.tcp.accepted[i].sock = -1;
 		conf.ipv4.tcp.accepted[i].sock = -1;
 
-#if defined(CONFIG_NET_IPV4)
+	#if defined(CONFIG_NET_IPV4)
 		tcp4_handler_in_use[i] = false;
-#endif
-#if defined(CONFIG_NET_IPV6)
-		tcp6_handler_in_use[i] = false;
-#endif
+	#endif
+
 	}
-
-#if defined(CONFIG_NET_IPV6)
-#if defined(CONFIG_USERSPACE)
-	k_mem_domain_add_thread(&app_domain, tcp6_thread_id);
-
-	for (i = 0; i < CONFIG_NET_SAMPLE_NUM_HANDLERS; i++) {
-		k_mem_domain_add_thread(&app_domain, &tcp6_handler_thread[i]);
-
-		k_thread_access_grant(tcp6_thread_id, &tcp6_handler_thread[i]);
-		k_thread_access_grant(tcp6_thread_id, &tcp6_handler_stack[i]);
-	}
-#endif
-
-	k_work_init_delayable(&conf.ipv6.tcp.stats_print, print_stats);
-	k_thread_start(tcp6_thread_id);
-#endif
 
 #if defined(CONFIG_NET_IPV4)
-#if defined(CONFIG_USERSPACE)
-	k_mem_domain_add_thread(&app_domain, tcp4_thread_id);
-
-	for (i = 0; i < CONFIG_NET_SAMPLE_NUM_HANDLERS; i++) {
-		k_mem_domain_add_thread(&app_domain, &tcp4_handler_thread[i]);
-
-		k_thread_access_grant(tcp4_thread_id, &tcp4_handler_thread[i]);
-		k_thread_access_grant(tcp4_thread_id, &tcp4_handler_stack[i]);
-	}
-#endif
-
 	k_work_init_delayable(&conf.ipv4.tcp.stats_print, print_stats);
 	k_thread_start(tcp4_thread_id);
 #endif
