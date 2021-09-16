@@ -21,15 +21,9 @@ LOG_MODULE_DECLARE(net_echo_server_sample, LOG_LEVEL_DBG);
 //#include "certificate.h"
 
 static void process_udp4(void);
-static void process_udp6(void);
 
 K_THREAD_DEFINE(udp4_thread_id, STACK_SIZE,
 		process_udp4, NULL, NULL, NULL,
-		THREAD_PRIORITY,
-		IS_ENABLED(CONFIG_USERSPACE) ? K_USER : 0, -1);
-
-K_THREAD_DEFINE(udp6_thread_id, STACK_SIZE,
-		process_udp6, NULL, NULL, NULL,
 		THREAD_PRIORITY,
 		IS_ENABLED(CONFIG_USERSPACE) ? K_USER : 0, -1);
 
@@ -38,44 +32,14 @@ static int start_udp_proto(struct data *data, struct sockaddr *bind_addr,
 {
 	int ret;
 
-#if defined(CONFIG_NET_SOCKETS_SOCKOPT_TLS)
-	data->udp.sock = socket(bind_addr->sa_family, SOCK_DGRAM,
-				IPPROTO_DTLS_1_2);
-#else
+
 	data->udp.sock = socket(bind_addr->sa_family, SOCK_DGRAM, IPPROTO_UDP);
-#endif
+
 	if (data->udp.sock < 0) {
 		NET_ERR("Failed to create UDP socket (%s): %d", data->proto,
 			errno);
 		return -errno;
 	}
-
-#if defined(CONFIG_NET_SOCKETS_SOCKOPT_TLS)
-	sec_tag_t sec_tag_list[] = {
-		SERVER_CERTIFICATE_TAG,
-#if defined(CONFIG_MBEDTLS_KEY_EXCHANGE_PSK_ENABLED)
-		PSK_TAG,
-#endif
-	};
-	int role = TLS_DTLS_ROLE_SERVER;
-
-	ret = setsockopt(data->udp.sock, SOL_TLS, TLS_SEC_TAG_LIST,
-			 sec_tag_list, sizeof(sec_tag_list));
-	if (ret < 0) {
-		NET_ERR("Failed to set UDP secure option (%s): %d", data->proto,
-			errno);
-		ret = -errno;
-	}
-
-	/* Set role to DTLS server. */
-	ret = setsockopt(data->udp.sock, SOL_TLS, TLS_DTLS_ROLE,
-			 &role, sizeof(role));
-	if (ret < 0) {
-		NET_ERR("Failed to set DTLS role secure option (%s): %d",
-			data->proto, errno);
-		ret = -errno;
-	}
-#endif
 
 	ret = bind(data->udp.sock, bind_addr, bind_addrlen);
 	if (ret < 0) {
@@ -160,32 +124,6 @@ static void process_udp4(void)
 	}
 }
 
-static void process_udp6(void)
-{
-	int ret;
-	struct sockaddr_in6 addr6;
-
-	(void)memset(&addr6, 0, sizeof(addr6));
-	addr6.sin6_family = AF_INET6;
-	addr6.sin6_port = htons(MY_PORT);
-
-	ret = start_udp_proto(&conf.ipv6, (struct sockaddr *)&addr6,
-			      sizeof(addr6));
-	if (ret < 0) {
-		quit();
-		return;
-	}
-
-	k_work_reschedule(&conf.ipv6.udp.stats_print, K_SECONDS(STATS_TIMER));
-
-	while (ret == 0) {
-		ret = process_udp(&conf.ipv6);
-		if (ret < 0) {
-			quit();
-		}
-	}
-}
-
 static void print_stats(struct k_work *work)
 {
 	struct data *data = CONTAINER_OF(work, struct data, udp.stats_print);
@@ -208,21 +146,7 @@ static void print_stats(struct k_work *work)
 
 void start_udp(void)
 {
-	if (IS_ENABLED(CONFIG_NET_IPV6)) {
-#if defined(CONFIG_USERSPACE)
-		k_mem_domain_add_thread(&app_domain, udp6_thread_id);
-#endif
-
-		k_work_init_delayable(&conf.ipv6.udp.stats_print, print_stats);
-		k_thread_name_set(udp6_thread_id, "udp6");
-		k_thread_start(udp6_thread_id);
-	}
-
 	if (IS_ENABLED(CONFIG_NET_IPV4)) {
-#if defined(CONFIG_USERSPACE)
-		k_mem_domain_add_thread(&app_domain, udp4_thread_id);
-#endif
-
 		k_work_init_delayable(&conf.ipv4.udp.stats_print, print_stats);
 		k_thread_name_set(udp4_thread_id, "udp4");
 		k_thread_start(udp4_thread_id);
@@ -234,13 +158,6 @@ void stop_udp(void)
 	/* Not very graceful way to close a thread, but as we may be blocked
 	 * in recvfrom call it seems to be necessary
 	 */
-	if (IS_ENABLED(CONFIG_NET_IPV6)) {
-		k_thread_abort(udp6_thread_id);
-		if (conf.ipv6.udp.sock >= 0) {
-			(void)close(conf.ipv6.udp.sock);
-		}
-	}
-
 	if (IS_ENABLED(CONFIG_NET_IPV4)) {
 		k_thread_abort(udp4_thread_id);
 		if (conf.ipv4.udp.sock >= 0) {
