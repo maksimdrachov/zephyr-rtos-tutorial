@@ -1,3 +1,6 @@
+## Introduction
+If you have no experience with network programming, I'd recommend first working through [this](https://www.youtube.com/playlist?list=PLfIJKC1ud8ggZKVtytWAlOS63vifF5iJC) course. The Lwip stack is very similar to the way the Zephyr Network stack works.
+
 ## BSD Sockets
 
 Zephyr offers an implementation of a subset of the BSD Sockets API. This API allows to port existing simple networking applications to Zephyr.
