@@ -103,7 +103,6 @@ This tutorial is under active development, if you want to participate - please r
 I believe all knowledge should be freely accessible to whomever wants to learn.
 
 If you want to support me in writing more tutorials like this one, here are some ways you can do so:
-- subscribe to my [youtube](https://www.youtube.com/channel/UCh_9X-7LSQtC5bnwKDteiLw): stay up to date on my latest videos
 - follow me on [twitter](https://twitter.com/maksimdrachov): stay up to date on my latest blogs/projects
 - donate cryptocurrency
 
