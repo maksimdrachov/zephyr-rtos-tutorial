@@ -1,4 +1,5 @@
 ## Threads
+
 *What are threads?* 
 
 A thread is an isolated instance that is responsible for the execution of some task. While a microcontroller usually only has 1 CPU, the RTOS is able to have multiple tasks execute (seemingly) simultanously by exchanging the thread that gets run on the CPU as dictated by the scheduler. 
@@ -11,6 +12,10 @@ A thread is an isolated instance that is responsible for the execution of some t
 - **Execution mode**: can be supervisor or user mode. By default, threads run in supervisor mode and allow access to privileged CPU instructions, the entire memory address space, and peripherals. User mode threads have a reduced set of privileges.
 
 The specifics of how to define a thread will be discussed in the next section
+
+## Thread creation
+
+
 
 ## Thread states
 *How does Zephyr choose which thread to run?*

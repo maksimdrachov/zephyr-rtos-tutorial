@@ -33,7 +33,7 @@ cd ~/zephyrproject
 west update
 ```
 
-- Export a Zephyr CMake package. This allows CMake to automatically load boilerplate code required for building Zephyr applications.
+- Export a Zephyr CMake package. This allows CMake to automatically load [boilerplate](https://en.wikipedia.org/wiki/Boilerplate_code) code required for building Zephyr applications.
 ```
 west zephyr-export
 ```
@@ -54,7 +54,7 @@ Add the following lines. Make sure to use the right toolchain version, yours mig
 export ZEPHYR_TOOLCHAIN_VARIANT=GNUARMEMB
 export GNUARMEMB_TOOLCHAIN_PATH=/Users/maksim/dev-tools/gcc-arm-none-eabi-10.3-2021.07
 ```
-- Restart terminal and dheck if environment variables are set up correctly
+- Restart terminal and check if environment variables are set up correctly
 ![env_var_check](/images/zephyr-setup/env-var-check.png)
 
 **5) Build the Blinky sample**

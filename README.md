@@ -83,11 +83,10 @@ This tutorial is under active development, if you want to participate - please r
   - [x] 11.3 [Kconfig](docs/logging/kconfig.md)
   - [ ] 11.4 [Exercise](docs/logging/exercise.md)
 
-- [ ] **Lesson 12: Networking**
-  - [x] 12.1 [Introduction](docs/networking/introduction.md)
-  - [x] 12.2 [Commands](docs/networking/commands.md)
-  - [x] 12.3 [Kconfig](docs/networking/kconfig.md)
-  - [ ] 12.4 [Exercise](docs/networking/exercise.md)
+- [ ] **Lesson 12: Build System**
+  - [ ] 12.1 [Introduction](docs/build-system/introduction.md)
+  - [ ] 12.2 [Commands](docs/build-system/commands.md)
+  - [ ] 12.3 [Exercise](docs/build-system/exercise.md)
 
 ## Useful Links
 **General**
