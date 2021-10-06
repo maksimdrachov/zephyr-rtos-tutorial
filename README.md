@@ -87,6 +87,7 @@ This tutorial is under active development, if you want to participate - please r
   - [ ] 12.1 [Introduction](docs/build-system/introduction.md)
   - [ ] 12.2 [Commands](docs/build-system/commands.md)
   - [ ] 12.3 [Exercise](docs/build-system/exercise.md)
+  - [ ] 12.4 [Next?](docs/build-system/next.md)
 
 ## Useful Links
 **General**
