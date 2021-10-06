@@ -98,6 +98,23 @@ This tutorial is under active development, if you want to participate - please r
 - [The Linux Foundation](https://www.youtube.com/c/LinuxfoundationOrg/search?query=zephyr)
 - [Zephyr Project](https://www.youtube.com/c/ZephyrProject/videos)
 
+**Projects using Zephyr**
+- [Golioth: IoT cloud platform](https://github.com/golioth/zephyr-sdk)
+- [Battery management system](https://github.com/scttnlsn/bms)
+- [MG100: IoT sensor module](https://github.com/LairdCP/MG100_firmware)
+- [Anyl: Embedded crypto wallet (for IoT)](https://github.com/Anylsite/anyl-wallet)
+- [BLE sensor](https://github.com/patrickmoffitt/zephyr_ble_sensor)
+- [PineTime smartwatch](https://github.com/endian-albin/pinetime-hypnos)
+- [UWB position tracking](https://github.com/RT-LOC/zephyr-dwm1001)
+- [zmk: mechanical keyboard firmware](https://github.com/zmkfirmware/zmk)
+- [air quality sensor](https://github.com/ExploratoryEngineering/air-quality-sensor-node)
+
+**Zephyr libraries**
+- [Zephyr Scientific Library](https://github.com/zscilib/zscilib)
+- [micro-ROS Zephyr module](https://github.com/micro-ROS/micro_ros_zephyr_module)
+- [sof: sound/DSP firmware](https://github.com/thesofproject/sof)
+
+
 ## Support
 I believe all knowledge should be freely accessible to whomever wants to learn.
 
