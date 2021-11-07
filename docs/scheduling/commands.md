@@ -1,3 +1,5 @@
+## Commands
+
 A couple of commands we haven't discussed in threads:
 
 - k_yield: Yield the current thread. This routine causes the current thread to yield execution to another thread of the same or higher priority. If there are no other ready threads of the same or higher priority, the routine returns immediately.

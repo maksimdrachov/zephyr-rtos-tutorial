@@ -4,87 +4,135 @@ In this lesson we'll be covering the way GPIO works in Zephyr. Just the basics:
 - set up an output pin
 - set up an interrupt pin
 
-## GPIO
-When setting any GPIO the following basic steps have to be followed:
-1) Look up devicetree binding for corresponding GPIO
+## GPIO setup
+When setting up any GPIO the following basic steps have to be followed:
+
+1) First you need to look up the devicetree binding for the corresponding GPIO (if you don't know what a devicetree is: see section below).
+
+The devicetree for your particular build can be found at `build/zephyr/zephyr.dts` or for each board in `zephyrproject/zephyr/boards`
+
+For example, the red arrow indicates the device binding to toggle the green led.
 ![devicetree-binding](/images/gpio/devicetree-binding.png)
-2)  Get:
-    - Devicetree node identifier
 
-    ```
-    #define LED0_NODE DT_ALIAS(led) 
-    ```
-    - Label
-    ```
-    #define LED0    DT_GPIO_LABEL(LED0_NODE, gpios)
-    ```
-    - Pin
-    ```
-    #define PIN	    DT_GPIO_PIN(LED0_NODE, gpios)
-    ```
-    - (Default) flags
-    ```
-    #define FLAGS	DT_GPIO_FLAGS(LED0_NODE, gpios)
-    ```
-    Or you can use `gpio_dt_spec`:
-    ```
-    static struct gpio_dt_spec led = GPIO_DT_SPEC_GET_OR(DT_ALIAS(led0), gpios, {0});
+2) To use the device binding in our main.c file; we need to use the following defines:
 
-    static const struct gpio_dt_spec button = GPIO_DT_SPEC_GET_OR(SW0_NODE, gpios, {0});
-    ```
+- Devicetree node identifier
 
-2)  Configure GPIO
-    - input/output configuration
-    ```c
-    const struct device *dev;
+```
+#define LED0_NODE DT_ALIAS(led0) 
+```    
+Notice how we used `led0` instead of `green_led` here? This is possible due to the following aliases being defined: 
 
-    dev = device_get_binding(LED0);
+```
+aliases {
+	led0 = &green_led;
+	led1 = &blue_led;
+	led2 = &red_led;
+	sw0 = &user_button;
+};
+```
 
-    ret = gpio_pin_configure(dev, PIN, GPIO_INPUT | FLAGS); // For input pin
+Now we use LED0_NODE to obtain all other (optional) defines:
 
-    ret = gpio_pin_configure(dev, PIN, GPIO_OUTPUT | FLAGS); // For output pin
-    ```
-    - interrupt configuration
-    ```c
-    ret = gpio_pin_interrupt_configure(dev, PIN, GPIO_INT_EDGE_RISING | FLAGS); // For rising edge interrupt
-    ```
-    Using `gpio_dt_spec`
-    - input/output configuration
-    ```
-    ret = gpio_pin_configure_dt(&led, GPIO_OUTPUT);
-    ret = gpio_pin_configure_dt(&button, GPIO_INPUT);
-    ```
-    - interrupt configuration
-    ```
-    gpio_pin_interrupt_configure_dt(&button, GPIO_INT_EDGE_RISING);
-    ```
+- Label
     
-3)  Use GPIO through dedicated functions (set, read, toggle,...)
-    - set 
-    ```c
-    gpio_pin_set(dev, PIN, led_state);
-    ```
-    - read
-    ```c
-    button_state = gpio_pin_get(dev, PIN);
-    ```
-    - toggle
-    ```c
-    gpio_pin_toggle(dev, PIN);
-    ```
-    Using `gpio_dt_spec`
-    - set
-    ```
-    int val = gpio_pin_set_dt(&led, val);
-    ```
-    - read
-    ```
-    int val = gpio_pin_get_dt(&button);
-    ```
-    - toggle
-    ```
-    gpio_pin_toggle_dt(&led);
-    ```
+```
+#define LED0    DT_GPIO_LABEL(LED0_NODE, gpios)
+```    
+
+- Pin
+
+```
+#define PIN	    DT_GPIO_PIN(LED0_NODE, gpios)
+```    
+
+- (Default) flags
+    
+```
+#define FLAGS	DT_GPIO_FLAGS(LED0_NODE, gpios)
+```    
+
+Optionally, instead of using 'defines', you can use `gpio_dt_spec`: 
+    
+```
+static struct gpio_dt_spec led = GPIO_DT_SPEC_GET_OR(DT_ALIAS(led0), gpios, {0});
+
+static const struct gpio_dt_spec button = GPIO_DT_SPEC_GET_OR(SW0_NODE, gpios, {0});
+```
+
+3)  Configure GPIO
+
+- input/output configuration
+
+```c
+const struct device *dev;
+
+dev = device_get_binding(LED0);
+
+ret = gpio_pin_configure(dev, PIN, GPIO_INPUT | FLAGS); // For input pin
+
+ret = gpio_pin_configure(dev, PIN, GPIO_OUTPUT | FLAGS); // For output pin
+```
+
+- interrupt configuration
+
+```
+ret = gpio_pin_interrupt_configure(dev, PIN, GPIO_INT_EDGE_RISING | FLAGS); // For rising edge interrupt
+```
+
+Using `gpio_dt_spec`
+- input/output configuration
+
+```
+ret = gpio_pin_configure_dt(&led, GPIO_OUTPUT);
+ret = gpio_pin_configure_dt(&button, GPIO_INPUT);
+```
+
+- interrupt configuration
+
+```
+gpio_pin_interrupt_configure_dt(&button, GPIO_INT_EDGE_RISING);
+```
+    
+4)  Use GPIO through dedicated functions (set, read, toggle,...)
+
+- set 
+
+```c
+gpio_pin_set(dev, PIN, led_state);
+```
+
+- read
+
+```c
+button_state = gpio_pin_get(dev, PIN);
+```
+
+- toggle
+
+```c
+gpio_pin_toggle(dev, PIN);
+```
+
+Using `gpio_dt_spec`
+
+- set
+
+```
+int val = gpio_pin_set_dt(&led, val);
+```
+
+- read
+
+```
+int val = gpio_pin_get_dt(&button);
+```
+
+- toggle
+
+```
+gpio_pin_toggle_dt(&led);
+```
 
 
 ## Devicetree

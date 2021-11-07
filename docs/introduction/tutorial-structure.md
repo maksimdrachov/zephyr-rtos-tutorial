@@ -2,7 +2,7 @@
 
 *How is the tutorial structured?* 
 - Each lesson covers 1 aspect of Zephyr
-- The order of the lessons is choosen deliberately, it is recommended to not skip ahead (unless you already know a thing or two, then go ahead!)
+- The order of the lessons is choosen deliberately, it is recommended to not skip ahead (unless you already know a thing or two, then skip ahead!)
 
 Each lesson has 4 parts:
 - Introduction: here we'll introduce each new topic, explain why it is useful.

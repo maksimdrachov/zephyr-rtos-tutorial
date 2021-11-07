@@ -1,3 +1,5 @@
+## Introduction
+
 *What is "scheduling"?*
 
 The scheduler determines which thread is allowed to execute at any point in time; this thread is known as the current thread.
@@ -13,6 +15,8 @@ A thread sleeps when it volutarily initiates an operation that transitions itsel
 
 Whenever the scheduler changes the identity of the current thread, or when execution of the current thread is replaced by an ISR, the kernel first saves the current thread's CPU register values. These register values get restored when the thread later resumes execution.
 
+## Scheduler
+
 *How does the scheduler work?*
 
 The kernel's scheduler selects the highest priority ready thread to be the current thread. When multiple ready threads of the same priority exist, the scheduler chooses the one that has been waiting the longest. 
@@ -24,30 +28,34 @@ The kernel can be built with one of several choices for the ready queue implemen
 - constant factor runtime overhead
 - performance scaling when many threads are involved
 
+Your Kconfig-file (`prj.conf`) should contain one of the following (or it will default to simple linked-list).
+
 The queue types: 
-- Simple linked-list ready queue (CONFIG_SCHED_DUMB)
+- Simple linked-list ready queue (`CONFIG_SCHED_DUMB`)
   - simple unordered list
   - very fast constant time performance for single threads
   - very low code size
   - useful for systems with:
     - constrained code size
     - small number of threads (<=3) at any given time
-- Red/black tree ready queue (CONFIG_SCHED_SCALABLE)
+- Red/black tree ready queue (`CONFIG_SCHED_SCALABLE`)
   - red/black tree ([wiki](https://en.wikipedia.org/wiki/Red%E2%80%93black_tree))
   - slower constant time insertion and removal overhead
-  - requires extra 2kB code
+  - requires extra 2Kb code
   - scales cleanly and quickly into many thousands of threads
   - Useful for systems with:
     - many concurrent runnable threads (>20 or so)
-- Traditional multi-queue ready queue (CONFIG_SCHED_MULTIQ)
+- Traditional multi-queue ready queue (`CONFIG_SCHED_MULTIQ`)
   - classic array of lists, one per priority (max 32 priorities)
   - tine code size overhead vs. the "dumb" scheduler
   - runs in 0(1) time with very low constant factor
   - requires fairly large RAM budget to store list heads
   - incompatible with [deadline scheduling](https://www.geeksforgeeks.org/deadline-scheduler-in-operating-system/) and [SMP affinity](https://cs.uwaterloo.ca/~brecht/servers/apic/SMP-affinity.txt)
   - systems with small # of threads (but usually DUMB is good enough)
-- Scalable wait_q implementation (CONFIG_WAITQ_SCALABLE)
-- Simple linked-list wait_q (CONFIG_WAITQ_DUMB)
+- Scalable wait_q implementation (`CONFIG_WAITQ_SCALABLE`)
+- Simple linked-list wait_q (`CONFIG_WAITQ_DUMB`)
+
+## Thread priorities
 
 *How do thread priorities work?*
 
@@ -63,6 +71,8 @@ The kernel supports a virtually unlimited number of thread priority levels. The 
 - cooperative threads: (-CONFIG_NUM_COOP_PRIORITIES) to -1
 - preemptive threads: 0 to (CONFIG_NUM_PREEMPT_PRIOTIES-1) 
 
+## Cooperative Time Slicing
+
 *What is cooperative time slicing?*
 Once a cooperative thread becomes the current thread, it remains the current thread until it performs an action that makes it unready. Consequently, if a cooperative thread performs lengthy computations, it may cause an unacceptable delay in the scheduling of other threads, including those of higher priority.
 
@@ -71,6 +81,8 @@ Once a cooperative thread becomes the current thread, it remains the current thr
 To overcome such problems, a cooperative thread can voluntarily relinquish the CPU from time to time to permit other threads to execute. A thread can relinquish the CPU in two ways:
 - Calling k_yield() puts the thread at the back of the scheduler's prioritized list of ready threads, and then invokes the scheduler. All ready threads whose priority is higher or equal to that of the yielding thread are then allowed to execute before the yielding thread is rescheduled. If no such threads exist, the scheduler immediately reschedules the yielding thread without context switching. 
 - Calling k_sleep() makes the thread unready for a specified time period. Ready threads of *all* priorities are then allowed to execute; however, there is no guarantee that threads whose priority is lower than that of the sleeping thread will actually be scheduled before the sleeping thread becomes ready once again.
+
+## Preemptive Time Slicing
 
 *What is preemptive time slicing?*
 
@@ -97,6 +109,8 @@ Once the critical operation is complete the preemptible thread must call k_sched
 If a thread calls k_sched_lock() and subsequently performs an action that makes it unready, the scheduler will switch the locking thread out and allow other threads to execute. When the locking thread again becomes the current thread, its non-preemptible status is maintained.
 
 Note: Locking out the scheduler is a more efficient way for a preemptible thread to prevent preemption than changing its priority level to a negative value.
+
+## Varia
 
 *What is thread sleeping?*
 A thread can call k_sleep() to delay its processing for a specified time period. During the time the thread is sleeping the CPU is relinquished to allow other ready threads to execute. Once the specified delay has elapsed the thread becomes ready and is eligible to be scheduled once again.

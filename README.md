@@ -24,24 +24,24 @@ This tutorial is under active development, if you want to participate - please r
     - [ ] [Windows](docs/zephyr-setup/setup/windows.md)
     - [ ] [Linux](docs/zephyr-setup/setup/linux.md)
 
-- [ ] **Lesson 2: Introduction**
+- [x] **Lesson 2: Introduction**
   - [x] 2.1 [RTOS basics](docs/introduction/rtos-basics.md)
   - [x] 2.2 [Zephyr structure](docs/introduction/zephyr-structure.md)
   - [x] 2.3 [Tutorial structure](docs/introduction/tutorial-structure.md)
   
-- [ ] **Lesson 3: Threads**
+- [x] **Lesson 3: Threads**
   - [x] 3.1 [Introduction](docs/threads/introduction.md)
   - [x] 3.2 [Commands](docs/threads/commands.md)
   - [x] 3.3 [Kconfig](docs/threads/kconfig.md)
   - [x] 3.4 [Exercise](docs/threads/exercise.md)
 
-- [ ] **Lesson 4: GPIO**
+- [x] **Lesson 4: GPIO**
   - [x] 4.1 [Introduction](docs/gpio/introduction.md)
   - [x] 4.2 [Commands](docs/gpio/commands.md)
   - [x] 4.3 [Kconfig](docs/gpio/kconfig.md)
   - [x] 4.4 [Exercise](docs/gpio/exercise.md)
   
-- [ ] **Lesson 5: Scheduling**
+- [x] **Lesson 5: Scheduling**
   - [x] 5.1 [Introduction](docs/scheduling/introduction.md)
   - [x] 5.2 [Commands](docs/scheduling/commands.md)
   - [x] 5.3 [Kconfig](docs/scheduling/kconfig.md)
@@ -140,3 +140,4 @@ Bitcoin            |  Ethereum | Dogecoin
 towards the end:
 - [ ] Add next page and prev page links
 - [ ] exercises: rename project names
+- for each section introduction add relevant links at the end?

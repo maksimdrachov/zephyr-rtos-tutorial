@@ -1,34 +1,3 @@
-## Thread commands
-### k_thread_start()
-A thread must be created before it can be used.
-
-![k_thread_im](/svg-images/threads/thread-start.png)
-
-### k_thread_abort()
-Abort a thread. Thread is taken off all kernel queues.
-
-![k_thread_im](/svg-images/threads/thread-abort.png)
-
-### k_sleep()
-A thread can prevent itself from executing for a specified amount of time. A sleeping thread becomes executable automatically once the time limit is reached.
-
-![k_thread_im](/svg-images/threads/thread-sleep.png)
-
-### k_thread_suspend()
-Prevent a thread from executing for an indefinite period of time. Once suspended, use k_thread_resume() to re-start.
-
-![k_thread_im](/svg-images/threads/thread-suspend.png)
-
-### k_thread_join()
-Sleep until a thread exits. 
-
-For example:
-- thread_b is responsible for setting up a hardware interface
-- thread_a is responsible for processing data from this interface
-- As long as thread_b has not exited, thread_a can't start, so we'll use k_thread_join(thread_b, timeout) in this case.
-
-![k_thread_im](/svg-images/threads/thread-join.png)
-
 ## Thread creation
 *How do I define threads in Zephyr?*
 
@@ -88,3 +57,36 @@ K_THREAD_DEFINE(my_tid, MY_STACK_SIZE,
                 my_entry_point, NULL, NULL, NULL,
                 MY_PRIORITY, 0, 0);
 ```
+
+## Thread commands
+### k_thread_start()
+A thread must be created before it can be used.
+
+![k_thread_im](/svg-images/threads/thread-start.png)
+
+### k_thread_abort()
+Abort a thread. Thread is taken off all kernel queues.
+
+![k_thread_im](/svg-images/threads/thread-abort.png)
+
+### k_sleep()
+A thread can prevent itself from executing for a specified amount of time. A sleeping thread becomes executable automatically once the time limit is reached.
+
+![k_thread_im](/svg-images/threads/thread-sleep.png)
+
+### k_thread_suspend()
+Prevent a thread from executing for an indefinite period of time. Once suspended, use k_thread_resume() to re-start.
+
+![k_thread_im](/svg-images/threads/thread-suspend.png)
+
+### k_thread_join()
+Sleep until a thread exits. 
+
+For example:
+- thread_b is responsible for setting up a hardware interface
+- thread_a is responsible for processing data from this interface
+- As long as thread_b has not exited, thread_a can't start, so we'll use k_thread_join(thread_b, timeout) in this case.
+
+![k_thread_im](/svg-images/threads/thread-join.png)
+
+

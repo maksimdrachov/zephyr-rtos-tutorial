@@ -1,7 +1,7 @@
 Useful API pages:
 - [GPIO API](https://docs.zephyrproject.org/latest/reference/peripherals/gpio.html#api-reference)
-- [Device Driver Model](https://docs.zephyrproject.org/latest/reference/drivers/index.html)
 - [Devicetree](https://docs.zephyrproject.org/latest/guides/dts/index.html)
+- [Device Driver Model](https://docs.zephyrproject.org/latest/reference/drivers/index.html)
 
 ## Functions table
 | Function | Description |
@@ -69,12 +69,9 @@ Defines
 | DT_ALIAS | Get a node identifier from /aliases.  |
 | DT_GPIO_LABEL | Get a label property from a gpio phandle-array property (at index 0)|
 | DT_GPIO_PIN | Get a GPIO specifier’s pin cell (at index 0) |
-| DT_GPIO_FLAGS | Get a GPIO specifier’s flags cell (at index 0) |
-|  |  |
-|  |  |
-|  |  |
+| DT_GPIO_FLAGS | Get a GPIO specifier’s flags cell (at index 0) |``
 
-Other flag categories you can find [here](https://docs.zephyrproject.org/latest/reference/peripherals/gpio.html#api-reference)
+Additional flag categories can be found [here](https://docs.zephyrproject.org/latest/reference/peripherals/gpio.html#api-reference):
 - GPIO drive strength flags
 - GPIO pin drive flags
 - GPIO pin bias flags

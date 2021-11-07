@@ -1,14 +1,14 @@
 ## Blinky
 GPIO-output
 
-Make a 1 Hz blinky program (using set or toggle function)
+Make a 1 Hz blinky program.
 
 solution: `exercises/gpio/blinky`
 
 ## Button
 GPIO-input
 
-Use button to turn LED on or off. (using GPIO read)
+Use button to turn LED on or off.
 
 solution: `exercises/gpio/button`
 
