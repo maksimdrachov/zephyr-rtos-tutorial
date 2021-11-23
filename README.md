@@ -53,10 +53,9 @@ This tutorial is under active development, if you want to participate - please r
   - [x] 6.3 [Kconfig](docs/debugging/kconfig.md)
   - [x] 6.4 [Exercise](docs/debugging/exercise.md)
 
-- [ ] **Lesson 7: Interrupts** 
+- [x] **Lesson 7: Interrupts** 
   - [x] 7.1 [Introduction](docs/interrupts/introduction.md)
   - [x] 7.2 [Commands](docs/interrupts/commands.md)
-  - [x] 7.3 [Kconfig](docs/interrupts/kconfig.md)
   - [x] 7.4 [Exercise](docs/interrupts/exercise.md)
 
 - [ ] **Lesson 8: Timers**
