@@ -116,16 +116,8 @@ This tutorial is under active development, if you want to participate - please r
 - [sof: sound/DSP firmware](https://github.com/thesofproject/sof)
 
 
-## Support
-I believe all knowledge should be freely accessible to whomever wants to learn.
-
-If you want to support me in writing more tutorials like this one, here are some ways you can do so:
-- follow me on [twitter](https://twitter.com/maksimdrachov): stay up to date on my latest blogs/projects
-- donate cryptocurrency
-
-Bitcoin            |  Ethereum | Dogecoin
-:-------------------------:|:-------------------------:|:-------------------------:
-![bitcoin_address](/images/donate/bitcoin-donations.png)  |  ![eth_address](/images/donate/ethereum-donations.png)|  ![doge_address](/images/donate/dogecoin-donations.png)
+## Contact
+Follow me on [twitter](https://twitter.com/maksimdrachov): stay up to date on my latest blogs/projects
 
 
 
