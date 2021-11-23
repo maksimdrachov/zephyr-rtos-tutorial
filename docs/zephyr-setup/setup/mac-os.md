@@ -47,6 +47,10 @@ west build -b nucleo_f756zg
 west flash
 ```
 
+Tip: if you've previously made a build for a different board, remove the old build first:
+
+`rm -rf build`
+
 - Verify the serial output:
 
 ![coolterm-3](/images/zephyr-setup/coolterm-3.png)

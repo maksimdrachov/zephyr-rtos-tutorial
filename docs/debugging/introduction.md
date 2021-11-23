@@ -45,6 +45,8 @@ The thread analyzer module enables all the Zephyr options required to track the 
 
 The analysis is performed on demand when the application calls thread_analyzer_run() or thread_analyzer_print().
 
+The output is put on the serial connection.
+
 *How does core dump work?*
 
 The core dump module enables dumping the CPU registers and memory content for offline debugging. This module is called when a fatal error is encountered, and the data is printed or stored to which backends are enabled. This core dump data can be fed into a custom made GDB server as a remote target for GDB. CPU registers, memory content and stack can be examined in the debugger.
