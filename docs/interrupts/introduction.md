@@ -53,7 +53,7 @@ void my_isr_installer(void)
 
 Regular Zephyr interrupts introduce some overhead which may be unacceptable for some low-latency use-cases. Specifically:
 - The argument to the ISR is retrieved and passed to the ISR
-- If power management is enabled and the system was idle, all the hardware will be resumed from low-power state before the ISR is executed, which cn be very time-consuming
+- If power management is enabled and the system was idle, all the hardware will be resumed from low-power state before the ISR is executed, which can be very time-consuming
 - Although some architectures will do this in hardware, other architectures need to switch to the interrupt stack in code
 - After the interrupt is serviced, the OS then performs some logic to potentially make a scheduling decision
 
