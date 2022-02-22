@@ -22,6 +22,7 @@ The following interrupt-related APIs are provided by irq.h:
 
 
 The following interrupt-related APIs are provided by kernel.h:
+
 | Command | Description |
 | --- | --- |
 | k_is_in_isr() | Determine if code is running at interrupt level. |

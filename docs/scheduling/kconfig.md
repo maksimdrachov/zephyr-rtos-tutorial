@@ -5,6 +5,7 @@ parent: 'Lesson 5: Scheduling'
 ---
 
 Scheduler configuration
+
 | CONFIG | Description |
 | --- | --- |
 | CONFIG_SCHED_DUMB | The scheduler ready queue will be implemented as a simple unordered list, with very fast constant time performance for single threads and very low code size. This implementation should be selected on systems with constrained code size that will never see more than a small number (3, maybe) of runnable threads in the queue at any given time. On most platforms (that are not otherwise using the red/black tree) this results in a savings of ~2k of code size. |
@@ -14,6 +15,7 @@ Scheduler configuration
 | CONFIG_WAITQ_DUMB | When selected, the wait_q will be implemented with a doubly-linked list. Choose this if you expect to have only a few threads blocked on any single IPC primitive. |
 
 Thread priorities configuration
+
 | CONFIG | Description |
 | --- | --- |
 | CONFIG_NUM_COOP_PRIORITIES | Number of coop priorities |

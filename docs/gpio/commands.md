@@ -10,6 +10,7 @@ Useful API pages:
 - [Device Driver Model](https://docs.zephyrproject.org/latest/reference/drivers/index.html)
 
 ## Functions table
+
 | Function | Description |
 | --- | --- |
 | gpio_pin_configure | Configure a single pin |
@@ -19,6 +20,7 @@ Useful API pages:
 | gpio_pin_toggle | Toggle pin level |
 
 Callback functions: (not covered in exercises)
+
 | Function | Description |
 | --- | --- |
 | gpio_init_callback | Helper to initialize a struct `gpio_callback` properly |
@@ -26,14 +28,16 @@ Callback functions: (not covered in exercises)
 | gpio_remove_callback | Remove an application callback |
 
 Device Driver Model
+
 | Function | Description |
 | --- | --- |
 | device_get_binding | Retrieve the device structure for a driver by name. Device objects are created via the DEVICE_DEFINE() macro and placed in memory by the linker. If a driver needs to bind to another driver it can use this function to retrieve the device structure of the lower level driver by the name the driver exposes to the system.|
 
- 
 
 ## Flags table
+
 Input/Output configuration options:
+
 | Flags | Description
 | --- | --- | 
 | GPIO_INPUT | Enables pin as input |
@@ -45,6 +49,7 @@ Input/Output configuration options:
 | GPIO_OUTPUT_ACTIVE | Configures GPIO pin as output and initializes it to a logic 1.  |
 
 GPIO interrupt configuration flags
+
 | Flags | Description |
 | --- | --- |
 | GPIO_INT_DISABLE | Disables GPIO pin interrupt. |
@@ -59,12 +64,14 @@ GPIO interrupt configuration flags
 | GPIO_INT_LEVEL_ACTIVE | Configures GPIO interrupt to be triggered on pin logical level 1 and enables it. |
 
 GPIO pin active level flags
+
 | Flags | Description |
 | --- | --- |
 | GPIO_ACTIVE_LOW | GPIO pin is active (has logical value ‘1’) in low state.  |
 | GPIO_ACTIVE_HIGH | GPIO pin is active (has logical value ‘1’) in high state.  |
 
 Defines
+
 | Flags | Description |
 | --- | --- |
 | GPIO_INT_DEBOUNCE | Enable GPIO pin debounce |
@@ -75,7 +82,7 @@ Defines
 | DT_ALIAS | Get a node identifier from /aliases.  |
 | DT_GPIO_LABEL | Get a label property from a gpio phandle-array property (at index 0)|
 | DT_GPIO_PIN | Get a GPIO specifier’s pin cell (at index 0) |
-| DT_GPIO_FLAGS | Get a GPIO specifier’s flags cell (at index 0) |``
+| DT_GPIO_FLAGS | Get a GPIO specifier’s flags cell (at index 0) |
 
 Additional flag categories can be found [here](https://docs.zephyrproject.org/latest/reference/peripherals/gpio.html#api-reference):
 - GPIO drive strength flags
