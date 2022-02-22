@@ -7,7 +7,8 @@ nav_order: 11
 ---
 
 # Setup
-**1) Install VSCode**
+
+## 1) Install VSCode
 
 - Add the following extensions to VSCode:
     - C/C++
@@ -23,7 +24,7 @@ git clone https://github.com/maksimdrachov/zephyr-rtos-tutorial
 
 ```
 
-**2) Install Coolterm**
+## 2) Install Coolterm
 
 - [Dowload](https://freeware.the-meiers.org/)
 
@@ -43,7 +44,7 @@ Terminal -> check "Filter ASCII Escape Sequences"
 
 Save this configuration under `~/dev-tools/coolterm`, since you'll need it often.  (suggested name: nucleo-f756zg)
 
-**3) Build and Flash basic-sample**
+## 3) Build and Flash basic-sample
 - Open the folder zephyr-rtos-tutorial in VScode
 
 - Open Coolterm with the `nucleo-f756zg` configuration and connect

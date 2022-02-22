@@ -4,7 +4,7 @@ title: '8.1 Introduction'
 parent: 'Lesson 8: Timers'
 ---
 
-*What is a timer?*
+## What is a timer?
 
 A timer is a kernel object that measures the passage of time using the kernel's system clock. When a timer's specified time limit is reached it can perform an application-defined action, or it can simply record the expiration and wait for the application to read its status.
 
@@ -35,7 +35,7 @@ A thread may read a timer's status indirectly by synchronizing with the timer. T
 
 Note: Only a single user should examine the status of any given timer, since reading the status (directly or indirectly) changes its value. Similarly, only a single thread at a time should synchronize with a given timer. ISRs are not permitted to synchronize with timers, since ISRs are not allowed to block. 
 
-*How to define a timer?*
+## How to define a timer?
 
 A timer is defined using a variable of type k_timer. It must then be initialized by calling k_timer_init().
 
@@ -127,7 +127,7 @@ k_timer_status_sync(&my_sync_timer);
 ```
 
 
-*When to use a timer?*
+## When to use a timer?
 
 Use a timer to initiate an asynchronous operation after a specified amount of time.
 

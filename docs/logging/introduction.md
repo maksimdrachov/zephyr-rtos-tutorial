@@ -4,7 +4,9 @@ title: '11.1 Introduction'
 parent: 'Lesson 11: Logging'
 ---
 
-*What is logging?*
+# Introduction
+
+## What is logging?
 
 The logging API provides a common interface to process messages issued by developers. Messages are passed through a frontend and are then processed by active backends. Custom frontends and backend can be used if needed. Default configuration uses built-in frontend and UART backend.
 
@@ -26,7 +28,7 @@ Each module which is using the logging must specify its unique name and register
 
 Logger's default frontend is designed to be thread-safe and minimizes time needed to log the message. Time consuming operations like string formatting or access to the transport are not performed by default when logging API is called. When logging API is called a message is created and added to the list. Dedicated, configurable buffer for pool or log messages is used. There are 2 types of messages: standard and hexdump. Each message contains source ID (module or instance ID and domain ID which might be used for multiprocessor systems), timestamp and severity level. Standard message contains pointer to the string and arguments. Hexdump message contains copied data and string. 
 
-*How to use logging?*
+## How to use logging?
 
 In order to use logging in the module, a unique name of a module must be specified and module must be registered using LOG_MODULE_REGISTER. Optionally, a compile time log level for the module can be specified as the second parameter. Default log level (CONFIG_LOG_DEFAULT_LEVEL) is used if custom log level is not provided.
 
@@ -86,5 +88,3 @@ void main(void)
      }
 }
 ```
-
-

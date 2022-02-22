@@ -4,7 +4,8 @@ title: '3.4 Exercises'
 parent: 'Lesson 3: Threads'
 ---
 
-## Exercises
+# Exercises
+
 For solving the exercises I recommend you create your own folder inside `zephyr-rtos-tutorial` which contains the following filetree.
 
 ```
@@ -30,7 +31,7 @@ For solving the exercises I recommend you create your own folder inside `zephyr-
 
 
 
-**thread creation: main**
+## thread creation: main
 
 - Use `k_thread_create()` to create a thread
 - Implement the following
@@ -43,13 +44,13 @@ For solving the exercises I recommend you create your own folder inside `zephyr-
 
 solution: `exercises/threads/thread-start`
 
-**thread creation: define**
+## thread creation: define
 
 - Same as previous, but this time using `K_THREAD_DEFINE` to create thread
 
 solution: `exercises/threads/thread-start-define`
 
-**thread abort**
+## thread abort
 
 - Implement the following
 
@@ -61,7 +62,7 @@ solution: `exercises/threads/thread-start-define`
 
 solution: `exercises/threads/thread-abort`
 
-**thread sleep**
+## thread sleep
 
 - Implement the following
 
@@ -73,7 +74,7 @@ solution: `exercises/threads/thread-abort`
 
 solution: `exercises/threads/thread-sleep`
 
-**thread suspend**
+## thread suspend
 
 - Implement the following
 
@@ -85,7 +86,7 @@ solution: `exercises/threads/thread-sleep`
 
 solution: `exercises/threads/thread-suspend`
 
-**thread join**
+## thread join
 
 - Implement the following
 

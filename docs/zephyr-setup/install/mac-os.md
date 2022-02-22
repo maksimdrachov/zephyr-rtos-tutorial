@@ -6,7 +6,9 @@ grand_parent: 'Lesson 1: Zephyr Setup'
 ---
 
 # Install
-**1) Install dependencies**
+
+## 1) Install dependencies
+
 - Install Homebrew
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -18,7 +20,7 @@ grand_parent: 'Lesson 1: Zephyr Setup'
 brew install cmake ninja gperf python3 ccache qemu dtc textmate    
 ```
 
-**2) Clone Zephyr into new folder `zephyrproject`**
+## 2) Clone Zephyr into new folder `zephyrproject`
 ```
 cd ~
 mkdir zephyrproject
@@ -26,7 +28,7 @@ cd zephyrproject
 git clone https://github.com/zephyrproject-rtos/zephyr
 ```
 
-**3) Install `west`**
+## 3) Install `west`
 - Install west
 
 ```
@@ -50,7 +52,7 @@ west zephyr-export
 pip3 install -r ~/zephyrproject/zephyr/scripts/requirements.txt
 ```
 
-**4) Install GNU ARM Embedded toolchain**
+## 4) Install GNU ARM Embedded toolchain
 - Dowload [GNU ARM Embedded build](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads) and extract in `~/dev-tools`
 - Set environment variables in `~/.zshenv`
 ```
@@ -64,7 +66,7 @@ export GNUARMEMB_TOOLCHAIN_PATH=/Users/maksim/dev-tools/gcc-arm-none-eabi-10.3-2
 - Restart terminal and check if environment variables are set up correctly
 ![env_var_check](/images/zephyr-setup/env-var-check.png)
 
-**5) Build the Blinky sample**
+## 5) Build the Blinky sample
 ```
 cd ~/zephyrproject/zephyr/samples/basic/blinky
 west build -b nucleo_f756zg
@@ -72,7 +74,7 @@ west build -b nucleo_f756zg
 A succesful build looks like this:
 ![succes_build](/images/zephyr-setup/succes-build.png)
 
-**6) Flash the Sample**
+## 6) Flash the Sample
 ```
 cd ~/zephyrproject/zephyr/samples/basic/blinky
 west flash

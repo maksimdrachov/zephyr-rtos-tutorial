@@ -4,9 +4,9 @@ title: '5.1 Introduction'
 parent: 'Lesson 5: Scheduling'
 ---
 
-## Introduction
+# Introduction
 
-*What is "scheduling"?*
+## What is "scheduling"?
 
 The scheduler determines which thread is allowed to execute at any point in time; this thread is known as the current thread.
 
@@ -21,9 +21,7 @@ A thread sleeps when it volutarily initiates an operation that transitions itsel
 
 Whenever the scheduler changes the identity of the current thread, or when execution of the current thread is replaced by an ISR, the kernel first saves the current thread's CPU register values. These register values get restored when the thread later resumes execution.
 
-## Scheduler
-
-*How does the scheduler work?*
+## How does the scheduler work?
 
 The kernel's scheduler selects the highest priority ready thread to be the current thread. When multiple ready threads of the same priority exist, the scheduler chooses the one that has been waiting the longest. 
 
@@ -61,9 +59,7 @@ The queue types:
 - Scalable wait_q implementation (`CONFIG_WAITQ_SCALABLE`)
 - Simple linked-list wait_q (`CONFIG_WAITQ_DUMB`)
 
-## Thread priorities
-
-*How do thread priorities work?*
+## How do thread priorities work?
 
 A thread's priority is an integer value, and can be either negative or non-negative. Numerically lower priorities take precedence over higher values (-5>6).
 
@@ -77,9 +73,8 @@ The kernel supports a virtually unlimited number of thread priority levels. The 
 - cooperative threads: (-CONFIG_NUM_COOP_PRIORITIES) to -1
 - preemptive threads: 0 to (CONFIG_NUM_PREEMPT_PRIOTIES-1) 
 
-## Cooperative Time Slicing
+## What is cooperative time slicing?
 
-*What is cooperative time slicing?*
 Once a cooperative thread becomes the current thread, it remains the current thread until it performs an action that makes it unready. Consequently, if a cooperative thread performs lengthy computations, it may cause an unacceptable delay in the scheduling of other threads, including those of higher priority.
 
 ![cooperative](/images/scheduling/cooperative.png)
@@ -88,9 +83,7 @@ To overcome such problems, a cooperative thread can voluntarily relinquish the C
 - Calling k_yield() puts the thread at the back of the scheduler's prioritized list of ready threads, and then invokes the scheduler. All ready threads whose priority is higher or equal to that of the yielding thread are then allowed to execute before the yielding thread is rescheduled. If no such threads exist, the scheduler immediately reschedules the yielding thread without context switching. 
 - Calling k_sleep() makes the thread unready for a specified time period. Ready threads of *all* priorities are then allowed to execute; however, there is no guarantee that threads whose priority is lower than that of the sleeping thread will actually be scheduled before the sleeping thread becomes ready once again.
 
-## Preemptive Time Slicing
-
-*What is preemptive time slicing?*
+## What is preemptive time slicing?
 
 Once a preemptive thread becomes the current thread, it remains the current thread until a higher priority thread becomes ready, or until the thread performs an action that makes it unready. Consequently, if a preemptive thread performs lengthy computations, it may cause an unacceptable delay in the scheduling of other threads, including those of equal priority. 
 
@@ -116,19 +109,20 @@ If a thread calls k_sched_lock() and subsequently performs an action that makes 
 
 Note: Locking out the scheduler is a more efficient way for a preemptible thread to prevent preemption than changing its priority level to a negative value.
 
-## Varia
+## What is thread sleeping?
 
-*What is thread sleeping?*
 A thread can call k_sleep() to delay its processing for a specified time period. During the time the thread is sleeping the CPU is relinquished to allow other ready threads to execute. Once the specified delay has elapsed the thread becomes ready and is eligible to be scheduled once again.
 
 A sleeping thread can be woken up prematurely by another thread using k_wakeup(). This technique can sometimes be used to permit the secondary thread to signal the sleeping thread that something has occured without requiring the thread to define a kernel synchronization object, such as a semaphore. Waking up a thread that is not sleeping is allowed, but has no effect. 
 
-*What is busy waiting?*
+## What is busy waiting?
+
 A thread can call k_busy_wait() to perform a busy wait that delays its processing for a specified time period without relinquishing the CPU to another ready thread.
 
 A busy wait is typically used instead of thread sleeping when the required delay is too short to warrant having the scheduler context switch from the current thread to another thread and then back again.
 
-*Cooperative or preemptive?*
+## Cooperative or preemptive?
+
 - Device drivers and other performance-critical work -> cooperative threads
 - Use cooperative threads to implement mutual exclusion without the need for a kernel object, such as a mutex
 - Use preemptive threads to give priority to time-sensitive processing over less time-sensitive processing
