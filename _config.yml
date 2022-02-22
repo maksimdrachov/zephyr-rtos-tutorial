@@ -1,1 +1,7 @@
-theme: jekyll-theme-slate
+title: Zephyr RTOS Tutorial
+remote_theme: pmarsceill/just-the-docs
+
+plugins:
+  - jekyll-relative-links
+  - jekyll-remote-theme
+  - jekyll-seo-tag

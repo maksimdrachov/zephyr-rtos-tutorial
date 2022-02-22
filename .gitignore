@@ -53,3 +53,7 @@ TAGS
 tags
 
 .idea
+
+_site
+.jekyll-cache
+vendor
