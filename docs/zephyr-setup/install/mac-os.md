@@ -1,3 +1,10 @@
+---
+layout: post
+title: 'MacOS'
+parent: '1.1 Installation'
+grand_parent: 'Lesson 1: Zephyr Setup'
+---
+
 # Install
 **1) Install dependencies**
 - Install Homebrew

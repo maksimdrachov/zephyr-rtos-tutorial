@@ -1,3 +1,9 @@
+---
+layout: post
+title: '4.4 Exercise'
+parent: 'Lesson 4: GPIO'
+---
+
 ## Blinky
 GPIO-output
 

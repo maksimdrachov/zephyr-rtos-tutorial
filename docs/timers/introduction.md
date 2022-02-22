@@ -1,3 +1,9 @@
+---
+layout: post
+title: '8.1 Introduction'
+parent: 'Lesson 8: Timers'
+---
+
 *What is a timer?*
 
 A timer is a kernel object that measures the passage of time using the kernel's system clock. When a timer's specified time limit is reached it can perform an application-defined action, or it can simply record the expiration and wait for the application to read its status.

@@ -1,3 +1,9 @@
+---
+layout: post
+title: Contributing
+nav_order: 3
+---
+
 ## Contributing to the Zephyr RTOS Tutorial
 
 The general workflow is the following:

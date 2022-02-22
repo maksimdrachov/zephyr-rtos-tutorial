@@ -1,3 +1,9 @@
+---
+layout: post
+title: '4.2 Commands'
+parent: 'Lesson 4: GPIO'
+---
+
 Useful API pages:
 - [GPIO API](https://docs.zephyrproject.org/latest/reference/peripherals/gpio.html#api-reference)
 - [Devicetree](https://docs.zephyrproject.org/latest/guides/dts/index.html)

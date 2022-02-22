@@ -1,3 +1,9 @@
+---
+layout: post
+title: '3.4 Exercises'
+parent: 'Lesson 3: Threads'
+---
+
 ## Exercises
 For solving the exercises I recommend you create your own folder inside `zephyr-rtos-tutorial` which contains the following filetree.
 

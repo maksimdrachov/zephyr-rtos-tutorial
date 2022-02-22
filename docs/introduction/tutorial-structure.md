@@ -1,3 +1,10 @@
+---
+layout: post
+title: '2.3 Tutorial structure'
+parent: 'Lesson 2: Introduction'
+nav_order: 10
+---
+
 ## Tutorial structure
 
 *How is the tutorial structured?* 

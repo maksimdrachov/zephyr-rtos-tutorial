@@ -1,3 +1,9 @@
+---
+layout: post
+title: '6.3 Kconfig'
+parent: 'Lesson 6: Debugging'
+---
+
 ## OpenOCD
 
 ## Thread analyzer

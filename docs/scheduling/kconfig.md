@@ -1,3 +1,9 @@
+---
+layout: post
+title: '5.3 Kconfig'
+parent: 'Lesson 5: Scheduling'
+---
+
 Scheduler configuration
 | CONFIG | Description |
 | --- | --- |

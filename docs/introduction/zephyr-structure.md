@@ -1,3 +1,10 @@
+---
+layout: post
+title: '2.2 Zephyr structure'
+parent: 'Lesson 2: Introduction'
+nav_order: 10
+---
+
 ## Zephyr structure
 
 *How to work with Zephyr?* 

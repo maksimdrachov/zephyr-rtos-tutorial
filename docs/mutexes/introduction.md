@@ -1,3 +1,9 @@
+---
+layout: post
+title: '9.1 Introduction'
+parent: 'Lesson 9: Mutexes'
+---
+
 *What is a mutex?*
 
 A mutex is a kernel object that implements a traditional reentrant mutex. A mutex allows multiple threads to safely share an associated hardware or software resource by ensuring mutually exclusive access to the resource.

@@ -1,3 +1,9 @@
+---
+layout: post
+title: '5.1 Introduction'
+parent: 'Lesson 5: Scheduling'
+---
+
 ## Introduction
 
 *What is "scheduling"?*

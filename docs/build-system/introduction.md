@@ -1,3 +1,9 @@
+---
+layout: post
+title: '13.1 Introduction'
+parent: 'Lesson 13: Build System'
+---
+
 ## Build System
 
 *How does `west` work?*

@@ -1,3 +1,9 @@
+---
+layout: post
+title: Prerequisites
+nav_order: 2
+---
+
 ## Prerequisites
 
 ### 1. [NUCLEO-F756ZG](https://www.st.com/en/evaluation-tools/nucleo-f756zg.html)

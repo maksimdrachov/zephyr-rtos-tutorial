@@ -1,3 +1,9 @@
+---
+layout: post
+title: '7.2 Commands'
+parent: 'Lesson 7: Interrupts'
+---
+
 The following interrupt-related APIs are provided by irq.h:
 
 | Command | Description |

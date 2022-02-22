@@ -1,3 +1,9 @@
+---
+layout: post
+title: '11.2 Commands'
+parent: 'Lesson 11: Logging'
+---
+
 X: ERR, WRN, INF or DGB 
 
 | Command | Description |

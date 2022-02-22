@@ -1,3 +1,9 @@
+---
+layout: post
+title: '3.1 Introduction'
+parent: 'Lesson 3: Threads'
+---
+
 ## Threads
 
 *What are threads?* 

@@ -1,3 +1,9 @@
+---
+layout: post
+title: '6.1 Introduction'
+parent: 'Lesson 6: Debugging'
+---
+
 *What are some common debugging techniques and when to use them?*
 
 The three most common debugging techniques we'll be discussing here are:

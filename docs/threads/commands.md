@@ -1,3 +1,9 @@
+---
+layout: post
+title: '3.2 Commands'
+parent: 'Lesson 3: Threads'
+---
+
 ## Thread creation
 *How do I define threads in Zephyr?*
 

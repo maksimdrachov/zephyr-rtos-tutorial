@@ -1,3 +1,9 @@
+---
+layout: post
+title: '8.2 Commands'
+parent: 'Lesson 8: Timers'
+---
+
 | Command | Description |
 | --- | --- |
 | k_timer_init | Initialize a timer. This routine initializes a timer, prior to its first use. |

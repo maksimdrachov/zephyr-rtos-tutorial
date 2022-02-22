@@ -1,3 +1,9 @@
+---
+layout: post
+title: '11.3 Kconfig'
+parent: 'Lesson 11: Logging'
+---
+
 Mode of operations:
 | Kconfig | Description |
 | --- | --- |

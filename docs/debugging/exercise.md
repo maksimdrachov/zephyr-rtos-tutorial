@@ -1,3 +1,9 @@
+---
+layout: post
+title: '6.4 Exercise'
+parent: 'Lesson 6: Debugging'
+---
+
 ## Exercise 1: Multiple threads debugging
 
 Using the code from the previous section (time-slicing), we'll try to see how debugging works in VSCode.
@@ -61,4 +67,4 @@ west flash
 
 _Come back to this when I understand GDB better_
 
-
+{% include incomplete.md %}

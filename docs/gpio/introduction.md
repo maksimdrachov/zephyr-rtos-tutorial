@@ -1,3 +1,9 @@
+---
+layout: post
+title: '4.1 Introduction'
+parent: 'Lesson 4: GPIO'
+---
+
 ## Introduction
 In this lesson we'll be covering the way GPIO works in Zephyr. Just the basics:
 - set up an input pin

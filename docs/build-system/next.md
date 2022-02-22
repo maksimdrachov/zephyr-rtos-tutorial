@@ -1,3 +1,9 @@
+---
+layout: post
+title: '13.2 Next?'
+parent: 'Lesson 13: Build System'
+---
+
 What's next? 
 
 Now that you've hopefully become somewhat acquainted to the way Zephyr works it is really up to you to decide how this journey continues. In this final section I would like to give you some pointers as to how you might continue growing your skills:

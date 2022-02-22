@@ -1,3 +1,8 @@
+---
+layout: post
+title: '7.4 Exercise'
+parent: 'Lesson 7: Interrupts'
+---
 
 ## Button-interrupt
 GPIO-input-interrupt

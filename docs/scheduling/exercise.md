@@ -1,3 +1,9 @@
+---
+layout: post
+title: '5.4 Exercise'
+parent: 'Lesson 5: Scheduling'
+---
+
 ## Exercises
 **Cooperative Time Slicing**
 

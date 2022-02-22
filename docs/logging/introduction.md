@@ -1,3 +1,9 @@
+---
+layout: post
+title: '11.1 Introduction'
+parent: 'Lesson 11: Logging'
+---
+
 *What is logging?*
 
 The logging API provides a common interface to process messages issued by developers. Messages are passed through a frontend and are then processed by active backends. Custom frontends and backend can be used if needed. Default configuration uses built-in frontend and UART backend.

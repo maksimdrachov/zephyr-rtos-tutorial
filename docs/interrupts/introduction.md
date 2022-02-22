@@ -1,3 +1,9 @@
+---
+layout: post
+title: '7.1 Introduction'
+parent: 'Lesson 7: Interrupts'
+---
+
 *What is an interrupt?*
 
 An interrupt service routine (ISR) is a function that executes asynchronously in response to a hardware or software interrupt. An ISR normally preempts the execution of the current thread, allowing the response to occur with very low overhead. Thread execution resumes only once all ISR work has been completed.

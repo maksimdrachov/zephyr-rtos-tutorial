@@ -1,3 +1,10 @@
+---
+layout: post
+title: '2.1 RTOS basics'
+parent: 'Lesson 2: Introduction'
+nav_order: 10
+---
+
 ## RTOS basics
 
 *Why do I need an RTOS?*

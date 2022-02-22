@@ -1,3 +1,9 @@
+---
+layout: post
+title: '10.1 Introduction'
+parent: 'Lesson 10: Semaphores'
+---
+
 *What is a semaphore?*
 
 A semaphore is a kernel object that implements a traditional counting semaphore.

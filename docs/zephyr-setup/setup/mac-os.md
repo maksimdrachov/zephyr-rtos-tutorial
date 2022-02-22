@@ -1,4 +1,12 @@
-## Setup
+---
+layout: post
+title: 'MacOS'
+parent: '1.2 Basic Workspace Setup'
+grand_parent: 'Lesson 1: Zephyr Setup'
+nav_order: 11
+---
+
+# Setup
 **1) Install VSCode**
 
 - Add the following extensions to VSCode:
