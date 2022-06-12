@@ -1,4 +1,12 @@
-*What is a semaphore?*
+---
+layout: post
+title: '10.1 Introduction'
+parent: 'Lesson 10: Semaphores'
+---
+
+# Introduction
+
+## What is a semaphore?
 
 A semaphore is a kernel object that implements a traditional counting semaphore.
 
@@ -16,7 +24,7 @@ A semaphore may be taken by a thread. Taking the semaphore decrements its count,
 
 Note: The kernel does allow an ISR to take a semaphore, however the ISR must not attempt to wait if the semaphore is unavailable.
 
-*How to define a semaphore?*
+## How to define a semaphore?
 
 A semaphore is defined using a variable of type k_sem. It must then be initialized by calling k_sem_init().
 
@@ -36,7 +44,7 @@ The following code has the same effect as the code segment above.
 K_SEM_DEFINE(my_sel, 0, 1);
 ```
 
-*How to use a semaphore?*
+## How to use a semaphore?
 
 A semaphore is given by calling k_sem_give().
 
@@ -71,7 +79,7 @@ void consumer_thread(void)
 }
 ```
 
-*When to use?*
+## When to use semaphores?
 
 Use a semaphore to control access to a set of resources by multiple threads.
 

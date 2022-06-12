@@ -1,5 +1,12 @@
-## Exercises
-**Cooperative Time Slicing**
+---
+layout: post
+title: '5.4 Exercise'
+parent: 'Lesson 5: Scheduling'
+---
+
+# Exercises
+
+## Cooperative Time Slicing
 
 Implement cooperative time slicing that puts out the following serial output (using `printk()`)
 
@@ -8,7 +15,7 @@ Implement cooperative time slicing that puts out the following serial output (us
 ![serial-coop-time-slicing](/images/scheduling/serial-coop-time-slicing.png)
 
 
-**Preemptive Time Slicing**
+## Preemptive Time Slicing
 
 Implement Preemptive time slicing that puts out the serial (using `printk()`)
 
@@ -16,7 +23,7 @@ Implement Preemptive time slicing that puts out the serial (using `printk()`)
 
 ![serial-preemptive-time-slicing](/images/scheduling/serial-preemptive-time-slicing.png)
 
-**Time Slicing (with 3 threads)**
+## Time Slicing (with 3 threads)
 
 Implement time slicing with three threads (of equal priority)
 

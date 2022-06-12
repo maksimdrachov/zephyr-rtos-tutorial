@@ -1,4 +1,11 @@
+---
+layout: post
+title: '11.3 Kconfig'
+parent: 'Lesson 11: Logging'
+---
+
 Mode of operations:
+
 | Kconfig | Description |
 | --- | --- |
 | CONFIG_LOG | Deferred mode |
@@ -9,6 +16,7 @@ Mode of operations:
 | CONFIG_LOG_MODE_MINIMAL | Minimal footprint mode |
 
 Filtering options:
+
 | Kconfig | Description |
 | --- | --- |
 | CONFIG_LOG_RUNTIME_FILTERING | Enables runtime reconfiguration of the filtering. |
@@ -17,12 +25,14 @@ Filtering options:
 | CONFIG_LOG_MAX_LEVEL | Maximal (lowest severity) level which is compiled in. |
 
 Processing options:
+
 | Kconfig | Description |
 | --- | --- |
 | CONFIG_LOG_PRINTK | Redirect printk calls to the logging |
 | CONFIG_LOG_BUFFER_SIZE | Number of bytes dedicated for the message pool. Single message capable of storing standard log with up to 3 arguments or hexdump message with 12 bytes of data take 32 bytes. In v2 it indicates buffer size dedicated for circular packet buffer. |
 
 Formatting options:
+
 | Kconfig | Description |
 | --- | --- |
 | CONFIG_LOG_FUNC_NAME_PREFIX_ERR | Prepend standard ERROR log messages with function name. Hexdump messages are not prepended. |

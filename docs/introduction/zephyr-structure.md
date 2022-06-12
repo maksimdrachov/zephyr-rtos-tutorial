@@ -1,6 +1,13 @@
-## Zephyr structure
+---
+layout: post
+title: '2.2 Zephyr structure'
+parent: 'Lesson 2: Introduction'
+nav_order: 10
+---
 
-*How to work with Zephyr?* 
+# Zephyr structure
+
+## How to work with Zephyr?
 
 Before we start writing our first applications in Zephyr, it might be a good step to take a look at the folder structure that Zephyr provides us.
 

@@ -1,6 +1,12 @@
+---
+layout: post
+title: '6.3 Kconfig'
+parent: 'Lesson 6: Debugging'
+---
+
 ## OpenOCD
 
-## Thread analyzer
+### Thread analyzer
 
 | CONFIG | Description |
 | --- | --- |
@@ -13,10 +19,7 @@
 | THREAD_NAME | enable this option in the kernel to print the name of the thread instead of its ID |
 | THREAD_RUNTIME_STATS | enable this option to print thread runtime data such as utilization (This options is automatically selected by THREAD_ANALYZER) |
 
-
-
-
-## Core dump
+### Core dump
 
 | CONFIG | Description |
 | --- | --- |

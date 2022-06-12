@@ -1,12 +1,19 @@
-*What are some common debugging techniques and when to use them?*
+---
+layout: post
+title: '6.1 Introduction'
+parent: 'Lesson 6: Debugging'
+---
+
+# Introduction
+
+## What are some common debugging techniques and when to use them?
 
 The three most common debugging techniques we'll be discussing here are:
 - thread aware debugging (debug probe)
 - thread analysis
 - core dump
 
-*How does thread aware debugging work?*
-
+## How does thread aware debugging work?
 
 To enable thread-aware debugging you'll need to add the line shown below to `zephyr/boards/arm/nucleo_f756zg/support/openocd.cfg`
 
@@ -27,7 +34,7 @@ It is compatible with the following host debug tools:
 
 In this tutorial we'll be using OpenOCD.
 
-*How to use OpenOCD?*
+## How to use OpenOCD?
 
 OpenOCD is available by default on ST-Link and configured as the default flash and debug tool. Flash and debug can be done as follows:
 ```
@@ -39,7 +46,7 @@ west build -b nucleo_f756zg
 west debug
 ```
 
-*How does thread analysis work?*
+## How does thread analysis work?
 
 The thread analyzer module enables all the Zephyr options required to track the thread information, e.g. thread stack size usage and other runtime thread statistics.
 
@@ -47,7 +54,7 @@ The analysis is performed on demand when the application calls thread_analyzer_r
 
 The output is put on the serial connection.
 
-*How does core dump work?*
+## How does core dump work?
 
 The core dump module enables dumping the CPU registers and memory content for offline debugging. This module is called when a fatal error is encountered, and the data is printed or stored to which backends are enabled. This core dump data can be fed into a custom made GDB server as a remote target for GDB. CPU registers, memory content and stack can be examined in the debugger.
 

@@ -1,4 +1,12 @@
-*What is an interrupt?*
+---
+layout: post
+title: '7.1 Introduction'
+parent: 'Lesson 7: Interrupts'
+---
+
+# Introduction
+
+## What is an interrupt?
 
 An interrupt service routine (ISR) is a function that executes asynchronously in response to a hardware or software interrupt. An ISR normally preempts the execution of the current thread, allowing the response to occur with very low overhead. Thread execution resumes only once all ISR work has been completed.
 
@@ -20,7 +28,7 @@ An ISR's interrupt handler function executes in the kernel's interrupt context. 
 
 Important: Many kernel APIs can be used only by threads, and not by ISRs. In cases where a routine may be invoked by both threads and ISRs the kernel provides the k_is_in_isr() function to allow the routine to alter its behavior depending on whether it is executing as part of a thread or as part of an ISR.
 
-*How to define a regular interrupt?*
+## How to define a regular interrupt?
 
 An ISR is defined at run-time by calling IRQ_CONNECT. It must then be enabled by calling irq_enable().
 
@@ -49,7 +57,7 @@ void my_isr_installer(void)
 }
 ```
 
-*How to define a 'direct' ISR?*
+## How to define a 'direct' ISR?
 
 Regular Zephyr interrupts introduce some overhead which may be unacceptable for some low-latency use-cases. Specifically:
 - The argument to the ISR is retrieved and passed to the ISR
@@ -82,7 +90,7 @@ void my_isr_installer(void)
 }
 ```
 
-*How to disable interrupts?*
+## How to disable interrupts?
 
 In certain situations it may be necessary for the current thread to prevent ISRs from executing while it is performing time-sensitive or critical section operations.
 
@@ -96,7 +104,7 @@ Alternatively, a thread may temporarily disable a specific IRQ. The IRQ must be 
 
 Important: Disabling an IRQ prevent all threads in the system from being preempted by the associated ISR, not just the thread that disabled the IRQ.
 
-*When to use an interrupt?*
+## When to use an interrupt?
 
 Use a regular or direct ISR to perform interrupt processing that requires a very rapid response, and can be done quickly without blocking.
 

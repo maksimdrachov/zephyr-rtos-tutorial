@@ -1,3 +1,9 @@
+---
+layout: post
+title: '3.3 Kconfig'
+parent: 'Lesson 3: Threads'
+---
+
 ## Kconfig
 Threads are always included in the system configuration, therefore no *additional* configs need to be set. 
 

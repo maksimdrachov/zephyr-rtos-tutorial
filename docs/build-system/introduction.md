@@ -1,6 +1,12 @@
-## Build System
+---
+layout: post
+title: '13.1 Introduction'
+parent: 'Lesson 13: Build System'
+---
 
-*How does `west` work?*
+# Build System
+
+## How does `west` work?
 
 Every time you type `west build` the build process starts.
 
@@ -8,15 +14,15 @@ The first stage is called **configuration** and uses CMake. During configuration
 
 The next stage is called the **build** stage. Cmake supports several build systems, but in our case we are only interested in Ninja and Make. Make is the 'old' build system; while Ninja is the newer, more efficient build system. These will execute the build scripts and recompile the application. As a developer we are often less interested in this stage, since it doesn't really affect the way our application works. 
 
-*What is Cmake?*
+## What is Cmake?
 
-*What is Make?*
+## What is Make?
 
-*What is Ninja?*
+## What is Ninja?
 
 Once you start to play with multiple libraries, it might be useful to read up on Make, Cmake and Ninja (in that order). See recommended reading below. For more basic applications, it will probably suffice to understand the examples discussed below.
 
-*How does a basic sample work?*
+## How does a basic sample work?
 
 A basic example of a CMakeLists.txt (samples/basic/blinky)
 
@@ -35,7 +41,7 @@ target_sources(app PRIVATE src/main.c)
 
 ![boilerplate](/images/build-system/boilerplate.png)
 
-*How does this work with more complex applications?*
+## How does this work with more complex applications?
 
 (samples/net/sockets/echo_client)
 
@@ -103,7 +109,7 @@ target_sources_ifdef(CONFIG_NET_VLAN app PRIVATE src/vlan.c)
 - target_sources: adds echo-client.c to our app, in the previous basic sample, this was main.c
 - target_sources_ifdef: depending on our Kconfig settings we'll be adding some additional files to our app.
 
-*How to import an external library?*
+## How to import an external library?
 
 (samples/application_development/external_lib)
 
@@ -180,7 +186,7 @@ target_link_libraries(app PUBLIC mylib_lib)
 
 ```
 
-*Recommended reading*
+## Recommended reading
 
 While reading "GNU Make Manual", keep the following in mind:
 

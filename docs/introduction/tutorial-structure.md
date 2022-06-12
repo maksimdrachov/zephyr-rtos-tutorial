@@ -1,6 +1,14 @@
-## Tutorial structure
+---
+layout: post
+title: '2.3 Tutorial structure'
+parent: 'Lesson 2: Introduction'
+nav_order: 10
+---
 
-*How is the tutorial structured?* 
+# Tutorial structure
+
+## How is the tutorial structured?
+
 - Each lesson covers 1 aspect of Zephyr
 - The order of the lessons is choosen deliberately, it is recommended to not skip ahead (unless you already know a thing or two, then skip ahead!)
 

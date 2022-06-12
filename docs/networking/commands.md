@@ -1,3 +1,9 @@
+---
+layout: post
+title: '12.2 Commands'
+parent: 'Lesson 12: Networking'
+---
+
 | Command | Description |
 | --- | --- |
 | zsock_socket |  |

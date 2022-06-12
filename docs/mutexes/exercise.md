@@ -1,3 +1,9 @@
+---
+layout: post
+title: '9.4 Exercise'
+parent: 'Lesson 9: Mutexes'
+---
+
 2 preemptive threads
 
 1 integer value, we want to in one thread add 1 and in the other subtract one.

@@ -1,5 +1,10 @@
-## Thread creation
-*How do I define threads in Zephyr?*
+---
+layout: post
+title: '3.2 Commands'
+parent: 'Lesson 3: Threads'
+---
+
+## How do I define threads in Zephyr?
 
 A thread is spawned by defining its stack area and its thread control block, and then calling k_thread_create().
 

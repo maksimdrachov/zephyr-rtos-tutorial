@@ -1,4 +1,12 @@
-*What is a mutex?*
+---
+layout: post
+title: '9.1 Introduction'
+parent: 'Lesson 9: Mutexes'
+---
+
+# Introduction
+
+## What is a mutex?
 
 A mutex is a kernel object that implements a traditional reentrant mutex. A mutex allows multiple threads to safely share an associated hardware or software resource by ensuring mutually exclusive access to the resource.
 
@@ -34,7 +42,7 @@ When tow or more threads wait on a mutex held by a lower priority thread, the ke
 
 The kernel does not fully support priority inheritance when a thread holds two or more mutexes simultaneously. This situation can result in the thread's priority not reverting to its original non-elevated priority when all mutexes have been released. It is recommended that a thread lock only a single mutex at a time
 
-*How to define a mutex?*
+## How to define a mutex?
 
 A mutex is defined using a variable of type k_mutex. It must then be initialized by calling k_mutex_init().
 
@@ -54,7 +62,7 @@ The following code has the same effect as the code segment above.
 K_MUTEX_DEFINE(my_mutex);
 ```
 
-*How to use a mutex?*
+## How to use a mutex?
 
 A mutex is locked by calling k_mutex_lock().
 
@@ -85,6 +93,6 @@ The following code builds on the example above, and unlocks the mutex that was p
 k_mutex_unlock(&my_mutex);
 ```
 
-*When to use?*
+## When to use?
 
 Use a mutex to provide exclusive access to a resource, such as a physical device.

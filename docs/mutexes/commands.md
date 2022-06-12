@@ -1,3 +1,9 @@
+---
+layout: post
+title: '9.2 Commands'
+parent: 'Lesson 9: Mutexes'
+---
+
 | Command | Description |
 | --- | --- |
 | K_MUTEX_DEFINE | Statically define and initialize a mutex. |

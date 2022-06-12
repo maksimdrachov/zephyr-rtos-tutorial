@@ -1,10 +1,18 @@
-## Introduction
+---
+layout: post
+title: '4.1 Introduction'
+parent: 'Lesson 4: GPIO'
+---
+
+# Introduction
+
 In this lesson we'll be covering the way GPIO works in Zephyr. Just the basics:
 - set up an input pin
 - set up an output pin
 - set up an interrupt pin
 
 ## GPIO setup
+
 When setting up any GPIO the following basic steps have to be followed:
 
 1) First you need to look up the devicetree binding for the corresponding GPIO (if you don't know what a devicetree is: see section below).
@@ -136,7 +144,8 @@ gpio_pin_toggle_dt(&led);
 
 
 ## Devicetree
-> A device tree is a data structure describing the hardware components of a particular computer so that the operating system's kernel can use and manage those components, including the CPU or CPUs, the memory, the buses and the peripherals. (wikipedia)
+
+> A device tree is a data structure describing the hardware components of a particular computer so that the operating system's kernel can use and manage those components, including the CPU or CPUs, the memory, the buses and the peripherals. [Wikipedia](https://en.wikipedia.org/wiki/Devicetree)
 
 In short: the devicetree will help Zephyr locate all the components of your particular SoC/Board and in this way it will be able to work regardless of the underlying hardware. That also means if we want to access anything on the board from within Zephyr, we'll need to know the binding of that particular component in our devicetree. For example, if we want to blink an LED on the board, we'll first have to determine how that LED is called in the devicetree. If you want to learn more about devicetree, I'd recommend watching [this](https://www.youtube.com/watch?v=m_NyYEBxfn8) video, which explains it pretty well. (devicetree is a concept borrowed from Linux)
 

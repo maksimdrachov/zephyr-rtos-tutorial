@@ -1,3 +1,9 @@
+---
+layout: post
+title: '10.2 Commands'
+parent: 'Lesson 10: Semaphores'
+---
+
 | Command | Description |
 | --- | --- |
 | K_SEM_MAX_LIMIT |     Maximum limit value allowed for a semaphore. This is intended for use when a semaphore does not have an explicit maximum limit, and instead is just used for counting purposes. |

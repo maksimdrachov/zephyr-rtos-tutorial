@@ -1,3 +1,9 @@
+---
+layout: post
+title: '7.2 Commands'
+parent: 'Lesson 7: Interrupts'
+---
+
 The following interrupt-related APIs are provided by irq.h:
 
 | Command | Description |
@@ -16,6 +22,7 @@ The following interrupt-related APIs are provided by irq.h:
 
 
 The following interrupt-related APIs are provided by kernel.h:
+
 | Command | Description |
 | --- | --- |
 | k_is_in_isr() | Determine if code is running at interrupt level. |

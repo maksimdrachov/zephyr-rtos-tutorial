@@ -1,3 +1,9 @@
+---
+layout: post
+title: '5.2 Commands'
+parent: 'Lesson 5: Scheduling'
+---
+
 ## Commands
 
 A couple of commands we haven't discussed in threads:
