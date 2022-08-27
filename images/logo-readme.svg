@@ -1,16 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
    viewBox="0 0 360 185"
    version="1.1"
    id="svg55"
    width="360"
-   height="185">
+   height="185"
+   sodipodi:docname="logo-readme.svg"
+   inkscape:version="1.1.2 (b8e25be8, 2022-02-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview34"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="1.5692797"
+     inkscape:cx="142.10341"
+     inkscape:cy="243.10517"
+     inkscape:window-width="1385"
+     inkscape:window-height="855"
+     inkscape:window-x="55"
+     inkscape:window-y="23"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg55" />
   <metadata
      id="metadata59">
     <rdf:RDF>
@@ -19,7 +41,6 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -91,44 +112,54 @@
        x2="178.9799"
        y2="93.40757" />
   </defs>
+  <rect
+     style="opacity:0.495177;fill:#2d3136;fill-opacity:0;stroke:none;stroke-width:3.36586"
+     id="rect873"
+     width="403.22308"
+     height="207.68396"
+     x="-89.738625"
+     y="111.3351"
+     inkscape:export-filename="/Users/maksimdrachov/zephyr-rtos-tutorial/images/logo.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96" />
   <g
      id="Colored_Positive"
      data-name="Colored Positive"
-     transform="matrix(0.81480572,0,0,0.81480572,1.6221167,-0.40622648)">
+     transform="matrix(0.81480572,0,0,0.81480572,-67.102144,110.51005)">
     <polygon
        class="cls-1"
-       points="105.31,135.046 132.385,148.72 137.154,121.601 "
+       points="132.385,148.72 137.154,121.601 105.31,135.046 "
        id="polygon22" />
     <polygon
        class="cls-2"
-       points="34.434,126.703 42.309,153.408 68.401,139.419 "
+       points="42.309,153.408 68.401,139.419 34.434,126.703 "
        id="polygon24" />
     <polygon
        class="cls-3"
-       points="105.31,135.046 68.401,139.419 84.508,115.518 "
+       points="68.401,139.419 84.508,115.518 105.31,135.046 "
        id="polygon26" />
     <polygon
        class="cls-3"
-       points="34.434,126.703 8.759,101.076 38.535,97.167 "
+       points="8.759,101.076 38.535,97.167 34.434,126.703 "
        id="polygon28" />
     <polygon
        class="cls-4"
-       points="220.982,44.482 258.666,94.416 137.154,121.601 "
+       points="258.666,94.416 137.154,121.601 220.982,44.482 "
        id="polygon30"
        style="fill:url(#linear-gradient)" />
     <polygon
        class="cls-5"
-       points="172.959,8.13 220.982,44.482 137.154,121.601 "
+       points="220.982,44.482 137.154,121.601 172.959,8.13 "
        id="polygon32"
        style="fill:url(#linearGradient884)" />
     <polygon
        class="cls-6"
-       points="258.666,8.13 220.982,44.482 172.959,8.13 "
+       points="220.982,44.482 172.959,8.13 258.666,8.13 "
        id="polygon34"
        style="fill:url(#linear-gradient-3)" />
     <polygon
        class="cls-7"
-       points="258.666,8.13 220.982,44.482 258.666,94.416 "
+       points="220.982,44.482 258.666,94.416 258.666,8.13 "
        id="polygon36"
        style="fill:url(#linear-gradient-4)" />
     <path
@@ -164,4 +195,15 @@
        d="m 424.254,172.49932 a 6.29376,6.29376 0 1 1 6.29434,-6.294 6.30082,6.30082 0 0 1 -6.29434,6.294 z m 0,-11.7913 a 5.49754,5.49754 0 1 0 5.49812,5.49735 5.50374,5.50374 0 0 0 -5.49812,-5.49737 z"
        id="path52" />
   </g>
+  <text
+     xml:space="preserve"
+     style="font-weight:bold;font-size:21.3333px;line-height:1.25;font-family:Courier;-inkscape-font-specification:'Courier Bold';fill:#2d3136;fill-opacity:1"
+     x="58.47205"
+     y="313.54749"
+     id="text1053"><tspan
+       sodipodi:role="line"
+       id="tspan1051"
+       x="58.47205"
+       y="313.54749"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:21.3333px;font-family:Charter;-inkscape-font-specification:'Charter Bold';fill:#2d3136;fill-opacity:1">Tutorial for beginners</tspan></text>
 </svg>
