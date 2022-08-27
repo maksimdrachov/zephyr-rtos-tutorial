@@ -1,6 +1,6 @@
    <a href="https://www.zephyrproject.org">
      <p align="center">
-       <img src="images/logo.png">
+       <img src="images/logo_no_bg.png">
      </p>
    </a>
 
