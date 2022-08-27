@@ -4,7 +4,8 @@
      <p align="center">
        <img src="images/logo-readme.svg">
      </p>
-
+   </a>
+   
 This repository contains a step-by-step guide that teaches you how to use Zephyr RTOS. It assumes:
 - no previous experience with RTOS
 - basic embedded electronics knowledge (GPIO, Timers, Interrupt,...)
