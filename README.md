@@ -123,18 +123,3 @@ A web version of this tutorial can be found [here](https://maksimdrachov.github.
 
 ## Contact
 Follow me on [twitter](https://twitter.com/maksimdrachov): stay up to date on my latest blogs/projects
-
-
-
-## To Do
-- [ ] gpio:commands.md -> add descriptions to tables
-- [ ] exercices: threads : add define equivalents to each type
-- [ ] zephyr-setup: test proposed install and setup on 'tutorial'
-- [ ] introduction->rtos-basics: add explanatory images
-- [ ] threads->exercises: check build thread-start
-- [ ] debugging: core dump exercise
-
-towards the end:
-- [ ] Add next page and prev page links
-- [ ] exercises: rename project names
-- for each section introduction add relevant links at the end?
