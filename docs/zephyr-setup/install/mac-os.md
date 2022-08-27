@@ -20,7 +20,7 @@ grand_parent: 'Lesson 1: Zephyr Setup'
 brew install cmake ninja gperf python3 ccache qemu dtc textmate    
 ```
 
-## 2) Clone Zephyr into new folder `zephyrproject`
+## 2) Clone Zephyr
 ```
 cd ~
 mkdir zephyrproject
@@ -39,7 +39,7 @@ pip3 install -U west
 
 ```
 mate etc/paths
-#Add /Users/<username>/Library/Python/3.10/bin
+#Add /Users/<username>/Library/Python/<version>/bin
 ```
 
 (running `pip3 show -f west` shows where the binary is installed)
@@ -51,7 +51,7 @@ cd ~/zephyrproject
 west update
 ```
 
-- Export a Zephyr CMake package. This allows CMake to automatically load boilerplate required for building Zephyr applications.
+- Export a Zephyr CMake package: this allows CMake to automatically load boilerplate required for building Zephyr applications.
 ```
 west zephyr-export
 ```
@@ -93,7 +93,7 @@ The board name can be found under `~/zephyrproject/zephyr/boards`
 
 ```
 cd ~/zephyrproject/zephyr/samples/basic/blinky
-west build -b nucleo_l552ze_q
+west build -b <board-name>  # for example: nucleo_l552ze_q
 ```
 A successful build looks like this:
 ![succes_build](/images/zephyr-setup/success-build.png)
