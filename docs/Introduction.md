@@ -36,11 +36,11 @@ Perhaps unsurprisingly this open nature has heavily accelereated Zephyr's adopti
 
 ### Kconfig
 
-Another distinctive feature of Zephyr is its unique build and configuration system. For those coming from the embedded Linux world, Kconfig is a familiar feature that allows developers to adjust the build process of the kernel, and hereby include only those features that are used (reducing the memory footprint).
+Another distinctive feature of Zephyr is its unique build and configuration system. For those coming from the embedded Linux world, Kconfig is a familiar feature that allows developers to adjust the build process of the kernel, and include only those features that are used (reducing the memory footprint).
 
 There's many more features that can be discussed, if you're interested [this](https://medium.com/geekculture/the-zephyr-rtos-is-awesome-931bce3a695f) article covers some additional benefits of using Zephyr.
 
-## Deployed examples
+## Examples
 
 And last but not least here are some companies that are already using Zephyr in their products:
 
