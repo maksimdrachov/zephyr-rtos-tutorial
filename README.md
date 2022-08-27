@@ -1,5 +1,12 @@
 # Zephyr: Tutorial for Beginners
 
+.. raw:: html
+
+   <a href="https://www.zephyrproject.org">
+     <p align="center">
+       <img src="images/logo-readme.svg">
+     </p>
+
 This repository contains a step-by-step guide that teaches you how to use Zephyr RTOS. It assumes:
 - no previous experience with RTOS
 - basic embedded electronics knowledge (GPIO, Timers, Interrupt,...)
@@ -9,7 +16,7 @@ Each lesson builds on the previous one. Most lessons end with exercises (with so
 
 This tutorial is under active development, if you want to participate - please read the [Contribution guide](docs/Contributions.md).
 
-A web version of this tutorial can also be found [here](https://maksimdrachov.github.io/zephyr-rtos-tutorial).
+A web version of this tutorial can be found [here](https://maksimdrachov.github.io/zephyr-rtos-tutorial).
 
 ## Table of Contents
 
