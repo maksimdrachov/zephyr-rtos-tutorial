@@ -14,13 +14,15 @@ This is the board that I'll be using for the tutorial, since Zephyr is platform-
 
 ## 2. [USB to Micro-USB Cable](https://www.google.com/search?q=micro+usb)
 
-This allows you to connect you (Nucleo) board through the debugger to your computer.
+To connect you board to your computer.
 
 ## 3. Optional
 
 To play with some of the more advanced features, you'll need a board that supports this.
 
 - Ethernet: [Nucleo F756ZG](https://www.st.com/en/evaluation-tools/nucleo-f756zg.html))
-- Bluetooth: 
+- Bluetooth: [Nordic nRF52-DK](https://www.nordicsemi.com/Products/Development-hardware/nrf52-dk)
+
+
 
 

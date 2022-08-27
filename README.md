@@ -1,4 +1,8 @@
-# Zephyr: Tutorial for Beginners
+   <a href="https://www.zephyrproject.org">
+     <p align="center">
+       <img src="images/logo_no_bg.png">
+     </p>
+   </a>
 
 This repository contains a step-by-step guide that teaches you how to use Zephyr RTOS. It assumes:
 - no previous experience with RTOS
@@ -9,7 +13,7 @@ Each lesson builds on the previous one. Most lessons end with exercises (with so
 
 This tutorial is under active development, if you want to participate - please read the [Contribution guide](docs/Contributions.md).
 
-A web version of this tutorial can also be found [here](https://maksimdrachov.github.io/zephyr-rtos-tutorial).
+A web version of this tutorial can be found [here](https://maksimdrachov.github.io/zephyr-rtos-tutorial).
 
 ## Table of Contents
 
@@ -119,18 +123,3 @@ A web version of this tutorial can also be found [here](https://maksimdrachov.gi
 
 ## Contact
 Follow me on [twitter](https://twitter.com/maksimdrachov): stay up to date on my latest blogs/projects
-
-
-
-## To Do
-- [ ] gpio:commands.md -> add descriptions to tables
-- [ ] exercices: threads : add define equivalents to each type
-- [ ] zephyr-setup: test proposed install and setup on 'tutorial'
-- [ ] introduction->rtos-basics: add explanatory images
-- [ ] threads->exercises: check build thread-start
-- [ ] debugging: core dump exercise
-
-towards the end:
-- [ ] Add next page and prev page links
-- [ ] exercises: rename project names
-- for each section introduction add relevant links at the end?
