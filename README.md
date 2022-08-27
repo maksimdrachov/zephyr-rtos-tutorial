@@ -1,5 +1,3 @@
-# Zephyr: Tutorial for Beginners
-
    <a href="https://www.zephyrproject.org">
      <p align="center">
        <img src="images/logo.png">
