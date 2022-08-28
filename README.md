@@ -4,7 +4,7 @@
      </p>
    </a>
 
-This repository contains a step-by-step guide that teaches you how to use Zephyr RTOS. It assumes:
+A step-by-step guide that teaches you how to use Zephyr RTOS. It assumes:
 - no previous experience with RTOS
 - basic embedded electronics knowledge (GPIO, Timers, Interrupt,...)
 - knowledge of C
@@ -23,12 +23,12 @@ A web version of this tutorial can be found [here](https://maksimdrachov.github.
 - [ ] **Lesson 1: Zephyr Setup** 
   - [ ] 1.1 Installation
     - [x] [MacOS](docs/zephyr-setup/install/mac-os.md)
-    - [ ] [Windows](docs/zephyr-setup/install/windows.md)
     - [ ] [Linux](docs/zephyr-setup/install/linux.md)
+    - [ ] [Windows](docs/zephyr-setup/install/windows.md)
   - [ ] 1.2 Basic Workspace Setup
     - [x] [MacOS](docs/zephyr-setup/setup/mac-os.md)
-    - [ ] [Windows](docs/zephyr-setup/setup/windows.md)
     - [ ] [Linux](docs/zephyr-setup/setup/linux.md)
+    - [ ] [Windows](docs/zephyr-setup/setup/windows.md)
 
 - [x] **Lesson 2: Introduction**
   - [x] 2.1 [RTOS basics](docs/introduction/rtos-basics.md)

@@ -2,8 +2,8 @@
 layout: post
 title: 'Windows'
 parent: '1.2 Basic Workspace Setup'
-grand_parent: 'Lesson 1: Zephyr Setup'
-nav_order: 10
+grand_parent: '1 Zephyr Setup'
+nav_order: 3
 ---
 
 {% include incomplete.md %}

@@ -2,7 +2,8 @@
 layout: post
 title: 'MacOS'
 parent: '1.1 Installation'
-grand_parent: 'Lesson 1: Zephyr Setup'
+grand_parent: '1 Zephyr Setup'
+nav_order: 1
 ---
 
 # Install
@@ -85,7 +86,7 @@ echo $ZEPHYR_TOOLCHAIN_VARIANT
 echo $GNUARMEMB_TOOLCHAIN_PATH
 ```
   
-![env_var_check](/images/zephyr-setup/env-var-check.png)
+![env_var_check](../../../images/zephyr-setup/env-var-check.png)
 
 ## 5) Build the Blinky sample
 
@@ -96,7 +97,7 @@ cd ~/zephyrproject/zephyr/samples/basic/blinky
 west build -b <board-name>  # for example: nucleo_l552ze_q
 ```
 A successful build looks like this:
-![succes_build](/images/zephyr-setup/success-build.png)
+![succes_build](../../../images/zephyr-setup/success-build.png)
 
 > **NOTE**:  Sometimes you'll need to delete the build folder to start from scratch: `rm -rf build`
 
