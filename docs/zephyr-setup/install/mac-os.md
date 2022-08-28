@@ -2,7 +2,7 @@
 layout: post
 title: 'MacOS'
 parent: '1.1 Installation'
-grand_parent: '1 Zephyr Setup'
+grand_parent: '1. Zephyr Setup'
 nav_order: 1
 ---
 
@@ -11,12 +11,13 @@ nav_order: 1
 ## 1) Install dependencies
 
 - Install Homebrew
+  
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 - Use `brew` to install the required dependencies
-
+  
 ```
 brew install cmake ninja gperf python3 ccache qemu dtc textmate    
 ```
@@ -30,7 +31,7 @@ git clone https://github.com/zephyrproject-rtos/zephyr
 ```
 
 ## 3) Install `west`
-- Install west
+- Install `west`
 
 ```
 pip3 install -U west
@@ -46,18 +47,23 @@ mate etc/paths
 (running `pip3 show -f west` shows where the binary is installed)
 
 - Get the Zephyr source code
+  
 ```
 west init ~/zephyrproject
 cd ~/zephyrproject
 west update
 ```
 
-- Export a Zephyr CMake package: this allows CMake to automatically load boilerplate required for building Zephyr applications.
+- Export Zephyr CMake package: 
+  
 ```
 west zephyr-export
 ```
 
-- Zephyr’s `scripts/requirements.txt` file declares additional Python dependencies. Install them with `pip3`.
+(this allows CMake to automatically load boilerplate required for building Zephyr applications)
+
+- Install additional dependencies using `pip3`
+
 ```
 pip3 install -r ~/zephyrproject/zephyr/scripts/requirements.txt
 ```
@@ -107,10 +113,10 @@ cd ~/zephyrproject/zephyr/samples/basic/blinky
 west flash
 ```
 A succesful flash looks like this:
+
 ![succes_flash](/images/zephyr-setup/success-flash.png)
 
-> **NOTE**:  For some boards you'll need to install an additional pyocd package
+{: .warning}
+Some boards will require installing an additional pyocd package! ![pyocd-error](../../../images/zephyr-setup/pyocd-error.png)
 
-For Nucleo L552ZE-Q: `pyocd pack install stm32l552zetxq`
-
-![pyocd-error](../../../images/zephyr-setup/pyocd-error.png)
+For Nucleo L552ZE-Q: `pyocd pack install stm32l552zetxq` (see [pyocd/target_support](https://pyocd.io/docs/target_support.html#managed-packs))

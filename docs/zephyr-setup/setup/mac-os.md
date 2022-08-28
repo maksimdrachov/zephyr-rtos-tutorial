@@ -1,64 +1,64 @@
 ---
 layout: post
 title: 'MacOS'
-parent: '1.2 Basic Workspace Setup'
-grand_parent: '1 Zephyr Setup'
+parent: '1.2 Workspace Setup'
+grand_parent: '1. Zephyr Setup'
 nav_order: 1
 ---
 
 # Setup
 
-## 1) Install VSCode
+## 1) Coolterm
 
-- Add the following extensions to VSCode:
-    - C/C++
-    - Cortex-Debug
-    - DeviceTree
+- [Dowload](https://freeware.the-meiers.org/) and install Coolterm
 
-- Optional: [set terminal color to green](https://stackoverflow.com/questions/42307949/color-theme-for-vs-code-integrated-terminal)
+- Connect your board to your computer
 
-- Clone tutorial folder into `~/zephyrproject`
-```
-cd ~/zephyrproject
-git clone https://github.com/maksimdrachov/zephyr-rtos-tutorial
-
-```
-
-## 2) Install Coolterm
-
-- [Dowload](https://freeware.the-meiers.org/)
-
-- Connect your Nucleo board to your computer
-
-- Set up serial connection with Nucleo
-    - Port: usbmodemxxxxx
-    - Baudrate: 115200
+- `Options`: Set up serial connection with Nucleo
+    - Port: `usbmodemxxxxx`
+    - Baudrate: `115200`
 
 ![coolterm-1](/images/zephyr-setup/coolterm-1.png)
 
-Terminal -> check "Filter ASCII Escape Sequences"
+- `Terminal`: check "Filter ASCII Escape Sequences" and press `Ok`
 
 ![coolterm-2](/images/zephyr-setup/coolterm-2.png)
 
-`File -> Save`
+- `File -> Save`: Save this configuration under `~/zephyrproject`
 
-Save this configuration under `~/dev-tools/coolterm`, since you'll need it often.  (suggested name: nucleo-f756zg)
+![coolterm-settings](../../../images/zephyr-setup/coolterm-settings.png)
 
-## 3) Build and Flash basic-sample
-- Open the folder zephyr-rtos-tutorial in VScode
+- `Connect`
+  
+![coolterm-connect](../../../images/zephyr-setup/coolterm-connect.png)
 
-- Open Coolterm with the `nucleo-f756zg` configuration and connect
+## 2) VSCode
 
-- `Terminal -> New Terminal`
+- Install [VSCode](https://code.visualstudio.com/)
+
+- Add the following extensions to VSCode:
+    - [C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
+    - [Cortex-Debug](https://marketplace.visualstudio.com/items?itemName=marus25.cortex-debug)
+    - [DeviceTree](https://marketplace.visualstudio.com/items?itemName=plorefice.devicetree)
+
+- Clone tutorial repository into `~/zephyrproject` and open VSCode
+  
+```
+cd ~/zephyrproject
+git clone https://github.com/maksimdrachov/zephyr-rtos-tutorial
+cd zephyr-rtos-tutorial
+code .
+```
+
+- VSCode: `Terminal -> New Terminal`
+  
 ```
 cd exercises/basic-sample
-west build -b nucleo_f756zg
+west build -b nucleo_l552ze_q
 west flash
 ```
 
-Tip: if you've previously made a build for a different board, remove the old build first:
-
-`rm -rf build`
+(If you've previously made a build for a different board, remove the old build first: `rm -rf build`)
 
 - Verify the serial output:
 
