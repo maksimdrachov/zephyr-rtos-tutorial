@@ -22,77 +22,66 @@ This tutorial is under active development, if you want to participate - please r
 - [x] **[Prerequisites](docs/Prerequisites.md)**
 - [ ] **Lesson 1: Zephyr Setup** 
   - [ ] 1.1 Installation
-    - [x] [MacOS](docs/zephyr-setup/install/mac-os.md)
-    - [ ] [Linux](docs/zephyr-setup/install/linux.md)
-    - [ ] [Windows](docs/zephyr-setup/install/windows.md)
+    - [x] [MacOS](docs/1-zephyr-setup/install/mac-os.md)
+    - [ ] [Linux](docs/1-zephyr-setup/install/linux.md)
+    - [ ] [Windows](docs/1-zephyr-setup/install/windows.md)
   - [ ] 1.2 Basic Workspace Setup
-    - [x] [MacOS](docs/zephyr-setup/setup/mac-os.md)
-    - [ ] [Linux](docs/zephyr-setup/setup/linux.md)
-    - [ ] [Windows](docs/zephyr-setup/setup/windows.md)
+    - [x] [MacOS](docs/1-zephyr-setup/setup/mac-os.md)
+    - [ ] [Linux](docs/1-zephyr-setup/setup/linux.md)
+    - [ ] [Windows](docs/1-zephyr-setup/setup/windows.md)
 
 - [x] **Lesson 2: Introduction**
-  - [x] 2.1 [RTOS basics](docs/introduction/rtos-basics.md)
-  - [x] 2.2 [Zephyr structure](docs/introduction/zephyr-structure.md)
-  - [x] 2.3 [Tutorial structure](docs/introduction/tutorial-structure.md)
+  - [x] 2.1 [RTOS basics](docs/2-introduction/rtos-basics.md)
+  - [x] 2.2 [Zephyr structure](docs/2-introduction/zephyr-structure.md)
+  - [x] 2.3 [Tutorial structure](docs/2-introduction/tutorial-structure.md)
   
 - [x] **Lesson 3: Threads**
-  - [x] 3.1 [Introduction](docs/threads/introduction.md)
-  - [x] 3.2 [Commands](docs/threads/commands.md)
-  - [x] 3.3 [Kconfig](docs/threads/kconfig.md)
-  - [x] 3.4 [Exercise](docs/threads/exercise.md)
+  - [x] 3.1 [Introduction](docs/3-threads/introduction.md)
+  - [x] 3.2 [Commands](docs/3-threads/commands.md)
+  - [x] 3.3 [Kconfig](docs/3-threads/kconfig.md)
+  - [x] 3.4 [Exercise](docs/3-threads/exercise.md)
 
 - [x] **Lesson 4: GPIO**
-  - [x] 4.1 [Introduction](docs/gpio/introduction.md)
-  - [x] 4.2 [Commands](docs/gpio/commands.md)
-  - [x] 4.3 [Kconfig](docs/gpio/kconfig.md)
-  - [x] 4.4 [Exercise](docs/gpio/exercise.md)
-  
+  - [x] 4.1 [Introduction](docs/4-gpio/introduction.md)
+  - [x] 4.2 [Commands](docs/4-gpio/commands.md)
+  - [x] 4.3 [Kconfig](docs/4-gpio/kconfig.md)
+  - [x] 4.4 [Exercise](docs/4-gpio/exercise.md)
+
 - [x] **Lesson 5: Scheduling**
-  - [x] 5.1 [Introduction](docs/scheduling/introduction.md)
-  - [x] 5.2 [Commands](docs/scheduling/commands.md)
-  - [x] 5.3 [Kconfig](docs/scheduling/kconfig.md)
-  - [x] 5.4 [Exercise](docs/scheduling/exercise.md)
+  - [x] 5.1 [Introduction](docs/5-scheduling/introduction.md)
+  - [x] 5.2 [Commands](docs/5-scheduling/commands.md)
+  - [x] 5.3 [Kconfig](docs/5-scheduling/kconfig.md)
+  - [x] 5.4 [Exercise](docs/5-scheduling/exercise.md)
 
-- [ ] **Lesson 6: Debugging**
-  - [x] 6.1 [Introduction](docs/debugging/introduction.md)
-  - [x] 6.2 [Commands](docs/debugging/commands.md)
-  - [x] 6.3 [Kconfig](docs/debugging/kconfig.md)
-  - [x] 6.4 [Exercise](docs/debugging/exercise.md)
+- [ ] **Lesson 6: Logging**
+  - [x] 6.1 [Introduction](docs/6-logging/introduction.md)
+  - [x] 6.2 [Commands](docs/6-logging/commands.md)
+  - [x] 6.3 [Kconfig](docs/6-logging/kconfig.md)
+  - [ ] 6.4 [Exercise](docs/6-logging/exercise.md)
 
-- [x] **Lesson 7: Interrupts** 
-  - [x] 7.1 [Introduction](docs/interrupts/introduction.md)
-  - [x] 7.2 [Commands](docs/interrupts/commands.md)
-  - [x] 7.4 [Exercise](docs/interrupts/exercise.md)
+- [ ] **Lesson 7: Debugging**
+  - [x] 7.1 [Introduction](docs/7-debugging/introduction.md)
+  - [x] 7.2 [Commands](docs/7-debugging/commands.md)
+  - [x] 7.3 [Kconfig](docs/7-debugging/kconfig.md)
+  - [x] 7.4 [Exercise](docs/7-debugging/exercise.md)
 
-- [ ] **Lesson 8: Timers**
-  - [x] 8.1 [Introduction](docs/timers/introduction.md)
-  - [x] 8.2 [Commands](docs/timers/commands.md)
-  - [x] 8.3 [Kconfig](docs/timers/kconfig.md)
-  - [x] 8.4 [Exercise](docs/timers/exercise.md)
+- [x] **Lesson 8: Interrupts** 
+  - [x] 8.1 [Introduction](docs/8-interrupts/introduction.md)
+  - [x] 8.2 [Commands](docs/8-interrupts/commands.md)
+  - [x] 8.3 [Kconfig](docs/8-interrupts/kconfig.md)
+  - [x] 8.4 [Exercise](docs/8-interrupts/exercise.md)
 
-- [ ] **Lesson 9: Mutexes**
-  - [x] 9.1 [Introduction](docs/mutexes/introduction.md)
-  - [x] 9.2 [Commands](docs/mutexes/commands.md)
-  - [x] 9.3 [Kconfig](docs/mutexes/kconfig.md)
-  - [ ] 9.4 [Exercise](docs/mutexes/exercise.md)
+- [ ] **Lesson 9: Timers**
+  - [x] 9.1 [Introduction](docs/9-timers/introduction.md)
+  - [x] 9.2 [Commands](docs/9-timers/commands.md)
+  - [x] 9.3 [Kconfig](docs/9-timers/kconfig.md)
+  - [x] 9.4 [Exercise](docs/9-timers/exercise.md)
 
-- [ ] **Lesson 10: Semaphores**
-  - [x] 10.1 [Introduction](docs/semaphores/introduction.md)
-  - [x] 10.2 [Commands](docs/semaphores/commands.md)
-  - [x] 10.3 [Kconfig](docs/semaphores/kconfig.md)
-  - [ ] 10.4 [Exercise](docs/semaphores/exercise.md)
-
-- [ ] **Lesson 11: Logging**
-  - [x] 11.1 [Introduction](docs/logging/introduction.md)
-  - [x] 11.2 [Commands](docs/logging/commands.md)
-  - [x] 11.3 [Kconfig](docs/logging/kconfig.md)
-  - [ ] 11.4 [Exercise](docs/logging/exercise.md)
-
-- [ ] **Lesson 12: Build System**
-  - [ ] 12.1 [Introduction](docs/build-system/introduction.md)
-  - [ ] 12.2 [Commands](docs/build-system/commands.md)
-  - [ ] 12.3 [Exercise](docs/build-system/exercise.md)
-  - [ ] 12.4 [Next?](docs/build-system/next.md)
+- [ ] **Lesson 10: Mutexes**
+  - [x] 10.1 [Introduction](docs/10-mutexes/introduction.md)
+  - [x] 10.2 [Commands](docs/10-mutexes/commands.md)
+  - [x] 10.3 [Kconfig](docs/10-mutexes/kconfig.md)
+  - [ ] 10.4 [Exercise](docs/10-mutexes/exercise.md)
 
 ## Useful Links
 **General**

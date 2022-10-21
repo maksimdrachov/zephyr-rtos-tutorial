@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Contributing
-nav_order: 3
+nav_order: 13
 ---
 
 ## Contributing to the Zephyr RTOS Tutorial
