@@ -8,7 +8,7 @@ nav_order: 1
 
 In this tutorial we'll be taking a closer look at the Zephyr real-time operating system (RTOS). Before we dive in, it might be useful to understand why RTOS has become a foundational building block for modern embedded systems. 
 
-As embedded systems have become increasingly complex with more devices becoming connected to the Internet, the difficulty for writing software for such systems has increased as well. Modern applications often require a delicate balance between executing multiple task simultanously (with tight timing constraints), as well as managing complex protocols such as WiFi, Bluetooth, USB, encryption,... To deal with this increased complexity, programming purely on the bare metal is no longer a feasible proposition. An RTOS provides an abstraction layer for certain commonly used functionality allowing the developer to focus on the actual application itself, without having to re-implement everything from scratch.
+As embedded systems have become increasingly complex with more devices becoming connected to the Internet, the difficulty of writing software for such systems has increased as well. Modern applications often require a delicate balance: between executing multiple task simultanously (with tight timing constraints), as well as managing complex protocols such as WiFi, Bluetooth, USB, encryption,... To deal with this increased complexity, programming purely on the bare metal is no longer a feasible proposition. An RTOS provides an abstraction layer for certain commonly used functionality allowing the developer to focus on the actual application itself, without having to re-implement everything from scratch.
 
 In this tutorial we won't necessarily be digging 'under the hood' of the workings of a modern RTOS, there have already been written many [books](https://www.amazon.com/Embedded-RTOS-Design-Insights-Implementation/dp/0128228512/) that cover this topic quite extensively. Instead we'll be mainly focusing on learning how to *use* the functionality provided by Zephyr.
 
@@ -36,7 +36,7 @@ Perhaps unsurprisingly this open nature has heavily accelereated Zephyr's adopti
 
 ### Kconfig
 
-Another distinctive feature of Zephyr is its unique build and configuration system. For those coming from the embedded Linux world, Kconfig is a familiar feature that allows developers to adjust the build process of the kernel, and include only those features that are used (reducing the memory footprint).
+Another distinctive feature of Zephyr is its unique build and configuration system. For those coming from the embedded Linux world, Kconfig is a familiar feature that allows developers to adjust the build process of the kernel, and include only those features that are used (hereby reducing the memory footprint).
 
 There's many more features that can be discussed, if you're interested [this](https://medium.com/geekculture/the-zephyr-rtos-is-awesome-931bce3a695f) article covers some additional benefits of using Zephyr.
 

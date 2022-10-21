@@ -20,7 +20,7 @@ To connect you board to your computer.
 
 To play with some of the more advanced features, you'll need a board that supports this.
 
-- Ethernet: [Nucleo F756ZG](https://www.st.com/en/evaluation-tools/nucleo-f756zg.html))
+- Ethernet: [Nucleo F756ZG](https://www.st.com/en/evaluation-tools/nucleo-f756zg.html)
 - Bluetooth: [Nordic nRF52-DK](https://www.nordicsemi.com/Products/Development-hardware/nrf52-dk)
 
 
