@@ -5,15 +5,15 @@
    </a>
 
 A step-by-step guide that teaches you how to use Zephyr RTOS. It assumes:
+- knowledge of C
 - no previous experience with RTOS
 - basic embedded electronics knowledge (GPIO, Timers, Interrupt,...)
-- knowledge of C
 
-Each lesson builds on the previous one. Most lessons end with exercises (with solutions!) that allow you to test your knowledge to make sure you understand everything that is covered.
+Each lesson builds on the previous one. Most lessons end with exercises (with solutions!) that show how the covered concepts can be used in a practical application.
 
 This tutorial is under active development, if you want to participate - please read the [Contribution guide](docs/Contributions.md).
 
-A web version of this tutorial can be found [here](https://maksimdrachov.github.io/zephyr-rtos-tutorial).
+**A web version of this tutorial can be found [here](https://maksimdrachov.github.io/zephyr-rtos-tutorial)**
 
 ## Table of Contents
 
