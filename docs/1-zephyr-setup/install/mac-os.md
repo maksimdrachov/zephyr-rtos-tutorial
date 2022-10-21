@@ -92,7 +92,7 @@ echo $ZEPHYR_TOOLCHAIN_VARIANT
 echo $GNUARMEMB_TOOLCHAIN_PATH
 ```
   
-![env_var_check](../../../images/zephyr-setup/env-var-check.png)
+![env_var_check](/images/1-zephyr-setup/env-var-check.png)
 
 ## 5) Build the Blinky sample
 
@@ -103,9 +103,10 @@ cd ~/zephyrproject/zephyr/samples/basic/blinky
 west build -b <board-name>  # for example: nucleo_l552ze_q
 ```
 A successful build looks like this:
-![succes_build](../../../images/zephyr-setup/success-build.png)
+![succes_build](/images/1-zephyr-setup/success-build.png)
 
-> **NOTE**:  Sometimes you'll need to delete the build folder to start from scratch: `rm -rf build`
+{: .note }
+> If you get a CMake error, this can usually be resolved by clearing the previous build: `rm -rf build`
 
 ## 6) Flash the sample
 ```
@@ -114,9 +115,9 @@ west flash
 ```
 A succesful flash looks like this:
 
-![succes_flash](/images/zephyr-setup/success-flash.png)
+![succes_flash](/images/1-zephyr-setup/success-flash.png)
 
 {: .warning}
-Some boards will require installing an additional pyocd package! ![pyocd-error](../../../images/zephyr-setup/pyocd-error.png)
-
-For Nucleo L552ZE-Q: `pyocd pack install stm32l552zetxq` (see [pyocd/target_support](https://pyocd.io/docs/target_support.html#managed-packs))
+> Some boards will require installing an additional `pyocd` package! 
+> ![pyocd-error](../../../images/zephyr-setup/pyocd-error.png)
+> For Nucleo L552ZE-Q: `pyocd pack install stm32l552zetxq` (see [pyocd/target_support](https://pyocd.io/docs/target_support.html#managed-packs))

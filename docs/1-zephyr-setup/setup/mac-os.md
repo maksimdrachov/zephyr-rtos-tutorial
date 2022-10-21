@@ -10,7 +10,7 @@ nav_order: 1
 
 ## 1) Coolterm
 
-- [Dowload](https://freeware.the-meiers.org/) and install Coolterm
+- Download and install [Coolterm](https://freeware.the-meiers.org/)
 
 - Connect your board to your computer
 
@@ -18,19 +18,19 @@ nav_order: 1
     - Port: `usbmodemxxxxx`
     - Baudrate: `115200`
 
-![coolterm-1](/images/zephyr-setup/coolterm-1.png)
+![coolterm-1](/images/1-zephyr-setup/coolterm-1.png)
 
 - `Terminal`: check "Filter ASCII Escape Sequences" and press `Ok`
 
-![coolterm-2](/images/zephyr-setup/coolterm-2.png)
+![coolterm-2](/images/1-zephyr-setup/coolterm-2.png)
 
 - `File -> Save`: Save this configuration under `~/zephyrproject`
 
-![coolterm-settings](../../../images/zephyr-setup/coolterm-settings.png)
+![coolterm-settings](/images/1-zephyr-setup/coolterm-settings.png)
 
 - `Connect`
   
-![coolterm-connect](../../../images/zephyr-setup/coolterm-connect.png)
+![coolterm-connect](/images/1-zephyr-setup/coolterm-connect.png)
 
 ## 2) VSCode
 
@@ -58,12 +58,13 @@ west build -b nucleo_l552ze_q
 west flash
 ```
 
-(If you've previously made a build for a different board, remove the old build first: `rm -rf build`)
+{: .note }
+> If you've previously made a build for a different board, remove the old build first: `rm -rf build`
 
 - Verify the serial output:
 
-![coolterm-3](/images/zephyr-setup/coolterm-3.png)
+![coolterm-3](/images/1-zephyr-setup/coolterm-3.png)
 
 Your final setup should look something like this:
 
-![final-setup](/images/zephyr-setup/final-setup.png)
+![final-setup](/images/1-zephyr-setup/final-setup.png)
