@@ -94,7 +94,7 @@ To open the serial monitor
 $ west espressif monitor
 ```
 You should see the similar output
-// TODO: Add hello, world output
+![hello_world_success_output](/images/1-zephyr-setup/hello_world_output.png)
 
 ## 4) Building the blinky
 Now, let's try to blink the builtin LED on ESP32. The sample is in `zephyr/samples/basic/blinky`
