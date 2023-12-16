@@ -9,7 +9,7 @@ GPIO-input-interrupt
 
 Configure an interrupt on a button press.
 
-1 thread running continously putting out "loop message" every second
+1 thread running continuously putting out "loop message" every second
 
 on button press: print out "isr message"
 

@@ -24,7 +24,7 @@ $_TARGETNAME configure -rtos Zephyr
 
 ![openocd-threads-support](/images/debugging/openocd-threads-support.png)
 
-A debug probe is special hardware which allows you to control execution of a Zephyr application running on a seperate board. Debug probes usually allow reading and writing registers and memory, and support breakpoint debugging of the Zephyr application on your host workstation using tools like GDB. 
+A debug probe is special hardware which allows you to control execution of a Zephyr application running on a separate board. Debug probes usually allow reading and writing registers and memory, and support breakpoint debugging of the Zephyr application on your host workstation using tools like GDB. 
 
 ST-LINK is a serial and debug adapter built into all Nucleo and Discovery boards. It provides a bridge between your computer (or other SUB host) and the embedded target processor, which can be used for debugging, flash programming, and serial communication, all over a simple USB cable.
 

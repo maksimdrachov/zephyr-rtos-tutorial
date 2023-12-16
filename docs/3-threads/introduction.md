@@ -6,7 +6,7 @@ parent: '3. Threads'
 
 ## What are threads?
 
-A thread is an isolated instance that is responsible for the execution of some task. While a microcontroller usually only has 1 CPU, the RTOS is able to have multiple tasks execute (seemingly) simultanously by exchanging the thread that gets run on the CPU as dictated by the scheduler. 
+A thread is an isolated instance that is responsible for the execution of some task. While a microcontroller usually only has 1 CPU, the RTOS is able to have multiple tasks execute (seemingly) simultaneously by exchanging the thread that gets run on the CPU as dictated by the scheduler. 
 
  Some key concepts:
 - **Stack area**: a region of memory used for the thread's stack. The size can be adjusted as required by the thread's processing.

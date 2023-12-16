@@ -77,7 +77,7 @@ The following code waits up to 100 milliseconds for the mutex to become availabl
 ```c
 if (k_mutex_lock(&my_mutex, K_MSEC(100)) == 0)
 {
-    /* mutex succesfully locked */
+    /* mutex successfully locked */
 }
 else
 {

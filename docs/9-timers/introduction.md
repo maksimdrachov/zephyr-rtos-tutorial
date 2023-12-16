@@ -103,7 +103,7 @@ if (k_timer_status_get(&my_status_timer) > 0) {
 }
 ```
 
-The following code performs timer status synchronization to allow a thread to do useful work while ensuring that a pair of protocol operations are seperated by the specified time interval.
+The following code performs timer status synchronization to allow a thread to do useful work while ensuring that a pair of protocol operations are separated by the specified time interval.
 
 ```c
 K_TIMER_DEFINE(my_sync_timer, NULL, NULL);

@@ -76,7 +76,7 @@ $ sudo udevadm control --reload
 
 ## 3) Building the Hello, World
 {:.note}
-> Thie list of supproted boards can be found [here](https://docs.zephyrproject.org/latest/boards/index.html#boards). I am going to use ESP32 for this example.
+> The list of supported boards can be found [here](https://docs.zephyrproject.org/latest/boards/index.html#boards). I am going to use ESP32 for this example.
 ```
 cd ~/zephyrproject/zephyr
 $ west build -p always -b esp32 samples/hello_world/

@@ -12,7 +12,7 @@ The logging API provides a common interface to process messages issued by develo
 
 Logging is highly configurable at compile time as well as at run time. Using Kconfig options logs can be gradually removed from compilation to reduce image size and execution time when logs are no longer needed. During compilation logs can be filtered out on module basis and severity level.
 
-Logs can also be compiled in but filtered on run time using dedicated API. Run time filtering is indepenent for each backend and each source of log messages. Source of log messages can be a module or specific instance of the module. 
+Logs can also be compiled in but filtered on run time using dedicated API. Run time filtering is independent for each backend and each source of log messages. Source of log messages can be a module or specific instance of the module. 
 
 There are four severity levels available in the system: error, warning, info and debug. For each severity level the logging API (include/logging/log.h) has a set of dedicated macros. Logger API also has macros for logging data. 
 
