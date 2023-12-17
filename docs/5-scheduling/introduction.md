@@ -113,7 +113,7 @@ Note: Locking out the scheduler is a more efficient way for a preemptible thread
 
 A thread can call k_sleep() to delay its processing for a specified time period. During the time the thread is sleeping the CPU is relinquished to allow other ready threads to execute. Once the specified delay has elapsed the thread becomes ready and is eligible to be scheduled once again.
 
-A sleeping thread can be woken up prematurely by another thread using k_wakeup(). This technique can sometimes be used to permit the secondary thread to signal the sleeping thread that something has occured without requiring the thread to define a kernel synchronization object, such as a semaphore. Waking up a thread that is not sleeping is allowed, but has no effect. 
+A sleeping thread can be woken up prematurely by another thread using k_wakeup(). This technique can sometimes be used to permit the secondary thread to signal the sleeping thread that something has occurred without requiring the thread to define a kernel synchronization object, such as a semaphore. Waking up a thread that is not sleeping is allowed, but has no effect. 
 
 ## What is busy waiting?
 

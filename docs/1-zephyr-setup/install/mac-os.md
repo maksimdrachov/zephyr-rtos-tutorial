@@ -113,7 +113,7 @@ A successful build looks like this:
 cd ~/zephyrproject/zephyr/samples/basic/blinky
 west flash
 ```
-A succesful flash looks like this:
+A successful flash looks like this:
 
 ![succes_flash](/images/1-zephyr-setup/success-flash.png)
 
