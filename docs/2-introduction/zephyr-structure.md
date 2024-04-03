@@ -11,7 +11,7 @@ nav_order: 10
 
 Before we start writing our first applications in Zephyr, it might be a good step to take a look at the folder structure that Zephyr provides us.
 
-![sample-folder](/images/2-introduction/sample-folder.png)
+![sample-folder](../../images/2-introduction/sample-folder.png)
 
 Let's go one-by-one:
 
