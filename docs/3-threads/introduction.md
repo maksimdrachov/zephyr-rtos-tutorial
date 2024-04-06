@@ -11,15 +11,15 @@ A thread is an isolated instance that is responsible for the execution of some t
  Some key concepts:
 - **Stack area**: a region of memory used for the thread's stack. The size can be adjusted as required by the thread's processing.
 
-![thread-stack-size](/images/threads/thread-stack-size.png)
+![thread-stack-size](../../images/threads/thread-stack-size.png)
 
 - **Thread control block**: for internal bookkeeping of the thread's metadata. An instance of the type `k_thread`.
 
-![thread-control-block](/images/threads/thread-control-block.png)
+![thread-control-block](../../images/threads/thread-control-block.png)
 
 - **Entry point function**: invoked when the thread is started. Up to 3 argument values can be passed to this function.
 
-![thread-entry-point](/images/threads/thread-entry-point.png)
+![thread-entry-point](../../images/threads/thread-entry-point.png)
 
 _ARG_UNUSED is needed to indicate that the 3 arguments are not used in our thread function._
 
@@ -41,4 +41,4 @@ Following factors can make a thread unready:
 
 The following diagram shows all the possible states a thread can find itself:
 
-![thread_states](/images/threads/thread-states.png)
+![thread_states](../../images/threads/thread-states.png)
