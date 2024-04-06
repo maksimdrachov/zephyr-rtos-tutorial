@@ -92,7 +92,7 @@ echo $ZEPHYR_TOOLCHAIN_VARIANT
 echo $GNUARMEMB_TOOLCHAIN_PATH
 ```
   
-![env_var_check](../../images/1-zephyr-setup/env-var-check.png)
+![env_var_check](/images/1-zephyr-setup/env-var-check.png)
 
 ## 5) Build the Blinky sample
 
@@ -103,7 +103,7 @@ cd ~/zephyrproject/zephyr/samples/basic/blinky
 west build -b <board-name>  # for example: nucleo_l552ze_q
 ```
 A successful build looks like this:
-![succes_build](../../images/1-zephyr-setup/success-build.png)
+![succes_build](/images/1-zephyr-setup/success-build.png)
 
 {: .note }
 > If you get a CMake error, this can usually be resolved by clearing the previous build: `rm -rf build`
@@ -115,7 +115,7 @@ west flash
 ```
 A successful flash looks like this:
 
-![succes_flash](../../images/1-zephyr-setup/success-flash.png)
+![succes_flash](/images/1-zephyr-setup/success-flash.png)
 
 {: .warning}
 > Some boards will require installing an additional `pyocd` package! 
