@@ -57,7 +57,3 @@ tags
 _site
 .jekyll-cache
 vendor
-
-.DS_Store
-.vscode/
-.history/

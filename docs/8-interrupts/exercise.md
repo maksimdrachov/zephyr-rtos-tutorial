@@ -21,8 +21,8 @@ on button press: print out "isr message"
 
 User button and LED aliases can be found in the devicetree file `build/zephyr/zephyr.dts`.
 
-![button-interrupt-alias](../../images/interrupts/button-interrupt-alias.png)
+![button-interrupt-alias](/images/interrupts/button-interrupt-alias.png)
 
 Expected output:
 
-![button-interrupt-output](../../images/interrupts/button-interrupt-output.png)
+![button-interrupt-output](/images/interrupts/button-interrupt-output.png)

@@ -22,7 +22,7 @@ To enable thread-aware debugging you'll need to add the line shown below to `zep
 $_TARGETNAME configure -rtos Zephyr
 ```
 
-![openocd-threads-support](../../images/debugging/openocd-threads-support.png)
+![openocd-threads-support](/images/debugging/openocd-threads-support.png)
 
 A debug probe is special hardware which allows you to control execution of a Zephyr application running on a separate board. Debug probes usually allow reading and writing registers and memory, and support breakpoint debugging of the Zephyr application on your host workstation using tools like GDB. 
 
