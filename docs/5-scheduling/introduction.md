@@ -77,7 +77,7 @@ The kernel supports a virtually unlimited number of thread priority levels. The 
 
 Once a cooperative thread becomes the current thread, it remains the current thread until it performs an action that makes it unready. Consequently, if a cooperative thread performs lengthy computations, it may cause an unacceptable delay in the scheduling of other threads, including those of higher priority.
 
-![cooperative](/images/scheduling/cooperative.png)
+![cooperative](../../images/scheduling/cooperative.png)
 
 To overcome such problems, a cooperative thread can voluntarily relinquish the CPU from time to time to permit other threads to execute. A thread can relinquish the CPU in two ways:
 - Calling k_yield() puts the thread at the back of the scheduler's prioritized list of ready threads, and then invokes the scheduler. All ready threads whose priority is higher or equal to that of the yielding thread are then allowed to execute before the yielding thread is rescheduled. If no such threads exist, the scheduler immediately reschedules the yielding thread without context switching. 
@@ -87,11 +87,11 @@ To overcome such problems, a cooperative thread can voluntarily relinquish the C
 
 Once a preemptive thread becomes the current thread, it remains the current thread until a higher priority thread becomes ready, or until the thread performs an action that makes it unready. Consequently, if a preemptive thread performs lengthy computations, it may cause an unacceptable delay in the scheduling of other threads, including those of equal priority. 
 
-![preemptive](/images/scheduling/preemptive.png)
+![preemptive](../../images/scheduling/preemptive.png)
 
 To overcome such problems, a preemptive thread can perform cooperative time slicing (as described above), or the scheduler's time slicing capability can be used to allow other threads of the same priority to execute.
 
-![timeslicing](/images/scheduling/timeslicing.png)
+![timeslicing](../../images/scheduling/timeslicing.png)
 
 The scheduler divides time into a series of time slices, where slices are measured in system clock ticks. The time slice size is configurable, but this size can be changed while the application is running.
 

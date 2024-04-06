@@ -11,7 +11,7 @@ nav_order: 10
 
 Before we start writing our first applications in Zephyr, it might be a good step to take a look at the folder structure that Zephyr provides us.
 
-![sample-folder](/images/2-introduction/sample-folder.png)
+![sample-folder](../../images/2-introduction/sample-folder.png)
 
 Let's go one-by-one:
 
@@ -28,7 +28,7 @@ This file will be used by [CMake](https://en.wikipedia.org/wiki/CMake) to set up
 ### prj.conf
 This is you Kconfig file. **Important!** This file will contain any *additional* settings you want set for your particular Zephyr build. Depending on your particular application, you might want to (for example) include a TCP/IP stack or make some changes to the scheduler. We'll explore some of these options throughout the tutorial.
 
-![k-config](/images/2-introduction/k-config.png)
+![k-config](../../images/2-introduction/k-config.png)
 
 Right now it's pretty empty, since for `basic-sample` we don't require any "fancy" functionality, just the basic Zephyr kernel. The only additional functionality we set is `CONFIG_PRINTK`, which allows us to use the `printk` function to output to the serial port (which is then displayed on your computer screen using Coolterm).
 
@@ -36,9 +36,9 @@ If you're ever unsure about what a particular config setting does, you have 2 op
 - Use [google](https://www.google.com/search?client=firefox-b-d&q=zephyr+CONFIG_PRINTK): usually Zephyr Documentation is one of the first links
 - Use the `guiconfig`: in your `basic-sample` folder execute `west build -t guiconfig`. This will show you a menu of all the possible configuration settings and a small description of what each one does. (Use `Jump to` to find a particular config)
   
-![guiconfig](/images/2-introduction/guiconfig.png)
+![guiconfig](../../images/2-introduction/guiconfig.png)
 
 ### src
 Where the magic happens! This folder should contain all of your custom application code. For now it contains one file: `main.c`, which prints out a message to the serial port and then sleeps for 1 second.
 
-![basic-sample](/images/2-introduction/basic-sample.png)
+![basic-sample](../../images/2-introduction/basic-sample.png)

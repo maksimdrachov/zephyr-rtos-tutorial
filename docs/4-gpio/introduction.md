@@ -20,7 +20,7 @@ When setting up any GPIO the following basic steps have to be followed:
 The devicetree for your particular build can be found at `build/zephyr/zephyr.dts` or for each board in `zephyrproject/zephyr/boards`
 
 For example, the red arrow indicates the device binding to toggle the green led.
-![devicetree-binding](/images/gpio/devicetree-binding.png)
+![devicetree-binding](../../images/gpio/devicetree-binding.png)
 
 2) To use the device binding in our main.c file; we need to use the following defines:
 
