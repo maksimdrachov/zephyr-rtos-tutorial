@@ -28,4 +28,4 @@ Each **thread** (or task) will use registers and memory as it executes. The whol
 
 Along with threads, you'll be using primitives such as **queues**, **mutexes** and **semaphores** for inter-thread communication. Then each RTOS provides varying levels of support for different protocols such as **TCP/IP**, **Bluetooth**, **LoRaWan**,... This makes your life easier, since now you don't need to study these protocols as in-depth. You'll get a series of API calls which should increase speed of development.
 
-![rtos-basic-execution]({{ site.baseurl }}/images/2-introduction/rtos_basic_execution.gif)
+![rtos-basic-execution](/images/2-introduction/rtos_basic_execution.gif)

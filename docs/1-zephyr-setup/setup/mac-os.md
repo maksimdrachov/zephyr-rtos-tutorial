@@ -18,19 +18,19 @@ nav_order: 1
     - Port: `usbmodemxxxxx`
     - Baudrate: `115200`
 
-![coolterm-1]({{ site.baseurl }}/images/1-zephyr-setup/coolterm-1.png)
+![coolterm-1](/images/1-zephyr-setup/coolterm-1.png)
 
 - `Terminal`: check "Filter ASCII Escape Sequences" and press `Ok`
 
-![coolterm-2]({{ site.baseurl }}/images/1-zephyr-setup/coolterm-2.png)
+![coolterm-2](/images/1-zephyr-setup/coolterm-2.png)
 
 - `File -> Save`: Save this configuration under `~/zephyrproject`
 
-![coolterm-settings]({{ site.baseurl }}/images/1-zephyr-setup/coolterm-settings.png)
+![coolterm-settings](/images/1-zephyr-setup/coolterm-settings.png)
 
 - `Connect`
   
-![coolterm-connect]({{ site.baseurl }}/images/1-zephyr-setup/coolterm-connect.png)
+![coolterm-connect](/images/1-zephyr-setup/coolterm-connect.png)
 
 ## 2) VSCode
 
@@ -64,8 +64,8 @@ west flash
 
 - Verify the serial output:
 
-![coolterm-3]({{ site.baseurl }}/images/1-zephyr-setup/coolterm-3.png)
+![coolterm-3](/images/1-zephyr-setup/coolterm-3.png)
 
 Your final setup should look something like this:
 
-![final-setup]({{ site.baseurl }}/images/1-zephyr-setup/final-setup.png)
+![final-setup](/images/1-zephyr-setup/final-setup.png)
