@@ -36,11 +36,11 @@ For solving the exercises I recommend you create your own folder inside `zephyr-
 - Use `k_thread_create()` to create a thread
 - Implement the following
 
-![thread-start](../../svg-images/threads/thread-start.png)
+![thread-start]({{ site.baseurl }}/svg-images/threads/thread-start.png)
 
 - Output the following serial using `printk()`
 
-![thread-start](../../images/threads/thread-start.png)
+![thread-start]({{ site.baseurl }}/images/threads/thread-start.png)
 
 solution: `exercises/threads/thread-start`
 
@@ -54,11 +54,11 @@ solution: `exercises/threads/thread-start-define`
 
 - Implement the following
 
-![thread-abort](../../svg-images/threads/thread-abort.png)
+![thread-abort]({{ site.baseurl }}/svg-images/threads/thread-abort.png)
 
 - Output the following serial using `printk()`
 
-![thread-abort](../../images/threads/thread-abort.png)
+![thread-abort]({{ site.baseurl }}/images/threads/thread-abort.png)
 
 solution: `exercises/threads/thread-abort`
 
@@ -66,11 +66,11 @@ solution: `exercises/threads/thread-abort`
 
 - Implement the following
 
-![thread-sleep](../../svg-images/threads/thread-sleep.png)
+![thread-sleep]({{ site.baseurl }}/svg-images/threads/thread-sleep.png)
 
 - Output the following serial using `printk()`
 
-![thread-sleep](../../images/threads/thread-sleep.png)
+![thread-sleep]({{ site.baseurl }}/images/threads/thread-sleep.png)
 
 solution: `exercises/threads/thread-sleep`
 
@@ -78,11 +78,11 @@ solution: `exercises/threads/thread-sleep`
 
 - Implement the following
 
-![thread-sleep](../../svg-images/threads/thread-suspend.png)
+![thread-sleep]({{ site.baseurl }}/svg-images/threads/thread-suspend.png)
 
 - Output the following serial using `printk()`
 
-![thread-sleep](../../images/threads/thread-suspend.png)
+![thread-sleep]({{ site.baseurl }}/images/threads/thread-suspend.png)
 
 solution: `exercises/threads/thread-suspend`
 
@@ -90,10 +90,10 @@ solution: `exercises/threads/thread-suspend`
 
 - Implement the following
 
-![thread-join](../../svg-images/threads/thread-join.png)
+![thread-join]({{ site.baseurl }}/svg-images/threads/thread-join.png)
 
 - Output the following serial using `printk()`
 
-![thread-join](../../images/threads/thread-join.png)
+![thread-join]({{ site.baseurl }}/images/threads/thread-join.png)
 
 solution: `exercises/threads/thread-join`

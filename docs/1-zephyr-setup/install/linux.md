@@ -84,7 +84,7 @@ $ west build -p always -b esp32 samples/hello_world/
 The `-p` option does a pristine build. It is used to build when there is any changes done to the CMake.
 
 A successful build looks like this
-![success_build_hello_world](../../images/1-zephyr-setup/hello_world_build_success.png)
+![success_build_hello_world]({{ site.baseurl }}/images/1-zephyr-setup/hello_world_build_success.png)
 Now flash the board with
 ```
 $ west flash
@@ -94,7 +94,7 @@ To open the serial monitor
 $ west espressif monitor
 ```
 You should see the similar output
-![hello_world_success_output](../../images/1-zephyr-setup/hello_world_output.png)
+![hello_world_success_output]({{ site.baseurl }}/images/1-zephyr-setup/hello_world_output.png)
 
 ## 4) Building the blinky
 Now, let's try to blink the builtin LED on ESP32. The sample is in `zephyr/samples/basic/blinky`
@@ -102,7 +102,7 @@ Now, let's try to blink the builtin LED on ESP32. The sample is in `zephyr/sampl
 $ west build -p -b esp32 samples/basic/blinky
 ```
 If you encounter build errors like this
-![blinky_build_error](../../images/1-zephyr-setup/blinky_build_errors.png)
+![blinky_build_error]({{ site.baseurl }}/images/1-zephyr-setup/blinky_build_errors.png)
 It means that we need to add an overlay file with the board support. This file can be added for any unsupported board with the `<board-name>.overlay`. <br/>
 Create an `esp32.overlay` file in `zephyr/samples/basic/blinky/` and add the following contents
 ```dtc

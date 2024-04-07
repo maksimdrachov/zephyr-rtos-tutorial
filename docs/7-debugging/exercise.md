@@ -40,11 +40,11 @@ The svd file can be found on the [STM](https://www.st.com/en/microcontrollers-mi
 
 *The first screen should look like this:*
 
-![debug-starting](../../images/debugging/debug-starting.png)
+![debug-starting]({{ site.baseurl }}/images/debugging/debug-starting.png)
 
 *If you put an interrupt in the first interrupt, the execution will again be stopped at this point*
 
-![debug-breakpoint](../../images/debugging/debug-breakpoint-1.png)
+![debug-breakpoint]({{ site.baseurl }}/images/debugging/debug-breakpoint-1.png)
 
 Notice the "Cortex Peripherals" and "Cortex Registers" on the left-hand side.
 
@@ -61,7 +61,7 @@ west flash
 
 3) Observe the output in the serial monitor:
 
-![runtime-statistics](../../images/debugging/runtime-statistics.png)
+![runtime-statistics]({{ site.baseurl }}/images/debugging/runtime-statistics.png)
 
 ## Exercise 3: Core dump
 
