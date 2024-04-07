@@ -58,6 +58,6 @@ _site
 .jekyll-cache
 vendor
 
-.DS_Store
+**/.DS_Store
 .vscode/
 .history/
