@@ -60,6 +60,7 @@ west flash
 
 {: .note }
 > If you've previously made a build for a different board, remove the old build first: `rm -rf build`
+> For convenience, full path to the basic-sample page: `cd ~/zephyrproject/zephyr-rtos-tutorial/exercises/basic-sample`
 
 - Verify the serial output:
 

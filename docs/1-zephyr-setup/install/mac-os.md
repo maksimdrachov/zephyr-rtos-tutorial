@@ -119,5 +119,5 @@ A successful flash looks like this:
 
 {: .warning}
 > Some boards will require installing an additional `pyocd` package! 
-> ![pyocd-error](../../../images/zephyr-setup/pyocd-error.png)
+> ![pyocd-error](/../images/zephyr-setup/pyocd-error.png)
 > For Nucleo L552ZE-Q: `pyocd pack install stm32l552zetxq` (see [pyocd/target_support](https://pyocd.io/docs/target_support.html#managed-packs))
