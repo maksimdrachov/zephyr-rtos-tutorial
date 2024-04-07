@@ -1,7 +1,7 @@
 title: Zephyr Tutorial
 remote_theme: bedroesb/just-the-docs
 
-baseurl: "/zephyr-rtos-tutorial"
+# baseurl: "/zephyr-rtos-tutorial"
 
 plugins:
   - jekyll-relative-links
